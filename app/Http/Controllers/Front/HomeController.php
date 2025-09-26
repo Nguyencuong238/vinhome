@@ -64,6 +64,19 @@ class HomeController extends Controller
         return view('front.gallery', compact('galleries', 'categories'));
     }
 
+    public function utility(Request $req)
+    {
+        return view('front.utility', compact([]));
+    }
+
+    public function progress(Request $req)
+    {
+        $galleries = Album::where('status', 1)->orderByDesc('id')->get();
+        $categories = Category::where('type', 'image')->get();
+        
+        return view('front.progress', compact('galleries', 'categories'));
+    }
+
     public function login(){
         return view('auth.login');
     }

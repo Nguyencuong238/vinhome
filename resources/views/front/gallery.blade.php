@@ -797,7 +797,7 @@
 
             <div class="virtual-tour-wrapper">
                 <div class="tour-frame">
-                    <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=1200" alt="360 Tour">
+                    <img src="{{asset('assets/images/vinhomes-green-paradise-tam-co-quoc-te.jpeg')}}" alt="360 Tour">
                     <div class="tour-overlay">
                         <button class="btn-start-tour">
                             <i class="fas fa-vr-cardboard"></i>

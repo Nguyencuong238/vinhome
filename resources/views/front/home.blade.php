@@ -199,7 +199,7 @@
                     <img src="{{ asset('assets/images/vi-tri-vinhomes-green-paradise.jpg') }}"
                         alt="Vị trí Green Paradise">
                     <div class="map-markers">
-                        <div class="marker marker-main" style="top: 40%; left: 50%;">
+                        <div class="marker marker-main" style="top: 48%; left: 65%;">
                             <div class="marker-pulse"></div>
                             <div class="marker-dot"></div>
                             <div class="marker-info">
@@ -207,14 +207,14 @@
                                 <p>Cần Giờ, TP.HCM</p>
                             </div>
                         </div>
-                        <div class="marker" style="top: 20%; left: 30%;">
+                        {{-- <div class="marker" style="top: 20%; left: 30%;">
                             <div class="marker-dot"></div>
                             <span>TP.HCM (50km)</span>
                         </div>
                         <div class="marker" style="top: 50%; left: 70%;">
                             <div class="marker-dot"></div>
                             <span>Sân bay Long Thành</span>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 

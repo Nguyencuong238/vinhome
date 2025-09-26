@@ -65,6 +65,8 @@ Route::get('tin-tuc/{post:slug}', [HomeController::class, 'newsDetail'])->name('
 
 Route::get('lien-he', [HomeController::class, 'contact'])->name('contact');
 Route::get('gallery', [HomeController::class, 'gallery'])->name('gallery');
+Route::get('tien-do', [HomeController::class, 'progress'])->name('progress');
+Route::get('tien-ich', [HomeController::class, 'utility'])->name('utility');
 
 //Route::get('register', [HomeController::class, 'register'])->name('register');
 

@@ -89,24 +89,28 @@
                 <ul class="nav-menu">
                     <li><a href="/">Trang Chủ</a></li>
                     <li class="dropdown">
-                        <a href="{{ route('about') }}">Tổng Quan <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
+                        <a href="{{ route('about') }}">Tổng Quan 
+                            {{-- <i class="fas fa-chevron-down"></i> --}}
+                        </a>
+                        {{-- <ul class="dropdown-menu">
                             <li><a href="#about">Giới Thiệu Dự Án</a></li>
                             <li><a href="#developer">Chủ Đầu Tư</a></li>
                             <li><a href="#esg">Đô Thị ESG</a></li>
-                        </ul>
+                        </ul> --}}
                     </li>
                     <li><a href="#location">Vị Trí</a></li>
                     <li class="dropdown">
-                        <a href="#utilities">Tiện Ích <i class="fas fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
+                        <a href="{{route('utility')}}">Tiện Ích 
+                            {{-- <i class="fas fa-chevron-down"></i> --}}
+                        </a>
+                        {{-- <ul class="dropdown-menu">
                             <li><a href="#lagoon">Paradise Lagoon</a></li>
                             <li><a href="#golf">Sân Golf</a></li>
                             <li><a href="#marina">Marina 5 Sao</a></li>
                             <li><a href="#entertainment">Giải Trí</a></li>
-                        </ul>
+                        </ul> --}}
                     </li>
-                    <li><a href="#subdivisions">Phân Khu</a></li>
+                    <li><a href="{{route('progress')}}">Tiến độ</a></li>
                     <li><a href="{{route('gallery')}}">Thư Viện</a></li>
                     <li><a href="{{ route('news') }}">Tin Tức</a></li>
                     <li><a href="{{ route('contact') }}" class="btn-nav">Liên Hệ</a></li>
