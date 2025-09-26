@@ -12,8 +12,6 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label>{{ __('Category') }}:</label>
-                            <input type="text" class="icon-pickers">
-
                             <input type="text" name="name" value="{{ old('name') }}"
                                 class="form-control @error('name')is-invalid @enderror" placeholder="">
                             @error('name')

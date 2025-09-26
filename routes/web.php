@@ -64,6 +64,7 @@ Route::get('tin-tuc', [HomeController::class, 'news'])->name('news');
 Route::get('tin-tuc/{post:slug}', [HomeController::class, 'newsDetail'])->name('news_detail');
 
 Route::get('lien-he', [HomeController::class, 'contact'])->name('contact');
+Route::get('gallery', [HomeController::class, 'gallery'])->name('gallery');
 
 //Route::get('register', [HomeController::class, 'register'])->name('register');
 
@@ -78,9 +79,9 @@ Route::get('lien-he', [HomeController::class, 'contact'])->name('contact');
 // Route::get('danh-muc-video/{slug}', VideoCategoryController::class)->name('videoCategory');
 // Route::get('video-thuoc-category/{categoryId}', [VideoCategoryController::class, 'getDatabyAjax'])->name('getDatabyAjax');
 
-Route::get('gallery', [FrontAlbumController::class, 'index'])->name('front.albums.index');
-Route::post('gallery', [FrontAlbumController::class, 'search'])->name('front.albums.search');
-Route::get('gallery/{name}', [FrontAlbumController::class, 'show'])->name('front.albums.show');
+// Route::get('gallery', [FrontAlbumController::class, 'index'])->name('front.albums.index');
+// Route::post('gallery', [FrontAlbumController::class, 'search'])->name('front.albums.search');
+// Route::get('gallery/{name}', [FrontAlbumController::class, 'show'])->name('front.albums.show');
 // Route::get('danh-muc-gallery/{name}', AlbumCategoryController::class)->name('albumCategory');
 
 // Route::get('user-album', [FrontAlbumController::class, 'userAlbum'])->name('user-album.index');

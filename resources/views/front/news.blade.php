@@ -604,7 +604,7 @@
 @section('page')
     <!-- Page Hero -->
     <section class="page-hero"
-        style="background: linear-gradient(135deg, rgba(5,102,141,0.9) 0%, rgba(0,168,150,0.8) 100%), url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1920') center/cover;">
+        style="background: linear-gradient(135deg, rgba(5,102,141,0.9) 0%, rgba(0,168,150,0.8) 100%), url('{{asset('assets/images/photo-1504711434969-e33886168f5c.jpeg')}}') center/cover;">
         <div class="container">
             <div class="page-hero-content">
                 <h1 class="page-title">Tin Tức & Sự Kiện</h1>
@@ -670,7 +670,7 @@
                             <span><i class="fas fa-share-alt"></i> 456 chia sẻ</span>
                         </div>
                         <h2>{{ $featured->title }}</h2>
-                        <p>{{$featured->exerpt}}</p>
+                        <p>{{$featured->excerpt}}</p>
                         <div class="featured-actions">
                             <a href="{{$featured->showUrl()}}" class="read-more-btn">
                                 Đọc Tiếp <i class="fas fa-arrow-right"></i>

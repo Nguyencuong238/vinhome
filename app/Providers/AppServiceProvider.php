@@ -48,6 +48,7 @@ class AppServiceProvider extends ServiceProvider
             'partner'   => 'App\Models\Partner',
             'department'   => 'App\Models\Department',
             'executive'   => 'App\Models\Executive',
+            'category'   => 'App\Models\Category',
         ]);
 
         if (! Str::hasMacro('shortNumber')) {

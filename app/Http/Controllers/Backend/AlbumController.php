@@ -57,22 +57,22 @@ class AlbumController extends Controller
         }
 
         $request->validate([
-            'name' => ['required'],
-            'status' => ['nullable'],
+            // 'name' => ['required'],
         ]);
 
         $album = Album::create([
             'name'      => request('name'),
             'status'    => request('status'),
+            'is_featured'    => request('is_featured'),
         ]);
 
         $album
             ->addFromMediaLibraryRequest($request->media)
             ->toMediaCollection('media');
 
-        $album
-            ->addFromMediaLibraryRequest($request->album)
-            ->toMediaCollection('album');
+        // $album
+        //     ->addFromMediaLibraryRequest($request->album)
+        //     ->toMediaCollection('album');
 
         $album->categories()->sync(request('categories'));
 
@@ -126,22 +126,22 @@ class AlbumController extends Controller
         $album = Album::findOrFail($id);
 
         $request->validate([
-            'name'   => ['required'],
-            'status' => ['nullable'],
+            // 'name'   => ['required'],
         ]);
 
         $album->fill([
             'name'      => request('name'),
             'status'    => request('status'),
+            'is_featured'    => request('is_featured'),
         ])->save();
 
         $album
             ->syncFromMediaLibraryRequest($request->media)
             ->toMediaCollection('media');
 
-        $album
-            ->syncFromMediaLibraryRequest($request->albums)
-            ->toMediaCollection('album');
+        // $album
+        //     ->syncFromMediaLibraryRequest($request->albums)
+        //     ->toMediaCollection('album');
 
         $album->categories()->sync(request('categories'));
 

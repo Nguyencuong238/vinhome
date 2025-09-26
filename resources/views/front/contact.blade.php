@@ -504,7 +504,7 @@
 @section('page')
     <!-- Page Hero -->
     <section class="page-hero"
-        style="background: linear-gradient(135deg, rgba(5,102,141,0.9) 0%, rgba(0,168,150,0.8) 100%), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1920') center/cover;">
+        style="background: linear-gradient(135deg, rgba(5,102,141,0.9) 0%, rgba(0,168,150,0.8) 100%), url('{{asset('assets/images/lien-he-cover.jpeg')}}') center/cover;">
         <div class="container">
             <div class="page-hero-content">
                 <h1 class="page-title">Liên Hệ Tư Vấn</h1>
@@ -696,7 +696,7 @@
                     </div>
 
                     <div class="contact-person">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100"
+                        <img src="{{asset('assets/images/avatar.jpg')}}"
                             alt="Sales Manager">
                         <div>
                             <h4>Mr. Nguyễn Văn A</h4>

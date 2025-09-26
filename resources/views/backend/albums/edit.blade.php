@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex justify-content-between">
-                            <h5 class="card-title">{{ __('Edit gallery') }}</h5>
+                            <h5 class="card-title">Sửa ảnh</h5>
                         </div>
                     </div>
                     <div class="card-body">
@@ -30,7 +30,7 @@
                             />
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label>{{ __('Album') }}:</label>
                             <x-media-library-collection
                                 name="albums"
@@ -39,6 +39,12 @@
                                 rules="mimes:png,jpeg,pdf"
                                 max-items="10"
                             />
+                        </div> --}}
+
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="hidden" class="custom-control-input" name="is_featured" value="0">
+                            <input type="checkbox" class="custom-control-input" name="is_featured" {{ old('is_featured', $album->is_featured) == '1' ? 'checked' : null }} value="1" id="is_featured">
+                            <label class="custom-control-label" for="is_featured">Nổi bật?</label>
                         </div>
 
                         <div class="custom-control custom-checkbox mb-2">

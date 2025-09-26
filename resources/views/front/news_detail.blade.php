@@ -524,11 +524,6 @@
             color: #00a896;
         }
 
-        .download-item .btn-download-small i {
-            font-size: 24px;
-            color: #fff;
-        }
-
         .download-item div {
             flex: 1;
         }
@@ -546,7 +541,7 @@
         .btn-download-small {
             width: 35px;
             height: 35px;
-            background: #00a896;
+            /* background: #00a896; */
             color: white;
             border: none;
             border-radius: 50%;
@@ -797,7 +792,7 @@
             <p class="article-lead">{{ $post->excerpt }}</p>
 
             <div class="article-author">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60" alt="Author">
+                <img src="{{asset('assets/images/photo-1472099645785-5658abf4ff4e.jpeg')}}" alt="Author">
                 <div class="author-info">
                     <strong>Nguyễn Văn Nam</strong>
                     <span>Phóng viên BĐS - 5 năm kinh nghiệm</span>

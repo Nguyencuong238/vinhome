@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Album;
 use App\Models\Category;
 use App\Models\Channel;
 use App\Models\Partner;
@@ -50,8 +51,15 @@ class HomeController extends Controller
 
     public function contact(Request $req)
     {
-        
         return view('front.contact');
+    }
+
+    public function gallery(Request $req)
+    {
+        $galleries = Album::where('status', 1)->orderByDesc('id')->get();
+        $categories = Category::where('type', 'image')->get();
+        
+        return view('front.gallery', compact('galleries', 'categories'));
     }
 
     public function login(){

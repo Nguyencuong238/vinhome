@@ -107,7 +107,7 @@
                         </ul>
                     </li>
                     <li><a href="#subdivisions">Phân Khu</a></li>
-                    <li><a href="#gallery">Thư Viện</a></li>
+                    <li><a href="{{route('gallery')}}">Thư Viện</a></li>
                     <li><a href="{{ route('news') }}">Tin Tức</a></li>
                     <li><a href="{{ route('contact') }}" class="btn-nav">Liên Hệ</a></li>
                 </ul>

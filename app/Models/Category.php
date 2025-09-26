@@ -114,4 +114,9 @@ class Category extends Model
         $prettyName .= $this->name;
         return $prettyName;
     }
+
+    public function albums()
+    {
+        return $this->morphedByMany(Album::class, 'categoryable');
+    }
 }

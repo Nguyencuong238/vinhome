@@ -17,6 +17,7 @@
                     <tr>
                         <th>#</th>
                         <th>{{ __('Name') }}</th>
+                        <th>{{ __('Category') }}</th>
                         <th>{{ __('Trạng thái') }}</th>
                         <th>{{ __('Date') }}</th>
                         <th class="text-center">{{ __('Action') }}</th>
@@ -37,6 +38,11 @@
                                     <a href="#" class="text-body font-weight-semibold">{{ $album->name }}</a>
                                 </div>
                             </div>
+                        </td>
+                        <td>
+                            @foreach($album->categories as $category)
+                                <span class="badge badge-primary">{{ $category->name }}</span>
+                            @endforeach
                         </td>
                         <td>
                             @if($album->status == 1)

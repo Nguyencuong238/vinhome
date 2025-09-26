@@ -6,7 +6,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex justify-content-between">
-                            <h5 class="card-title">{{ __('Create gallery') }}</h5>
+                            <h5 class="card-title">Thêm ảnh</h5>
                         </div>
                     </div>
                     <div class="card-body">
@@ -32,7 +32,7 @@
                             />
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label>{{ __('Album') }}:</label>
                             @php
                                 $album = new \App\Models\Album;
@@ -44,11 +44,17 @@
                                 rules="mimes:png,jpeg,pdf"
                                 max-items="10"
                             />
+                        </div> --}}
+
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="hidden" class="custom-control-input" name="is_featured" value="0">
+                            <input type="checkbox" class="custom-control-input" name="is_featured" {{ old('is_featured') == '1' ? 'checked' : null }} value="1" id="is_featured">
+                            <label class="custom-control-label" for="is_featured">Nổi bật</label>
                         </div>
 
                         <div class="custom-control custom-checkbox mb-2">
                             <input type="hidden" class="custom-control-input" name="status" value="0">
-                            <input type="checkbox" class="custom-control-input" name="status" {{ old('status') == '1' ? 'checked' : null }} value="1" id="status">
+                            <input type="checkbox" class="custom-control-input" name="status" {{ old('status', 1) == '1' ? 'checked' : null }} value="1" id="status">
                             <label class="custom-control-label" for="status">{{ __('Hiển thị') }}</label>
                         </div>
                     </div>
