@@ -737,7 +737,7 @@
                 <div class="video-list">
                     <div class="video-item">
                         <div class="video-thumbnail">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300"
+                            <img src="{{asset('assets/images/photo-1506905925346-21bda4d32df4.jpeg')}}"
                                 alt="Video thumbnail">
                             <span class="video-duration">3:45</span>
                         </div>
@@ -749,7 +749,7 @@
 
                     <div class="video-item">
                         <div class="video-thumbnail">
-                            <img src="https://images.unsplash.com/photo-1587381420270-3e1a5b9e6904?w=300"
+                            <img src="{{asset('assets/images/photo-1587381420270-3e1a5b9e6904.jpeg')}}"
                                 alt="Video thumbnail">
                             <span class="video-duration">4:20</span>
                         </div>
@@ -761,7 +761,7 @@
 
                     <div class="video-item">
                         <div class="video-thumbnail">
-                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=300"
+                            <img src="{{asset('assets/images/photo-1512917774080-9991f1c4c750.jpeg')}}"
                                 alt="Video thumbnail">
                             <span class="video-duration">6:15</span>
                         </div>
@@ -773,7 +773,7 @@
 
                     <div class="video-item">
                         <div class="video-thumbnail">
-                            <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=300"
+                            <img src="{{asset('assets/images/photo-1540979388789-6cee28a1cdc9.jpeg')}}"
                                 alt="Video thumbnail">
                             <span class="video-duration">2:30</span>
                         </div>

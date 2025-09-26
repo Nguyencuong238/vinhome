@@ -33,7 +33,7 @@
     --gradient-primary: linear-gradient(135deg, #00a896 0%, #02c39a 100%);
     --gradient-secondary: linear-gradient(135deg, #05668d 0%, #028090 100%);
     --gradient-dark: linear-gradient(135deg, #1a1a1a 0%, #343a40 100%);
-    --gradient-hero: linear-gradient(135deg, rgba(5,102,141,0.9) 0%, rgba(0,168,150,0.8) 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(5,102,141,0.9) 0%, rgba(0,168,150,0.3) 100%);
     
     /* Shadows */
     --shadow-xs: 0 1px 3px rgba(0,0,0,0.06);

@@ -14,7 +14,9 @@ class HomeController extends Controller
 {
     public function index(Request $req)
     {
-        return view('front.home', compact([]));
+        $posts = Post::where('status', 1)->orderByDesc('is_featured')->orderByDesc('id')->paginate(9);
+
+        return view('front.home', compact('posts'));
     }
 
     public function about(Request $req)
