@@ -543,7 +543,7 @@
             <div class="subdivisions-grid">
                 <div class="subdivision-card">
                     <div class="subdivision-image">
-                        <img src="{{ asset('assets/images/photo-1512917774080-9991f1c4c750.jpeg') }}" alt="The Haven Bay">
+                        <img src="{{ asset('assets/images/the-haven-bay-vinh-tien.jpg') }}" alt="The Haven Bay">
                         <div class="subdivision-overlay">
                             <h3>Phân khu A</h3>
                         </div>
@@ -561,7 +561,7 @@
 
                 <div class="subdivision-card">
                     <div class="subdivision-image">
-                        <img src="{{ asset('assets/images/photo-1613490493576-7fde63acd811.jpeg') }}" alt="The Green Bay">
+                        <img src="{{ asset('assets/images/the-greean-bay-vinh-ngoc.jpg') }}" alt="The Green Bay">
                         <div class="subdivision-overlay">
                             <h3>Phân khu B</h3>
                         </div>
@@ -579,7 +579,7 @@
 
                 <div class="subdivision-card">
                     <div class="subdivision-image">
-                        <img src="{{ asset('assets/images/photo-1545324418-cc1a3fa10c00.jpeg') }}" alt="The Paradise">
+                        <img src="{{ asset('assets/images/the-paradise-mui-danh-vong.jpg') }}" alt="The Paradise">
                         <div class="subdivision-overlay">
                             <h3>Phân khu C</h3>
                         </div>
@@ -597,7 +597,7 @@
 
                 <div class="subdivision-card">
                     <div class="subdivision-image">
-                        <img src="{{ asset('assets/images/photo-1573052905904-34ad8c27f0cc.jpeg') }}"
+                        <img src="{{ asset('assets/images/the-grand-island-dao-mat-troi.jpg') }}"
                             alt="The Grand Island">
                         <div class="subdivision-overlay">
                             <h3>Phân khu D</h3>
