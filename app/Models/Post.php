@@ -153,7 +153,7 @@ class Post extends Model implements HasMedia
 
     public function showUrl()
     {
-        return route('front.posts.show', ['slug' => $this->slug]);
+        return route('news_detail', $this);
     }
 
     public function projects()

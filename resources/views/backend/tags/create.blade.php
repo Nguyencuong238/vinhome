@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label>{{ __('Tag') }}:</label>
-                            <input type="text" name="name" value="{{ old('name') }}" class="form-control @error('name')is-invalid @enderror" placeholder="Crypto, BitCoin, ...">
+                            <input type="text" name="name" value="{{ old('name') }}" class="form-control @error('name')is-invalid @enderror" placeholder="">
                             @error('name')
                                 <span class="invalid-feedback">{{ $message }}</span>
                             @enderror
@@ -23,9 +23,9 @@
                             <select name="type" data-placeholder="{{ __('Select tag type') }}" class="form-control form-control-select2 @error('type')is-invalid @enderror" data-fouc>
                                 <option></option>
                                 <option {{ old('type') == 'post' ? 'selected' : null }} value="post">{{ __('Post') }}</option>
-                                <option {{ old('type') == 'page' ? 'selected' : null }} value="page">{{ __('Page') }}</option>
-                                <option {{ old('type') == 'event' ? 'selected' : null }} value="event">{{ __('Event') }}</option>
-                                <option {{ old('type') == 'project' ? 'selected' : null }} value="project">{{ __('Location') }}</option>
+                                {{-- <option {{ old('type') == 'page' ? 'selected' : null }} value="page">{{ __('Page') }}</option> --}}
+                                {{-- <option {{ old('type') == 'event' ? 'selected' : null }} value="event">{{ __('Event') }}</option> --}}
+                                <option {{ old('type') == 'project' ? 'selected' : null }} value="project">{{ __('Project') }}</option>
                             </select>
                             @error('type')
                                 <span class="invalid-feedback">{{ $message }}</span>

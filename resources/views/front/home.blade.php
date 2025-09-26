@@ -1,17 +1,38 @@
 @extends('layouts.front')
 
 @section('css')
-    <style>
-        @media screen and (max-width: 1399px) {}
-
-        @media screen and (max-width: 1199px) {}
-
-        @media screen and (max-width: 991px) {}
-
-        @media screen and (max-width: 767px) {}
-
-        @media screen and (max-width: 575px) {}
-    </style>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "RealEstateAgent",
+            "name": "Vinhomes Green Paradise Cần Giờ",
+            "image": "https://vinhomescangio.info/logo.png",
+            "url": "https://vinhomescangio.info",
+            "telephone": "+84963728586",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Xã Long Hòa, Thị trấn Cần Thạnh",
+                "addressLocality": "Cần Giờ",
+                "addressRegion": "TP.HCM",
+                "postalCode": "700000",
+                "addressCountry": "VN"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 10.5833,
+                "longitude": 106.719
+            },
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                "opens": "08:00",
+                "closes": "19:00"
+            },
+            "priceRange": "5 tỷ - 100 tỷ VNĐ"
+        }
+    </script>
 @endsection
 
 @section('page')
@@ -19,9 +40,9 @@
     <section id="home" class="hero">
         <div class="hero-bg">
             <div class="hero-overlay"></div>
-            <video autoplay muted loop poster="{{ asset('vin/images/photo-1559827260-dc66d52bef19.jpeg') }}">
+            <video autoplay muted loop poster="{{ asset('assets/images/photo-1559827260-dc66d52bef19.jpeg') }}">
                 <source src="video.mp4" type="video/mp4">
-                <img src="{{ asset('vin/images/photo-1559827260-dc66d52bef19.jpeg') }}" alt="Green Paradise">
+                <img src="{{ asset('assets/images/photo-1559827260-dc66d52bef19.jpeg') }}" alt="Green Paradise">
             </video>
         </div>
         <div class="hero-content">
@@ -171,7 +192,7 @@
 
             <div class="location-wrapper">
                 <div class="location-map">
-                    <img src="{{ asset('vin/images/photo-1524813686514-a57563d77965.jpeg') }}" alt="Vị trí Green Paradise">
+                    <img src="{{ asset('assets/images/photo-1524813686514-a57563d77965.jpeg') }}" alt="Vị trí Green Paradise">
                     <div class="map-markers">
                         <div class="marker marker-main" style="top: 40%; left: 50%;">
                             <div class="marker-pulse"></div>
@@ -270,7 +291,7 @@
                         </ul>
                     </div>
                     <div class="utility-image">
-                        <img src="{{ asset('vin/images/photo-1506929562872-bb421503ef21.jpeg') }}" alt="Paradise Lagoon">
+                        <img src="{{ asset('assets/images/photo-1506929562872-bb421503ef21.jpeg') }}" alt="Paradise Lagoon">
                         <div class="image-badge">443 HECTA</div>
                     </div>
                 </div>
@@ -294,7 +315,7 @@
                         </ul>
                     </div>
                     <div class="utility-image">
-                        <img src="{{ asset('vin/images/photo-1587381420270-3e1a5b9e6904.jpeg') }}" alt="Golf Course">
+                        <img src="{{ asset('assets/images/photo-1587381420270-3e1a5b9e6904.jpeg') }}" alt="Golf Course">
                         <div class="image-badge">36 HOLES</div>
                     </div>
                 </div>
@@ -318,7 +339,7 @@
                         </ul>
                     </div>
                     <div class="utility-image">
-                        <img src="{{ asset('vin/images/photo-1540979388789-6cee28a1cdc9.jpeg') }}" alt="Marina">
+                        <img src="{{ asset('assets/images/photo-1540979388789-6cee28a1cdc9.jpeg') }}" alt="Marina">
                         <div class="image-badge">5★ MARINA</div>
                     </div>
                 </div>
@@ -383,7 +404,7 @@
             <div class="subdivisions-grid">
                 <div class="subdivision-card">
                     <div class="subdivision-image">
-                        <img src="{{ asset('vin/images/photo-1512917774080-9991f1c4c750.jpeg') }}" alt="The Haven Bay">
+                        <img src="{{ asset('assets/images/photo-1512917774080-9991f1c4c750.jpeg') }}" alt="The Haven Bay">
                         <div class="subdivision-overlay">
                             <h3>The Haven Bay</h3>
                         </div>
@@ -401,7 +422,7 @@
 
                 <div class="subdivision-card">
                     <div class="subdivision-image">
-                        <img src="{{ asset('vin/images/photo-1613490493576-7fde63acd811.jpeg') }}" alt="The Green Bay">
+                        <img src="{{ asset('assets/images/photo-1613490493576-7fde63acd811.jpeg') }}" alt="The Green Bay">
                         <div class="subdivision-overlay">
                             <h3>The Green Bay</h3>
                         </div>
@@ -419,7 +440,7 @@
 
                 <div class="subdivision-card">
                     <div class="subdivision-image">
-                        <img src="{{ asset('vin/images/photo-1545324418-cc1a3fa10c00.jpeg') }}" alt="The Paradise">
+                        <img src="{{ asset('assets/images/photo-1545324418-cc1a3fa10c00.jpeg') }}" alt="The Paradise">
                         <div class="subdivision-overlay">
                             <h3>The Paradise</h3>
                         </div>
@@ -437,7 +458,7 @@
 
                 <div class="subdivision-card">
                     <div class="subdivision-image">
-                        <img src="{{ asset('vin/images/photo-1573052905904-34ad8c27f0cc.jpeg') }}" alt="The Grand Island">
+                        <img src="{{ asset('assets/images/photo-1573052905904-34ad8c27f0cc.jpeg') }}" alt="The Grand Island">
                         <div class="subdivision-overlay">
                             <h3>The Grand Island</h3>
                         </div>
@@ -537,37 +558,37 @@
 
             <div class="gallery-container">
                 <div class="gallery-item" data-category="overview">
-                    <img src="{{ asset('vin/images/photo-1570168007204-dfb528c6958f.jpeg') }}" alt="Toàn cảnh dự án">
+                    <img src="{{ asset('assets/images/photo-1570168007204-dfb528c6958f.jpeg') }}" alt="Toàn cảnh dự án">
                     <div class="gallery-info">
                         <h4>Toàn Cảnh Dự Án</h4>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="utilities">
-                    <img src="{{ asset('vin/images/photo-1571896349842-33c89424de2d.jpeg') }}" alt="Resort 5 sao">
+                    <img src="{{ asset('assets/images/photo-1571896349842-33c89424de2d.jpeg') }}" alt="Resort 5 sao">
                     <div class="gallery-info">
                         <h4>Resort 5 Sao</h4>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="interior">
-                    <img src="{{ asset('vin/images/photo-1600607687939-ce8a6c25118c.jpeg') }}" alt="Nội thất căn hộ">
+                    <img src="{{ asset('assets/images/photo-1600607687939-ce8a6c25118c.jpeg') }}" alt="Nội thất căn hộ">
                     <div class="gallery-info">
                         <h4>Nội Thất Cao Cấp</h4>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="overview">
-                    <img src="{{ asset('vin/images/photo-1506929562872-bb421503ef21.jpeg') }}" alt="Bãi biển">
+                    <img src="{{ asset('assets/images/photo-1506929562872-bb421503ef21.jpeg') }}" alt="Bãi biển">
                     <div class="gallery-info">
                         <h4>Bãi Biển Riêng</h4>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="utilities">
-                    <img src="{{ asset('vin/images/photo-1587381420270-3e1a5b9e6904.jpeg') }}" alt="Sân golf">
+                    <img src="{{ asset('assets/images/photo-1587381420270-3e1a5b9e6904.jpeg') }}" alt="Sân golf">
                     <div class="gallery-info">
                         <h4>Sân Golf Championship</h4>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="construction">
-                    <img src="{{ asset('vin/images/photo-1541888946425-d81bb19240f5.jpeg') }}" alt="Tiến độ xây dựng">
+                    <img src="{{ asset('assets/images/photo-1541888946425-d81bb19240f5.jpeg') }}" alt="Tiến độ xây dựng">
                     <div class="gallery-info">
                         <h4>Tiến Độ Q4/2025</h4>
                     </div>
@@ -587,7 +608,7 @@
             <div class="news-container">
                 <article class="news-item featured">
                     <div class="news-image">
-                        <img src="{{ asset('vin/images/photo-1486406146926-c627a92ad1ab.jpeg') }}" alt="Ra mắt phân khu">
+                        <img src="{{ asset('assets/images/photo-1486406146926-c627a92ad1ab.jpeg') }}" alt="Ra mắt phân khu">
                         <span class="news-category">Sự Kiện</span>
                     </div>
                     <div class="news-content">
@@ -606,7 +627,7 @@
                 <div class="news-grid">
                     <article class="news-item">
                         <div class="news-image">
-                            <img src="{{ asset('vin/images/photo-1560518883-ce09059eeffa.jpeg') }}" alt="Cầu Cần Giờ">
+                            <img src="{{ asset('assets/images/photo-1560518883-ce09059eeffa.jpeg') }}" alt="Cầu Cần Giờ">
                             <span class="news-category">Hạ Tầng</span>
                         </div>
                         <div class="news-content">
@@ -621,7 +642,7 @@
 
                     <article class="news-item">
                         <div class="news-image">
-                            <img src="{{ asset('vin/images/photo-1554469384-e58fac16e23a.jpeg') }}"
+                            <img src="{{ asset('assets/images/photo-1554469384-e58fac16e23a.jpeg') }}"
                                 alt="Cleveland Clinic">
                             <span class="news-category">Tiện Ích</span>
                         </div>
@@ -637,7 +658,7 @@
 
                     <article class="news-item">
                         <div class="news-image">
-                            <img src="{{ asset('vin/images/duong-sat-toc-do-cao-bac-nam.jpg') }}" alt="Metro">
+                            <img src="{{ asset('assets/images/duong-sat-toc-do-cao-bac-nam.jpg') }}" alt="Metro">
                             <span class="news-category">Giao Thông</span>
                         </div>
                         <div class="news-content">
@@ -750,11 +771,6 @@
 
 @section('js')
     <script>
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
 
         $(function() {
             $('.contact-form .btn-submit').on('click', function(e) {
@@ -773,12 +789,11 @@
                     url: '{{ route('newsletters') }}',
                     data: data,
                 }).then(function(res) {
-                    
                     if (res.success) {
-                        alert('Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ với bạn sớm nhất.');
+                        toastr.success('Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ với bạn sớm nhất.');
                         $('.contact-form')[0].reset();
                     } else {
-                        alert('Đã có lỗi xảy ra. Vui lòng thử lại sau.');
+                        toastr.error(res.msg);
                     }
                     
 

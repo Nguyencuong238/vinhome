@@ -66,12 +66,12 @@ class CategoryController extends Controller
             'name'      => request('name'),
             'parent_id' => request('parent_id') == 'root' ? null : request('parent_id'),
             'type'      => request('type'),
-            'external_link' => request('external_link') ?? 0,
-            'link' => request('link'),
-            'meta'        => [
-                'meta_title'       => request('meta_title'),
-                'meta_description' => request('meta_description'),
-            ],
+            // 'external_link' => request('external_link') ?? 0,
+            // 'link' => request('link'),
+            // 'meta'        => [
+            //     'meta_title'       => request('meta_title'),
+            //     'meta_description' => request('meta_description'),
+            // ],
             'slug' => request('slug')
         ]);
 
@@ -134,12 +134,12 @@ class CategoryController extends Controller
         $category->fill([
             'name'      => request('name'),
             'parent_id' => request('parent_id') == 'root' ? null : request('parent_id'),
-            'external_link' => request('external_link') ?? 0,
-            'link' => request('link'),
-            'meta'        => [
-                'meta_title'       => request('meta_title'),
-                'meta_description' => request('meta_description'),
-            ],
+            // 'external_link' => request('external_link') ?? 0,
+            // 'link' => request('link'),
+            // 'meta'        => [
+            //     'meta_title'       => request('meta_title'),
+            //     'meta_description' => request('meta_description'),
+            // ],
             'slug' => request('slug')
         ])->save();
 

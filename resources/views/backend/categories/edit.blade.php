@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label>{{ __('Category') }}:</label>
-                            <input type="text" name="name" value="{{ old('name', $category->name) }}" class="form-control @error('name')is-invalid @enderror" placeholder="Crypto, BitCoin, ...">
+                            <input type="text" name="name" value="{{ old('name', $category->name) }}" class="form-control @error('name')is-invalid @enderror" placeholder="">
                             @error('name')
                                 <span class="invalid-feedback">{{ $message }}</span>
                             @enderror
@@ -32,7 +32,7 @@
                             @enderror
                         </div>
 
-                        <div class="d-flex mb-2">
+                        {{-- <div class="d-flex mb-2">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" name="external_link" {{ old('external_link', $category->external_link) == '1' ? 'checked' : null }} id="external_link" value="1">
                                 <label class="custom-control-label" for="external_link">{{ __('External link') }}?</label>
@@ -42,9 +42,9 @@
                         <div class="form-group link" @if(!old('external_link', $category->external_link)) style="display: none; @endif">
                             <label>{{ __('Link') }}:</label>
                             <input type="text" name="link" value="{{ old('link', $category->link) }}" class="form-control">
-                        </div>
+                        </div> --}}
                     </div>
-                    @include('backend.posts._meta', ['model' => $category])
+                    {{-- @include('backend.posts._meta', ['model' => $category]) --}}
                 </div>
             </div>
             <div class="col-md-3">

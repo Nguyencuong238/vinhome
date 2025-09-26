@@ -89,8 +89,6 @@ class PostController extends Controller
             'title'       => request('title'),
             'excerpt'     => request('excerpt'),
             'is_featured' => request('is_featured'),
-            'is_new' => request('is_new'),
-            'order' => request('order'),
             'body'        => request('body'),
             'meta'        => [
                 'meta_title'       => request('meta_title'),
@@ -104,9 +102,9 @@ class PostController extends Controller
             ->addFromMediaLibraryRequest($request->media)
             ->toMediaCollection('media');
 
-        if ($request->filled('projects')) {
-            $post->projects()->attach(request('projects'));
-        }
+        // if ($request->filled('projects')) {
+        //     $post->projects()->attach(request('projects'));
+        // }
 
         $post->categories()->sync(request('categories'));
 
@@ -169,8 +167,6 @@ class PostController extends Controller
             'title'       => request('title'),
             'excerpt'     => request('excerpt'),
             'is_featured' => request('is_featured'),
-            'is_new' => request('is_new'),
-            'order' => request('order'),
             'body'        => request('body'),
             'meta'        => [
                 'meta_title'       => request('meta_title'),
@@ -183,9 +179,9 @@ class PostController extends Controller
             ->syncFromMediaLibraryRequest($request->media)
             ->toMediaCollection('media');
 
-        if ($request->filled('projects')) {
-            $post->projects()->sync(request('projects'));
-        }
+        // if ($request->filled('projects')) {
+        //     $post->projects()->sync(request('projects'));
+        // }
 
         $post->categories()->sync(request('categories'));
 

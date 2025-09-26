@@ -18,6 +18,7 @@
                         <th>#</th>
                         <th>{{ __('Name') }}</th>
                         <th>{{ __('Email') }}</th>
+                        <th>{{ __('Quan tâm') }}</th>
                         <th>{{ __('Message') }}</th>
                         <th>{{ __('Date') }}</th>
                         <th class="text-center">{{ __('Action') }}</th>
@@ -29,6 +30,7 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $contact->name }}</td>
                         <td>{{ $contact->email }}</td>
+                        <td>{{ $contact->product }}</td>
                         <td>{{ $contact->message }}</td>
                         <td>{{ $contact->created_at->format('d/m/Y H:i:s') }}</td>
                         <td class="text-center">

@@ -43,34 +43,7 @@
                             <div class="custom-control custom-checkbox">
                                 <input type="hidden" class="custom-control-input" name="is_featured" value="0">
                                 <input type="checkbox" class="custom-control-input" name="is_featured" {{ old('is_featured') == '1' ? 'checked' : null }} value="1" id="is_featured">
-                                <label class="custom-control-label" for="is_featured">{{ __('Is featured ?') }}</label>
-                            </div>
-                            {{--  ut1  --}}
-                            <div class="custom-control ml-3">
-                                <input type="radio" name="order" {{ old('order') == '1' ? 'checked' : null }} value="1" id="ut1">
-                                <label for="ut1">{{ __('UT1') }}</label>
-                            </div>
-                            {{--  ut2  --}}
-                            <div class="custom-control  ml-3">
-                                <input type="radio" name="order" {{ old('order') == '2' ? 'checked' : null }} value="2" id="ut2">
-                                <label for="ut2">{{ __('UT2') }}</label>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <div class="custom-control custom-checkbox mb-2">
-                                <input type="hidden" class="custom-control-input" name="is_new" value="0">
-                                <input type="checkbox" class="custom-control-input" name="is_new" {{ old('is_new') == '1' ? 'checked' : null }} value="1" id="is_new">
-                                <label class="custom-control-label" for="is_new">{{ __('Is new ?') }}</label>
-                            </div>
-                            {{--  ut3  --}}
-                            <div class="custom-control ml-3">
-                                <input type="radio" name="order" {{ old('order') == '3' ? 'checked' : null }} value="3" id="ut3">
-                                <label for="ut3">{{ __('UT3') }}</label>
-                            </div>
-                            {{--  ut4  --}}
-                            <div class="custom-control  ml-3">
-                                <input type="radio" name="order" {{ old('order') == '4' ? 'checked' : null }} value="4" id="ut4">
-                                <label for="ut4">{{ __('UT4') }}</label>
+                                <label class="custom-control-label" for="is_featured">{{ __('Is hot') }}?</label>
                             </div>
                         </div>
 
@@ -82,14 +55,14 @@
                             @enderror
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label>{{ __('Relate Projects') }}</label>
                             <select multiple="multiple" class="form-control" id="select-projects" data-fouc name="projects[]">
                                 @foreach(old('projects', []) as $projectId)
                                     <option value="{{ $projectId }}" selected></option>
                                 @endforeach
                             </select>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
@@ -166,7 +139,7 @@
                     tokenSeparators: [',']
                 });
 
-                setSearchSelect2($('#select-projects'), "{{ route('projects.search') }}")
+                //setSearchSelect2($('#select-projects'), "{{ route('projects.search') }}")
             })
         </script>
     @endpush

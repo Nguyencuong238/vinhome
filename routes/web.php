@@ -61,6 +61,10 @@ Route::get('login', [HomeController::class, 'login'])->name('login');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('tong-quan', [HomeController::class, 'about'])->name('about');
 Route::get('tin-tuc', [HomeController::class, 'news'])->name('news');
+Route::get('tin-tuc/{post:slug}', [HomeController::class, 'newsDetail'])->name('news_detail');
+
+Route::get('lien-he', [HomeController::class, 'contact'])->name('contact');
+
 //Route::get('register', [HomeController::class, 'register'])->name('register');
 
 // Route::get('tin-tuc', [FrontPostController::class, 'index'])->name('front.posts.index');
@@ -110,7 +114,7 @@ Route::get('doi-tac', [FrontPageController::class, 'partner'])->name('front.page
 // Route::get('archive/{year}/{month}', PostArchiveController::class)->name('postArchive');
 Route::post('newsletters', [NewsletterController::class, 'store'])->name('newsletters');
 
-Route::post('post/review', [FrontEventController::class, 'postReview'])->name('postReview');
+// Route::post('post/review', [FrontEventController::class, 'postReview'])->name('postReview');
 
 Route::view('/user/profile', 'profile.show')->name('profile.show')->middleware(['auth', 'verified']);
 
@@ -124,12 +128,12 @@ Route::view('/user/profile', 'profile.show')->name('profile.show')->middleware([
 // Route::post('/executives/update', [FrontExecutiveController::class, 'update'])->name('executives.update')->middleware(['auth', 'verified']);
 // Route::delete('/executives/delete/{id}', [FrontExecutiveController::class, 'delete'])->name('executives.delete')->middleware(['auth', 'verified']);
 
-Route::get('/action-news', [ActionNewsController::class, 'index'])->name('action-news.index')->middleware(['auth', 'verified']);
-Route::get('/action-news/create', [ActionNewsController::class, 'create'])->name('action-news.create')->middleware(['auth', 'verified']);
-Route::post('/action-news/store', [ActionNewsController::class, 'store'])->name('action-news.store')->middleware(['auth', 'verified']);
-Route::get('/action-news/edit/{id}', [ActionNewsController::class, 'edit'])->name('action-news.edit')->middleware(['auth', 'verified']);
-Route::post('/action-news/update/{id}', [ActionNewsController::class, 'update'])->name('action-news.update')->middleware(['auth', 'verified']);
-Route::delete('/action-news/delete/{id}', [ActionNewsController::class, 'delete'])->name('action-news.delete')->middleware(['auth', 'verified']);
+// Route::get('/action-news', [ActionNewsController::class, 'index'])->name('action-news.index')->middleware(['auth', 'verified']);
+// Route::get('/action-news/create', [ActionNewsController::class, 'create'])->name('action-news.create')->middleware(['auth', 'verified']);
+// Route::post('/action-news/store', [ActionNewsController::class, 'store'])->name('action-news.store')->middleware(['auth', 'verified']);
+// Route::get('/action-news/edit/{id}', [ActionNewsController::class, 'edit'])->name('action-news.edit')->middleware(['auth', 'verified']);
+// Route::post('/action-news/update/{id}', [ActionNewsController::class, 'update'])->name('action-news.update')->middleware(['auth', 'verified']);
+// Route::delete('/action-news/delete/{id}', [ActionNewsController::class, 'delete'])->name('action-news.delete')->middleware(['auth', 'verified']);
 
 Route::prefix('backend')
 	->middleware(['auth', 'verified', IsAdmin::class])

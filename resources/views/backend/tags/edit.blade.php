@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label>{{ __('Tag') }}:</label>
-                            <input type="text" name="name" value="{{ old('name', $tag->name) }}" class="form-control @error('name')is-invalid @enderror" placeholder="Crypto, BitCoin, ...">
+                            <input type="text" name="name" value="{{ old('name', $tag->name) }}" class="form-control @error('name')is-invalid @enderror" placeholder="">
                             @error('name')
                                 <span class="invalid-feedback">{{ $message }}</span>
                             @enderror

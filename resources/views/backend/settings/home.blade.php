@@ -32,7 +32,7 @@
                 <div class="card-header">
                 </div>
                 <div class="card-body">
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label>{{ __('Menu Category') }}:</label>
                         <select id="menu-category" multiple name="menu_category_id[]" data-placeholder="{{ __('Select category') }}" class="form-control w-md-50 @error('type')is-invalid @enderror" data-fouc>
                             @foreach($categories as $pc)
@@ -42,7 +42,7 @@
                         @error('menu_category_id')
                             <span class="invalid-feedback">{{ $message }}</span>
                         @enderror
-                    </div>
+                    </div> --}}
 
                     <div class="form-group">
                         <label>{{ __('Contact Email') }}:</label>
@@ -81,6 +81,14 @@
                         <label>{{ __('Youtube') }}:</label>
                         <input type="text" name="youtube" value="{{ old('youtube', settings('youtube')) }}" class="form-control @error('youtube')is-invalid @enderror" placeholder="">
                         @error('youtube')
+                            <span class="invalid-feedback">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ __('Phone') }}:</label>
+                        <input type="text" name="phone" value="{{ old('phone', settings('phone')) }}" class="form-control @error('phone')is-invalid @enderror" placeholder="">
+                        @error('phone')
                             <span class="invalid-feedback">{{ $message }}</span>
                         @enderror
                     </div>
