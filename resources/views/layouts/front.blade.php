@@ -58,7 +58,17 @@
 
     @yield('css')
 
-
+    <style>
+        @media (max-width: 768px) {
+            .contact-card {
+                display: block;
+                text-align: center;
+            }
+            .contact-icon {
+                margin: 0 auto 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>

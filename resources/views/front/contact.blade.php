@@ -696,7 +696,7 @@
                     </div>
 
                     <div class="contact-person">
-                        <img src="{{asset('assets/images/avatar.jpg')}}"
+                        <img src="{{asset('assets/images/avatar.jpeg')}}"
                             alt="Sales Manager">
                         <div>
                             <h4>Mr. Nguyễn Văn A</h4>
