@@ -1,26 +1,24 @@
 @extends('layouts.front')
 
 @section('meta')
-    <title>Tiện Ích Vinhomes Green Paradise - Paradise Lagoon, Golf, Marina | All-in-One</title>
-    <meta name="description"
-        content="Khám phá hệ sinh thái tiện ích all-in-one: Paradise Lagoon 443ha Guinness, 2 sân golf 36 lỗ Tiger Woods, Marina 5 sao, Cleveland Clinic">
-
+    <title>Tiến Độ Xây Dựng Vinhomes Green Paradise 2025 | Cập Nhật Real-time</title>
+<meta name="description" content="Cập nhật tiến độ xây dựng Vinhomes Green Paradise thời gian thực. Hoàn thành 42%, dự kiến bàn giao The Haven Bay Q4/2027. Xem camera trực tiếp">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="Tiện Ích Vinhomes Green Paradise - Paradise Lagoon, Golf, Marina | All-in-One">
+    <meta property="og:title" content="Tiến Độ Xây Dựng Vinhomes Green Paradise 2025 | Cập Nhật Real-time">
     <meta property="og:description"
-        content="Khám phá hệ sinh thái tiện ích all-in-one: Paradise Lagoon 443ha Guinness, 2 sân golf 36 lỗ Tiger Woods, Marina 5 sao, Cleveland Clinic">
+        content="Cập nhật tiến độ xây dựng Vinhomes Green Paradise thời gian thực. Hoàn thành 42%, dự kiến bàn giao The Haven Bay Q4/2027. Xem camera trực tiếp">
     <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
     <meta property="og:locale" content="vi_VN">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ url()->current() }}">
-    <meta name="twitter:title" content="Tiện Ích Vinhomes Green Paradise - Paradise Lagoon, Golf, Marina | All-in-One">
+    <meta name="twitter:title" content="Tiến Độ Xây Dựng Vinhomes Green Paradise 2025 | Cập Nhật Real-time">
     <meta name="twitter:description"
-        content="Khám phá hệ sinh thái tiện ích all-in-one: Paradise Lagoon 443ha Guinness, 2 sân golf 36 lỗ Tiger Woods, Marina 5 sao, Cleveland Clinic">
+        content="Cập nhật tiến độ xây dựng Vinhomes Green Paradise thời gian thực. Hoàn thành 42%, dự kiến bàn giao The Haven Bay Q4/2027. Xem camera trực tiếp">
     <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
 

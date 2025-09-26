@@ -98,7 +98,7 @@
                             <li><a href="#esg">Đô Thị ESG</a></li>
                         </ul> --}}
                     </li>
-                    <li><a href="#location">Vị Trí</a></li>
+                    {{-- <li><a href="#location">Vị Trí</a></li> --}}
                     <li class="dropdown">
                         <a href="{{route('utility')}}">Tiện Ích 
                             {{-- <i class="fas fa-chevron-down"></i> --}}

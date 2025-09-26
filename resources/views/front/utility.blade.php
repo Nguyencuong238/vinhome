@@ -1,26 +1,25 @@
 @extends('layouts.front')
 
 @section('meta')
-    <title>Thư Viện Hình Ảnh & Video Vinhomes Green Paradise | Tour 360°</title>
-    <meta name="description"
-        content="Xem hình ảnh thực tế, video flycam, tour 360° dự án Vinhomes Green Paradise. Paradise Lagoon 443ha, sân golf Tiger Woods, Marina 5 sao">
+    <title>Tiện Ích Vinhomes Green Paradise - Paradise Lagoon, Golf, Marina | All-in-One</title>
+<meta name="description" content="Khám phá hệ sinh thái tiện ích all-in-one: Paradise Lagoon 443ha Guinness, 2 sân golf 36 lỗ Tiger Woods, Marina 5 sao, Cleveland Clinic">
 
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="Thư Viện Hình Ảnh & Video Vinhomes Green Paradise | Tour 360°">
+    <meta property="og:title" content="Tiện Ích Vinhomes Green Paradise - Paradise Lagoon, Golf, Marina | All-in-One°">
     <meta property="og:description"
-        content="Xem hình ảnh thực tế, video flycam, tour 360° dự án Vinhomes Green Paradise. Paradise Lagoon 443ha, sân golf Tiger Woods, Marina 5 sao">
+        content="Khám phá hệ sinh thái tiện ích all-in-one: Paradise Lagoon 443ha Guinness, 2 sân golf 36 lỗ Tiger Woods, Marina 5 sao, Cleveland Clinic">
     <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
     <meta property="og:locale" content="vi_VN">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ url()->current() }}">
-    <meta name="twitter:title" content="Thư Viện Hình Ảnh & Video Vinhomes Green Paradise | Tour 360°">
+    <meta name="twitter:title" content="Tiện Ích Vinhomes Green Paradise - Paradise Lagoon, Golf, Marina | All-in-One°">
     <meta name="twitter:description"
-        content="Xem hình ảnh thực tế, video flycam, tour 360° dự án Vinhomes Green Paradise. Paradise Lagoon 443ha, sân golf Tiger Woods, Marina 5 sao">
+        content="Khám phá hệ sinh thái tiện ích all-in-one: Paradise Lagoon 443ha Guinness, 2 sân golf 36 lỗ Tiger Woods, Marina 5 sao, Cleveland Clinic">
     <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
 
