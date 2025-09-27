@@ -730,7 +730,7 @@
             </div>
 
             <!-- Pagination -->
-            <div class="pagination">
+            {{-- <div class="pagination">
                 <button class="page-btn prev" disabled>
                     <i class="fas fa-chevron-left"></i>
                 </button>
@@ -744,7 +744,7 @@
                 <button class="page-btn next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
-            </div>
+            </div> --}}
         </div>
     </section>
 

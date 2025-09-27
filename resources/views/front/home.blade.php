@@ -1,6 +1,19 @@
 @extends('layouts.front')
 
 @section('css')
+<style>
+    .overview-item.utilities-image {
+        padding: 0;
+    }
+    .overview-item.utilities-image img {
+        height: 330px;
+    }
+    .utility-card img {
+        height: 330px;
+        width: 100%;
+        object-fit: cover;
+    }
+</style>
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
         {
@@ -485,36 +498,62 @@
             </div>
 
             <!-- More Utilities Grid -->
+            <div class="section-header">
+                <h2 class="section-title">Hệ Thống Tiện Ích <br><span>Toàn Năng Cho Cư Dân Toàn Cầu</span></h2>
+                <p class="section-desc">
+                    Giữa đại dương bao la và hệ sinh quyển cổ đại của Cần Giờ, Vinhomes Green Paradise được quy hoạch như một thế giới sống toàn diện – nơi mỗi khoảnh khắc đều trọn vẹn ý nghĩa. Tại đây, hệ thống tiện ích không chỉ đáp ứng nhu cầu mà còn trở thành chất liệu kiến tạo phong cách sống và linh hồn kết nối cộng đồng tinh hoa toàn cầu.
+                </p>
+            </div>
+
+            <div class="overview-grid">
+                <div class="overview-item utilities-image">
+                    <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-9.jpg') }}" alt="tien-ich-vinhomes-green-paradise-1">
+                </div>
+                <div class="overview-item utilities-image">
+                    <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-10.jpg') }}" alt="tien-ich-vinhomes-green-paradise-2">
+                </div>
+                <div class="overview-item utilities-image">
+                    <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-11.jpg') }}" alt="tien-ich-vinhomes-green-paradise-3">
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2 class="section-title">Biểu Tượng Toàn Cầu – <br><span>Kỳ Quan Tiện Ích Giữa Rừng Biển Việt Nam</span></h2>
+                <p class="section-desc">
+                    Vinhomes Green Paradise không chỉ đơn thuần là nơi an cư, mà còn là tuyệt tác sống đỉnh cao – nơi hội tụ những tiện ích tầm vóc quốc tế, kiến tạo nên chuẩn mực sống mới của thế kỷ 21 ngay giữa thiên nhiên Cần Giờ.
+                </p>
+            </div>
+
             <div class="utilities-grid">
                 <div class="utility-card">
-                    <div class="utility-card-icon">
-                        <i class="fas fa-building"></i>
+                    <h4>TÒA THÁP 108 TẦNG – HẢI ĐĂNG THẾ KỶ MỚI</h4>
+                    <p>Biểu tượng phồn vinh mới của TP.HCM, tòa tháp 108 tầng vươn cao giữa đại dương và rừng ngập mặn, hội tụ khách sạn 6 sao, TTTM xa xỉ, trung tâm hội nghị – triển lãm quốc tế và đài quan sát 360° – khẳng định vị thế Việt Nam trên bản đồ kiến trúc toàn cầu.</p>
+                    <div class="mt-10">
+                        <img src="{{ asset('assets/images/thap-108-tang-vinhomes-can-gio.webp') }}" alt="TÒA THÁP 108 TẦNG – HẢI ĐĂNG THẾ KỶ MỚI">
                     </div>
-                    <h4>Tòa Tháp 108 Tầng</h4>
-                    <p>Top 10 tòa nhà cao nhất thế giới, biểu tượng kiến trúc mới của Việt Nam</p>
                 </div>
                 <div class="utility-card">
-                    <div class="utility-card-icon">
-                        <i class="fas fa-theater-masks"></i>
+                    <h4>BLUE WAVES THEATRE – NHÀ HÁT SÓNG XANH</h4>
+                    <p>Tuyệt tác kiến trúc 7ha do Gensler thiết kế, quy mô đăng cấp Quốc tế : Nhà hát 5.000 chỗ ngồi lớn nhất Đông Nam Á, 40 phòng hội nghị, khu tiệc cưới – triển lãm, quảng trường 50.000 người và cụm ẩm thực quốc tế – trái tim văn hóa, nghệ thuật, giải trí tại Vinhomes Green Paradise.</p>
+                    <div class="mt-10">
+                        <img src="{{ asset('assets/images/vinhomes-green-paradise-tam-co-quoc-te.jpeg') }}" alt="BLUE WAVES THEATRE – NHÀ HÁT SÓNG XANH">
                     </div>
-                    <h4>Blue Wave Theatre</h4>
-                    <p>Nhà hát 5.000 chỗ, thiết kế bởi Gensler, đẳng cấp London West End</p>
                 </div>
                 <div class="utility-card">
-                    <div class="utility-card-icon">
-                        <i class="fas fa-hospital"></i>
+                    <h4>PARADISE LAGOON – VỊNH THIÊN ĐƯỜNG 443HA</h4>
+                    <p>Biển hồ nhân tạo lớn nhất thế giới, tái hiện trọn vẹn vẻ đẹp Maldives với mặt nước xanh ngọc, bờ cát trắng mịn và trải nghiệm nghỉ dưỡng bất tận ngay giữa lòng đô thị.</p>
+                    <div class="mt-10">
+                        <img src="{{ asset('assets/images/paradise-lagoon-vinhomes-green-paradise.webp') }}" alt="PARADISE LAGOON – VỊNH THIÊN ĐƯỜNG 443HA">
                     </div>
-                    <h4>Cleveland Clinic</h4>
-                    <p>Bệnh viện số 1 nước Mỹ, y tế chuẩn quốc tế ngay tại Việt Nam</p>
                 </div>
                 <div class="utility-card">
-                    <div class="utility-card-icon">
-                        <i class="fas fa-hotel"></i>
+                    <h4>LANDMARK HARBOUR – CẢNG DU THUYỀN 5 SAO QUỐC TẾ</h4>
+                    <p>Bến đỗ của những siêu du thuyền xa hoa từ khắp thế giới, kết nối trực tiếp với chuỗi nhà hàng, khách sạn và phố ẩm thực ven biển đẳng cấp quốc tế.</p>
+                    <div class="mt-10">
+                        <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-5.jpg') }}" alt="LANDMARK HARBOUR – CẢNG DU THUYỀN 5 SAO QUỐC TẾ">
                     </div>
-                    <h4>7.000 Phòng Khách Sạn</h4>
-                    <p>Four Seasons, Ritz-Carlton, Aman - tổ hợp resort lớn nhất Việt Nam</p>
                 </div>
-                <div class="utility-card">
+                {{-- <div class="utility-card">
                     <div class="utility-card-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
@@ -527,7 +566,7 @@
                     </div>
                     <h4>Winter Wonderland</h4>
                     <p>30.000m² với núi tuyết nhân tạo 60m, trượt tuyết 4 mùa</p>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>

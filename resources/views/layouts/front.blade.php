@@ -50,7 +50,7 @@
 
     <!-- Toastr CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <link rel="stylesheet" href="{{ asset_v('assets/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/styles.css') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap"
@@ -59,6 +59,9 @@
     @yield('css')
 
     <style>
+        .mt-10 {
+            margin-top: 10px;
+        }
         @media (max-width: 768px) {
             .contact-card {
                 display: block;
