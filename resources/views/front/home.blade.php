@@ -1,19 +1,53 @@
 @extends('layouts.front')
 
 @section('css')
-<style>
-    .overview-item.utilities-image {
-        padding: 0;
-    }
-    .overview-item.utilities-image img {
-        height: 330px;
-    }
-    .utility-card img {
-        height: 330px;
-        width: 100%;
-        object-fit: cover;
-    }
-</style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+
+    <style>
+        .overview-item.utilities-image {
+            padding: 0;
+        }
+
+        .overview-item.utilities-image img {
+            height: 330px;
+        }
+
+        .utility-card img {
+            height: 330px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .glide__arrows {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            pointer-events: none;
+            /* để tránh block hover slide */
+        }
+
+        .glide__arrow {
+            pointer-events: all;
+            /* bật lại sự kiện cho nút */
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .glide__arrow:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
         {
@@ -209,8 +243,7 @@
 
             <div class="location-wrapper">
                 <div class="location-map">
-                    <img src="{{ asset('assets/images/vi-tri-vinhomes-green-paradise.jpg') }}"
-                        alt="Vị trí Green Paradise">
+                    <img src="{{ asset('assets/images/vi-tri-vinhomes-green-paradise.jpg') }}" alt="Vị trí Green Paradise">
                     <div class="map-markers">
                         <div class="marker marker-main" style="top: 48%; left: 65%;">
                             <div class="marker-pulse"></div>
@@ -346,7 +379,8 @@
                         </ul>
                     </div>
                     <div class="utility-image">
-                        <img src="{{ asset('assets/images/vinhomes-green-paradise-tam-co-quoc-te.jpg') }}" alt="BIỂU TƯỢNG TẦM CỠ QUỐC TẾ">
+                        <img src="{{ asset('assets/images/vinhomes-green-paradise-tam-co-quoc-te.jpg') }}"
+                            alt="BIỂU TƯỢNG TẦM CỠ QUỐC TẾ">
                         {{-- <div class="image-badge">36 HOLES</div> --}}
                     </div>
                 </div>
@@ -371,7 +405,8 @@
                         </ul>
                     </div>
                     <div class="utility-image">
-                        <img src="{{ asset('assets/images/sieu-do-thi-esg-vinhomes-green-paradise.jpg') }}" alt="SIÊU ĐÔ THỊ ESG">
+                        <img src="{{ asset('assets/images/sieu-do-thi-esg-vinhomes-green-paradise.jpg') }}"
+                            alt="SIÊU ĐÔ THỊ ESG">
                         {{-- <div class="image-badge">5★ MARINA</div> --}}
                     </div>
                 </div>
@@ -388,19 +423,23 @@
                             và sân East (Sunrise) do Robert Trent Jones II thiết kế. Trải nghiệm golf tại đây tương
                             đương Augusta National hay Pebble Beach.</p> --}}
                         <ul>
-                            <li>Palm Jumeirah – Dubai (UAE): ~560 ha, biểu tượng du lịch – nghỉ dưỡng của Dubai, hội tụ khách sạn 5 sao, resort, khu dân cư cao cấp, bến du thuyền.</li>
-                            <li>Đảo Sentosa – Singapore: ~500 ha, trung tâm giải trí – nghỉ dưỡng số 1 Singapore, nổi bật với casino, Universal Studios, sân golf, khách sạn hạng sang.</li>
-                            <li>Vinhomes Green Paradise – Cần Giờ (Việt Nam): ~2.870 ha – quy mô gấp 5 lần Dubai & Singapore, kỳ tích kiến tạo siêu đô thị biển, đưa Việt Nam kiêu hãnh vươn tầm thế giới.</li>
+                            <li>Palm Jumeirah – Dubai (UAE): ~560 ha, biểu tượng du lịch – nghỉ dưỡng của Dubai, hội tụ
+                                khách sạn 5 sao, resort, khu dân cư cao cấp, bến du thuyền.</li>
+                            <li>Đảo Sentosa – Singapore: ~500 ha, trung tâm giải trí – nghỉ dưỡng số 1 Singapore, nổi bật
+                                với casino, Universal Studios, sân golf, khách sạn hạng sang.</li>
+                            <li>Vinhomes Green Paradise – Cần Giờ (Việt Nam): ~2.870 ha – quy mô gấp 5 lần Dubai &
+                                Singapore, kỳ tích kiến tạo siêu đô thị biển, đưa Việt Nam kiêu hãnh vươn tầm thế giới.</li>
                         </ul>
                     </div>
                     <div class="utility-image">
-                        <img src="{{ asset('assets/images/vinhomes-green-paradise-so-sanh-quoc-te.jpg') }}" alt="SO SÁNH QUỐC TẾ ">
+                        <img src="{{ asset('assets/images/vinhomes-green-paradise-so-sanh-quoc-te.jpg') }}"
+                            alt="SO SÁNH QUỐC TẾ ">
                         {{-- <div class="image-badge">36 HOLES</div> --}}
                     </div>
                 </div>
             </div>
 
-             <!-- Paradise Lagoon -->
+            <!-- Paradise Lagoon -->
             <div class="utility-highlight">
                 <div class="utility-content">
                     <div class="utility-info">
@@ -412,10 +451,12 @@
                             được Guinness công nhận.</p> --}}
                         <ul>
                             <li>Quần thể giải trí 122 ha – quy mô ngang tầm Disneyland Hong Kong.</li>
-                            <li>Winter Wonderland 30.000m² – độc nhất Đông Nam Á, dự kiến đón hàng triệu du khách mỗi năm.</li>
+                            <li>Winter Wonderland 30.000m² – độc nhất Đông Nam Á, dự kiến đón hàng triệu du khách mỗi năm.
+                            </li>
                             <li> Safari – VinWonders – Công viên nước: Chuỗi trải nghiệm giải trí đa dạng.</li>
                             <li>Khách sạn & resort 5 sao – hệ sinh thái nghỉ dưỡng đẳng cấp quốc tế.</li>
-                            <li>Sân golf chuẩn quốc tế – bến du thuyền – thể thao biển: Điểm hẹn thượng lưu và phong cách sống đỉnh cao.</li>
+                            <li>Sân golf chuẩn quốc tế – bến du thuyền – thể thao biển: Điểm hẹn thượng lưu và phong cách
+                                sống đỉnh cao.</li>
                         </ul>
                     </div>
                     <div class="utility-image">
@@ -438,12 +479,16 @@
                             đương Augusta National hay Pebble Beach.</p> --}}
                         <ul>
                             <li>Hà Nội (2023): Concert BlackPink thu hút 170.000 khách, mang về 630 tỷ đồng doanh thu.</li>
-                            <li>Singapore (2024): Taylor Swift Tour tạo cú hích kinh tế, doanh thu 422–450 triệu SGD (~300–330 triệu USD).</li>
-                            <li>Vinhomes Green Paradise – Cần Giờ: Với hạ tầng và quần thể sự kiện đẳng cấp quốc tế, dự án sở hữu tiềm năng trở thành điểm đến của những đại nhạc hội, triển lãm và sự kiện toàn cầu, thúc đẩy du lịch và dòng vốn FDI bùng nổ.</li>
+                            <li>Singapore (2024): Taylor Swift Tour tạo cú hích kinh tế, doanh thu 422–450 triệu SGD
+                                (~300–330 triệu USD).</li>
+                            <li>Vinhomes Green Paradise – Cần Giờ: Với hạ tầng và quần thể sự kiện đẳng cấp quốc tế, dự án
+                                sở hữu tiềm năng trở thành điểm đến của những đại nhạc hội, triển lãm và sự kiện toàn cầu,
+                                thúc đẩy du lịch và dòng vốn FDI bùng nổ.</li>
                         </ul>
                     </div>
                     <div class="utility-image">
-                        <img src="{{ asset('assets/images/vinhomes-green-paradise-kinh-te-su-kien.jpg') }}" alt="KINH TẾ & TÁC ĐỘNG SỰ KIỆN ">
+                        <img src="{{ asset('assets/images/vinhomes-green-paradise-kinh-te-su-kien.jpg') }}"
+                            alt="KINH TẾ & TÁC ĐỘNG SỰ KIỆN ">
                         {{-- <div class="image-badge">36 HOLES</div> --}}
                     </div>
                 </div>
@@ -460,7 +505,8 @@
                             chuẩn mực quốc tế.</p> --}}
                         <ul>
                             <li>Quỹ đất rộng lớn, giá trị còn ở giai đoạn sơ khai so với Phú Quốc hay Nha Trang.</li>
-                            <li>Đòn bẩy hạ tầng: Cầu Cần Giờ, metro tốc độ cao, cảng quốc tế… tạo lực đẩy tăng giá trị vượt trội.</li>
+                            <li>Đòn bẩy hạ tầng: Cầu Cần Giờ, metro tốc độ cao, cảng quốc tế… tạo lực đẩy tăng giá trị vượt
+                                trội.</li>
                             <li>Xu hướng BĐS sinh thái – nghỉ dưỡng gần đô thị lớn bùng nổ mạnh mẽ.</li>
                             <li>Đáp ứng nhu cầu cao cấp của cư dân TP.HCM và giới đầu tư quốc tế.</li>
                             <li>Chủ đầu tư Vinhomes – bảo chứng cho uy tín, chất lượng và tiềm năng sinh lời lâu dài.</li>
@@ -468,7 +514,8 @@
                         </ul>
                     </div>
                     <div class="utility-image">
-                        <img src="{{ asset('assets/images/tiem-nang-bat-dong-san-vinhomes-green-paradise.jpg') }}" alt="TIỀM NĂNG BẤT ĐỘNG SẢN">
+                        <img src="{{ asset('assets/images/tiem-nang-bat-dong-san-vinhomes-green-paradise.jpg') }}"
+                            alt="TIỀM NĂNG BẤT ĐỘNG SẢN">
                         {{-- <div class="image-badge">5★ MARINA</div> --}}
                     </div>
                 </div>
@@ -485,13 +532,17 @@
                             và sân East (Sunrise) do Robert Trent Jones II thiết kế. Trải nghiệm golf tại đây tương
                             đương Augusta National hay Pebble Beach.</p> --}}
                         <ul>
-                            <li>Vinhomes Green Paradise Cần Giờ định hướng trở thành biểu tượng phồn vinh mới của TP.HCM, một “Tiểu Dubai – Singapore” của Châu Á.</li>
-                            <li>Dự án kiến tạo siêu đô thị biển ESG xanh – thông minh – sinh thái chuẩn quốc tế, mở ra cơ hội lớn về đầu tư, du lịch, logistics, y tế, văn hóa và bất động sản cao cấp.</li>
-                            <li>Đồng thời, Vinhomes Green Paradise mang trong mình sứ mệnh bảo tồn thiên nhiên và phát triển bền vững, khẳng định vị thế Việt Nam trên bản đồ thế giới.</li>
+                            <li>Vinhomes Green Paradise Cần Giờ định hướng trở thành biểu tượng phồn vinh mới của TP.HCM,
+                                một “Tiểu Dubai – Singapore” của Châu Á.</li>
+                            <li>Dự án kiến tạo siêu đô thị biển ESG xanh – thông minh – sinh thái chuẩn quốc tế, mở ra cơ
+                                hội lớn về đầu tư, du lịch, logistics, y tế, văn hóa và bất động sản cao cấp.</li>
+                            <li>Đồng thời, Vinhomes Green Paradise mang trong mình sứ mệnh bảo tồn thiên nhiên và phát triển
+                                bền vững, khẳng định vị thế Việt Nam trên bản đồ thế giới.</li>
                         </ul>
                     </div>
                     <div class="utility-image">
-                        <img src="{{ asset('assets/images/tam-nhin-du-an-vinhomes-green-paradise-can-gio.jpg') }}" alt="SO SÁNH QUỐC TẾ ">
+                        <img src="{{ asset('assets/images/tam-nhin-du-an-vinhomes-green-paradise-can-gio.jpg') }}"
+                            alt="SO SÁNH QUỐC TẾ ">
                         {{-- <div class="image-badge">36 HOLES</div> --}}
                     </div>
                 </div>
@@ -501,56 +552,75 @@
             <div class="section-header">
                 <h2 class="section-title">Hệ Thống Tiện Ích <br><span>Toàn Năng Cho Cư Dân Toàn Cầu</span></h2>
                 <p class="section-desc">
-                    Giữa đại dương bao la và hệ sinh quyển cổ đại của Cần Giờ, Vinhomes Green Paradise được quy hoạch như một thế giới sống toàn diện – nơi mỗi khoảnh khắc đều trọn vẹn ý nghĩa. Tại đây, hệ thống tiện ích không chỉ đáp ứng nhu cầu mà còn trở thành chất liệu kiến tạo phong cách sống và linh hồn kết nối cộng đồng tinh hoa toàn cầu.
+                    Giữa đại dương bao la và hệ sinh quyển cổ đại của Cần Giờ, Vinhomes Green Paradise được quy hoạch như
+                    một thế giới sống toàn diện – nơi mỗi khoảnh khắc đều trọn vẹn ý nghĩa. Tại đây, hệ thống tiện ích không
+                    chỉ đáp ứng nhu cầu mà còn trở thành chất liệu kiến tạo phong cách sống và linh hồn kết nối cộng đồng
+                    tinh hoa toàn cầu.
                 </p>
             </div>
 
             <div class="overview-grid">
                 <div class="overview-item utilities-image">
-                    <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-9.jpg') }}" alt="tien-ich-vinhomes-green-paradise-1">
+                    <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-9.jpg') }}"
+                        alt="tien-ich-vinhomes-green-paradise-1">
                 </div>
                 <div class="overview-item utilities-image">
-                    <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-10.jpg') }}" alt="tien-ich-vinhomes-green-paradise-2">
+                    <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-10.jpg') }}"
+                        alt="tien-ich-vinhomes-green-paradise-2">
                 </div>
                 <div class="overview-item utilities-image">
-                    <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-11.jpg') }}" alt="tien-ich-vinhomes-green-paradise-3">
+                    <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-11.jpg') }}"
+                        alt="tien-ich-vinhomes-green-paradise-3">
                 </div>
             </div>
 
             <div class="section-header">
-                <h2 class="section-title">Biểu Tượng Toàn Cầu – <br><span>Kỳ Quan Tiện Ích Giữa Rừng Biển Việt Nam</span></h2>
+                <h2 class="section-title">Biểu Tượng Toàn Cầu – <br><span>Kỳ Quan Tiện Ích Giữa Rừng Biển Việt Nam</span>
+                </h2>
                 <p class="section-desc">
-                    Vinhomes Green Paradise không chỉ đơn thuần là nơi an cư, mà còn là tuyệt tác sống đỉnh cao – nơi hội tụ những tiện ích tầm vóc quốc tế, kiến tạo nên chuẩn mực sống mới của thế kỷ 21 ngay giữa thiên nhiên Cần Giờ.
+                    Vinhomes Green Paradise không chỉ đơn thuần là nơi an cư, mà còn là tuyệt tác sống đỉnh cao – nơi hội tụ
+                    những tiện ích tầm vóc quốc tế, kiến tạo nên chuẩn mực sống mới của thế kỷ 21 ngay giữa thiên nhiên Cần
+                    Giờ.
                 </p>
             </div>
 
             <div class="utilities-grid">
                 <div class="utility-card">
                     <h4>TÒA THÁP 108 TẦNG – HẢI ĐĂNG THẾ KỶ MỚI</h4>
-                    <p>Biểu tượng phồn vinh mới của TP.HCM, tòa tháp 108 tầng vươn cao giữa đại dương và rừng ngập mặn, hội tụ khách sạn 6 sao, TTTM xa xỉ, trung tâm hội nghị – triển lãm quốc tế và đài quan sát 360° – khẳng định vị thế Việt Nam trên bản đồ kiến trúc toàn cầu.</p>
+                    <p>Biểu tượng phồn vinh mới của TP.HCM, tòa tháp 108 tầng vươn cao giữa đại dương và rừng ngập mặn, hội
+                        tụ khách sạn 6 sao, TTTM xa xỉ, trung tâm hội nghị – triển lãm quốc tế và đài quan sát 360° – khẳng
+                        định vị thế Việt Nam trên bản đồ kiến trúc toàn cầu.</p>
                     <div class="mt-10">
-                        <img src="{{ asset('assets/images/thap-108-tang-vinhomes-can-gio.webp') }}" alt="TÒA THÁP 108 TẦNG – HẢI ĐĂNG THẾ KỶ MỚI">
+                        <img src="{{ asset('assets/images/thap-108-tang-vinhomes-can-gio.webp') }}"
+                            alt="TÒA THÁP 108 TẦNG – HẢI ĐĂNG THẾ KỶ MỚI">
                     </div>
                 </div>
                 <div class="utility-card">
                     <h4>BLUE WAVES THEATRE – NHÀ HÁT SÓNG XANH</h4>
-                    <p>Tuyệt tác kiến trúc 7ha do Gensler thiết kế, quy mô đăng cấp Quốc tế : Nhà hát 5.000 chỗ ngồi lớn nhất Đông Nam Á, 40 phòng hội nghị, khu tiệc cưới – triển lãm, quảng trường 50.000 người và cụm ẩm thực quốc tế – trái tim văn hóa, nghệ thuật, giải trí tại Vinhomes Green Paradise.</p>
+                    <p>Tuyệt tác kiến trúc 7ha do Gensler thiết kế, quy mô đăng cấp Quốc tế : Nhà hát 5.000 chỗ ngồi lớn
+                        nhất Đông Nam Á, 40 phòng hội nghị, khu tiệc cưới – triển lãm, quảng trường 50.000 người và cụm ẩm
+                        thực quốc tế – trái tim văn hóa, nghệ thuật, giải trí tại Vinhomes Green Paradise.</p>
                     <div class="mt-10">
-                        <img src="{{ asset('assets/images/vinhomes-green-paradise-tam-co-quoc-te.jpeg') }}" alt="BLUE WAVES THEATRE – NHÀ HÁT SÓNG XANH">
+                        <img src="{{ asset('assets/images/vinhomes-green-paradise-tam-co-quoc-te.jpeg') }}"
+                            alt="BLUE WAVES THEATRE – NHÀ HÁT SÓNG XANH">
                     </div>
                 </div>
                 <div class="utility-card">
                     <h4>PARADISE LAGOON – VỊNH THIÊN ĐƯỜNG 443HA</h4>
-                    <p>Biển hồ nhân tạo lớn nhất thế giới, tái hiện trọn vẹn vẻ đẹp Maldives với mặt nước xanh ngọc, bờ cát trắng mịn và trải nghiệm nghỉ dưỡng bất tận ngay giữa lòng đô thị.</p>
+                    <p>Biển hồ nhân tạo lớn nhất thế giới, tái hiện trọn vẹn vẻ đẹp Maldives với mặt nước xanh ngọc, bờ cát
+                        trắng mịn và trải nghiệm nghỉ dưỡng bất tận ngay giữa lòng đô thị.</p>
                     <div class="mt-10">
-                        <img src="{{ asset('assets/images/paradise-lagoon-vinhomes-green-paradise.webp') }}" alt="PARADISE LAGOON – VỊNH THIÊN ĐƯỜNG 443HA">
+                        <img src="{{ asset('assets/images/paradise-lagoon-vinhomes-green-paradise.webp') }}"
+                            alt="PARADISE LAGOON – VỊNH THIÊN ĐƯỜNG 443HA">
                     </div>
                 </div>
                 <div class="utility-card">
                     <h4>LANDMARK HARBOUR – CẢNG DU THUYỀN 5 SAO QUỐC TẾ</h4>
-                    <p>Bến đỗ của những siêu du thuyền xa hoa từ khắp thế giới, kết nối trực tiếp với chuỗi nhà hàng, khách sạn và phố ẩm thực ven biển đẳng cấp quốc tế.</p>
+                    <p>Bến đỗ của những siêu du thuyền xa hoa từ khắp thế giới, kết nối trực tiếp với chuỗi nhà hàng, khách
+                        sạn và phố ẩm thực ven biển đẳng cấp quốc tế.</p>
                     <div class="mt-10">
-                        <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-5.jpg') }}" alt="LANDMARK HARBOUR – CẢNG DU THUYỀN 5 SAO QUỐC TẾ">
+                        <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-5.jpg') }}"
+                            alt="LANDMARK HARBOUR – CẢNG DU THUYỀN 5 SAO QUỐC TẾ">
                     </div>
                 </div>
                 {{-- <div class="utility-card">
@@ -592,8 +662,10 @@
                         <p>Điểm khởi đầu của hành trình sống xanh, nơi nghỉ dưỡng và giải trí giao hòa cùng thiên nhiên.</p>
                         <ul>
                             <li><strong>Quy mô:</strong> 953 ha</li>
-                            <li><strong>Chức năng:</strong> Cửa ngõ của đại đô thị, khu ở <strong>sinh thái & du lịch</strong>.</li>
-                            <li><strong>Tiện ích nổi bật:</strong> Hội nghị, sân golf, biệt thự nghỉ dưỡng, khách sạn mini.</li>
+                            <li><strong>Chức năng:</strong> Cửa ngõ của đại đô thị, khu ở <strong>sinh thái & du
+                                    lịch</strong>.</li>
+                            <li><strong>Tiện ích nổi bật:</strong> Hội nghị, sân golf, biệt thự nghỉ dưỡng, khách sạn mini.
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -607,11 +679,13 @@
                     </div>
                     <div class="subdivision-info">
                         <h4>The Green Bay - Vịnh Ngọc</h4>
-                        <p><strong>Trái tim sôi động của đại đô thị</strong>, nơi hội tụ thương mại, y tế, thể thao và nghỉ dưỡng cao cấp.</p>
+                        <p><strong>Trái tim sôi động của đại đô thị</strong>, nơi hội tụ thương mại, y tế, thể thao và nghỉ
+                            dưỡng cao cấp.</p>
                         <ul>
                             <li><strong>Quy mô:</strong> 660 ha</li>
                             <li><strong>Chức năng:</strong> Trung tâm thương mại – văn hóa – giải trí – y tế quốc tế.</li>
-                            <li><strong>Tiện ích nổi bật:</strong> Sân vận động hiện đại, trung tâm thương mại, bệnh viện quốc tế, khu du lịch & nghỉ dưỡng.</li>
+                            <li><strong>Tiện ích nổi bật:</strong> Sân vận động hiện đại, trung tâm thương mại, bệnh viện
+                                quốc tế, khu du lịch & nghỉ dưỡng.</li>
                         </ul>
                     </div>
                 </div>
@@ -625,32 +699,97 @@
                     </div>
                     <div class="subdivision-info">
                         <h4>The Paradise - Mũi Danh Vọng</h4>
-                        <p><strong>Biểu tượng phồn vinh của đại đô thị</strong>, nơi định hình đường chân trời mới với những công trình mang tầm vóc toàn cầu.</p>
+                        <p><strong>Biểu tượng phồn vinh của đại đô thị</strong>, nơi định hình đường chân trời mới với những
+                            công trình mang tầm vóc toàn cầu.</p>
                         <ul>
                             <li><strong>Quy mô:</strong> 318 ha</li>
                             <li><strong>Chức năng:</strong> Trung tâm tài chính – thương mại – dịch vụ & bến cảng.</li>
-                            <li><strong>Tiện ích nổi bật:</strong> Tòa tháp 108 tầng, bến tàu quốc tế, cao ốc văn phòng, trung tâm thương mại biểu tượng.</li>
+                            <li><strong>Tiện ích nổi bật:</strong> Tòa tháp 108 tầng, bến tàu quốc tế, cao ốc văn phòng,
+                                trung tâm thương mại biểu tượng.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="subdivision-card">
                     <div class="subdivision-image">
-                        <img src="{{ asset('assets/images/the-grand-island-dao-mat-troi.jpg') }}"
-                            alt="The Grand Island">
+                        <img src="{{ asset('assets/images/the-grand-island-dao-mat-troi.jpg') }}" alt="The Grand Island">
                         <div class="subdivision-overlay">
                             <h3>Phân khu D</h3>
                         </div>
                     </div>
                     <div class="subdivision-info">
                         <h4>The Grand Island - Đảo Mặt Trời</h4>
-                        <p><strong>Thiên đường nghỉ dưỡng quy mô lớn</strong>, nơi hội tụ quảng trường biển và không gian sinh thái độc bản giữa lòng đô thị biển.</p>
+                        <p><strong>Thiên đường nghỉ dưỡng quy mô lớn</strong>, nơi hội tụ quảng trường biển và không gian
+                            sinh thái độc bản giữa lòng đô thị biển.</p>
                         <ul>
                             <li><strong>Quy mô:</strong> 480 ha</li>
                             <li><strong>Chức năng:</strong> Du lịch – nghỉ dưỡng đẳng cấp quốc tế.</li>
-                            <li><strong>Tiện ích nổi bật:</strong> Quảng trường biển, khu thấp tầng sinh thái, tổ hợp nghỉ dưỡng & giải trí đa trải nghiệm.</li>
+                            <li><strong>Tiện ích nổi bật:</strong> Quảng trường biển, khu thấp tầng sinh thái, tổ hợp nghỉ
+                                dưỡng & giải trí đa trải nghiệm.</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- phap ly Section -->
+    <section id="overview" class="overview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pháp lý </span>
+                <h2 class="section-title">Pháp Lý Dự Án <br><span>Vinhomes Green Paradise</span></h2>
+            </div>
+
+            {{-- <div class="overview-stats" style="display:block; font-size: 18px;">
+                <p style="margin-bottom: 20px;">
+                    Dự án Vinhomes Green Paradise Cần Giờ đã được UBND TP.HCM phê duyệt Quy hoạch chi tiết 1/500 theo Quyết
+                    định số 340/QĐ-UBND ngày 24/01/2025. Đây là nền tảng pháp lý quan trọng, khẳng định tính minh bạch và
+                    đảm bảo khả năng triển khai bền vững của dự án.</p>
+
+                <label>Thông tin quy hoạch 1/500</label>
+                <ul>
+                    <li>Quy mô: ~2.870 ha, gồm 4 phân khu A, B, C, D-E
+
+                    </li>
+                    <li>Vị trí: Xã Long Hòa & Thị trấn Cần Thạnh, huyện Cần Giờ, TP.HCM
+                    </li>
+                </ul>
+                <p style="margin-bottom: 20px;">Với <strong>hành lang pháp lý đầy đủ và minh bạch</strong>, Vinhomes Green
+                    Paradise khẳng định vị thế là <strong>điểm đến an cư – đầu tư tầm cỡ quốc tế</strong> ngay giữa thiên
+                    nhiên Cần Giờ.</p>
+
+            </div> --}}
+
+            <div class="utility-highlight reverse">
+                <div class="utility-content">
+                    <div class="utility-info">
+                        <p>Dự án <strong>Vinhomes Green Paradise Cần Giờ</strong> đã được <strong>UBND TP.HCM phê duyệt Quy
+                                hoạch chi tiết 1/500</strong> theo <strong>Quyết định số 340/QĐ-UBND ngày
+                                24/01/2025</strong>. Đây là nền tảng pháp lý quan trọng, khẳng định tính minh bạch và đảm
+                            bảo khả năng triển khai bền vững của dự án.</p>
+
+                        <label><strong>Thông tin quy hoạch 1/500</strong></label>
+                        <ul>
+                            <li><strong>Quy mô:</strong> ~2.870 ha, gồm 4 phân khu A, B, C, D-E</li>
+                            <li><strong>Vị trí:</strong> Xã Long Hòa & Thị trấn Cần Thạnh, huyện Cần Giờ, TP.HCM</li>
+                        </ul>
+
+
+                        <label class="mt-30 d-block"><strong>Ý nghĩa pháp lý</strong></label>
+                        <ul>
+                            <li>Xác định rõ ràng chức năng từng phân khu, hệ thống hạ tầng, cảnh quan biển và mặt nước.</li>
+                            <li>Là căn cứ để cấp phép xây dựng, thẩm định tín dụng và triển khai đồng bộ hạ tầng.</li>
+                            <li>Đảm bảo an toàn pháp lý tuyệt đối, mang lại sự an tâm cho khách hàng và nhà đầu tư.</li>
+                        </ul>
+
+                        <p class="mt-20">Với <strong>hành lang pháp lý đầy đủ và minh bạch</strong>, Vinhomes Green
+                            Paradise khẳng định vị thế là <strong>điểm đến an cư – đầu tư tầm cỡ quốc tế</strong> ngay giữa
+                            thiên
+                            nhiên Cần Giờ.</p>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -727,50 +866,60 @@
                 <h2 class="section-title">Khám Phá<br><span>Green Paradise</span></h2>
             </div>
 
-            <div class="gallery-tabs">
+            {{-- <div class="gallery-tabs">
                 <button class="tab-btn active" data-tab="all">Tất Cả</button>
                 <button class="tab-btn" data-tab="overview">Tổng Quan</button>
                 <button class="tab-btn" data-tab="utilities">Tiện Ích</button>
                 <button class="tab-btn" data-tab="interior">Nội Thất</button>
                 <button class="tab-btn" data-tab="construction">Tiến Độ</button>
-            </div>
+            </div> --}}
 
-            <div class="gallery-container">
-                <div class="gallery-item" data-category="overview">
-                    <img src="{{ asset('assets/images/photo-1570168007204-dfb528c6958f.jpeg') }}" alt="Toàn cảnh dự án">
-                    <div class="gallery-info">
-                        <h4>Toàn Cảnh Dự Án</h4>
-                    </div>
+            <div class="glide gallerycontainer">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide gallery-item" data-category="overview">
+                            <img src="assets/images/photo-1570168007204-dfb528c6958f.jpeg" alt="Toàn cảnh dự án">
+                            <div class="gallery-info">
+                                <h4>Toàn Cảnh Dự Án</h4>
+                            </div>
+                        </li>
+                        <li class="glide__slide gallery-item" data-category="utilities">
+                            <img src="assets/images/photo-1571896349842-33c89424de2d.jpeg" alt="Resort 5 sao">
+                            <div class="gallery-info">
+                                <h4>Resort 5 Sao</h4>
+                            </div>
+                        </li>
+                        <li class="glide__slide gallery-item" data-category="interior">
+                            <img src="assets/images/photo-1600607687939-ce8a6c25118c.jpeg" alt="Nội thất căn hộ">
+                            <div class="gallery-info">
+                                <h4>Nội Thất Cao Cấp</h4>
+                            </div>
+                        </li>
+                        <li class="glide__slide gallery-item" data-category="overview">
+                            <img src="assets/images/photo-1506929562872-bb421503ef21.jpeg" alt="Bãi biển">
+                            <div class="gallery-info">
+                                <h4>Bãi Biển Riêng</h4>
+                            </div>
+                        </li>
+                        <li class="glide__slide gallery-item" data-category="utilities">
+                            <img src="assets/images/photo-1587381420270-3e1a5b9e6904.jpeg" alt="Sân golf">
+                            <div class="gallery-info">
+                                <h4>Sân Golf Championship</h4>
+                            </div>
+                        </li>
+                        <li class="glide__slide gallery-item" data-category="construction">
+                            <img src="assets/images/photo-1541888946425-d81bb19240f5.jpeg" alt="Tiến độ xây dựng">
+                            <div class="gallery-info">
+                                <h4>Tiến Độ Q4/2025</h4>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="gallery-item" data-category="utilities">
-                    <img src="{{ asset('assets/images/photo-1571896349842-33c89424de2d.jpeg') }}" alt="Resort 5 sao">
-                    <div class="gallery-info">
-                        <h4>Resort 5 Sao</h4>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="interior">
-                    <img src="{{ asset('assets/images/photo-1600607687939-ce8a6c25118c.jpeg') }}" alt="Nội thất căn hộ">
-                    <div class="gallery-info">
-                        <h4>Nội Thất Cao Cấp</h4>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="overview">
-                    <img src="{{ asset('assets/images/photo-1506929562872-bb421503ef21.jpeg') }}" alt="Bãi biển">
-                    <div class="gallery-info">
-                        <h4>Bãi Biển Riêng</h4>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="utilities">
-                    <img src="{{ asset('assets/images/photo-1587381420270-3e1a5b9e6904.jpeg') }}" alt="Sân golf">
-                    <div class="gallery-info">
-                        <h4>Sân Golf Championship</h4>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="construction">
-                    <img src="{{ asset('assets/images/photo-1541888946425-d81bb19240f5.jpeg') }}" alt="Tiến độ xây dựng">
-                    <div class="gallery-info">
-                        <h4>Tiến Độ Q4/2025</h4>
-                    </div>
+
+                <!-- Nút điều khiển -->
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
                 </div>
             </div>
         </div>
@@ -924,8 +1073,29 @@
 @endsection
 
 @section('js')
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            new Glide('.glide', {
+                type: 'carousel',
+                perView: 3, // số item hiển thị
+                gap: 20, // khoảng cách giữa các item
+                autoplay: 3000, // tự động chạy (ms), bỏ nếu không muốn
+                hoverpause: true,
+                breakpoints: {
+                    1024: {
+                        perView: 2
+                    },
+                    768: {
+                        perView: 1
+                    }
+                }
+            }).mount();
+        });
+    </script>
     <script>
         $(function() {
+
             $('.contact-form').on('submit', function(e) {
                 e.preventDefault();
 
