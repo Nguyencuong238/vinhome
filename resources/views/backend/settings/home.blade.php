@@ -45,9 +45,25 @@
                     </div> --}}
 
                     <div class="form-group">
-                        <label>{{ __('Contact Email') }}:</label>
+                        <label>{{ __('Phone') }}:</label>
+                        <input type="text" name="phone" value="{{ old('phone', settings('phone')) }}" class="form-control @error('phone')is-invalid @enderror" placeholder="">
+                        @error('phone')
+                            <span class="invalid-feedback">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ __('Email') }}:</label>
                         <input type="text" name="contact_email" value="{{ old('contact_email', settings('contact_email')) }}" class="form-control @error('contact_email')is-invalid @enderror" placeholder="abc@gmail.com">
                         @error('contact_email')
+                            <span class="invalid-feedback">{{ $message }}</span>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ __('Tiktok') }}:</label>
+                        <input type="text" name="tiktok" value="{{ old('tiktok', settings('tiktok')) }}" class="form-control @error('tiktok')is-invalid @enderror" placeholder="">
+                        @error('tiktok')
                             <span class="invalid-feedback">{{ $message }}</span>
                         @enderror
                     </div>
@@ -81,14 +97,6 @@
                         <label>{{ __('Youtube') }}:</label>
                         <input type="text" name="youtube" value="{{ old('youtube', settings('youtube')) }}" class="form-control @error('youtube')is-invalid @enderror" placeholder="">
                         @error('youtube')
-                            <span class="invalid-feedback">{{ $message }}</span>
-                        @enderror
-                    </div>
-
-                    <div class="form-group">
-                        <label>{{ __('Phone') }}:</label>
-                        <input type="text" name="phone" value="{{ old('phone', settings('phone')) }}" class="form-control @error('phone')is-invalid @enderror" placeholder="">
-                        @error('phone')
                             <span class="invalid-feedback">{{ $message }}</span>
                         @enderror
                     </div>

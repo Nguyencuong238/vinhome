@@ -125,7 +125,7 @@
 							<a href="{{ route('newsletters.index') }}" class="nav-link">
 								<i class="icon-shield2"></i>
 								<span>
-									{{ __('Contacts') }}
+									Liên hệ
 								</span>
 							</a>
 						</li>
@@ -213,13 +213,13 @@
 							<a href="{{ route('setting.home') }}" class="nav-link">
 								<i class="icon-cog"></i>
 								<span>
-									{{ __('Settings') }}
+									Cài đặt
 								</span>
 							</a>
 						</li>
 						@endcan
 
-						@canany('users.view', 'users.create', 'users.edit', 'users.delete')
+						{{-- @canany('users.view', 'users.create', 'users.edit', 'users.delete')
 						<li class="nav-item">
 							<a href="{{ route('users.index') }}" class="nav-link">
 								<i class="icon-users4"></i>
@@ -228,9 +228,9 @@
 								</span>
 							</a>
 						</li>
-						@endcan
+						@endcan --}}
 
-						@canany('roles.view', 'roles.create', 'roles.edit', 'roles.delete')
+						{{-- @canany('roles.view', 'roles.create', 'roles.edit', 'roles.delete')
 						<li class="nav-item">
 							<a href="{{ route('roles.index') }}" class="nav-link">
 								<i class="icon-shield2"></i>
@@ -239,7 +239,7 @@
 								</span>
 							</a>
 						</li>
-						@endcan
+						@endcan --}}
 					</ul>
 				</div>
 

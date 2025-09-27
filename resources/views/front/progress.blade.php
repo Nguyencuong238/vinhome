@@ -2,7 +2,8 @@
 
 @section('meta')
     <title>Tiến Độ Xây Dựng Vinhomes Green Paradise 2025 | Cập Nhật Real-time</title>
-<meta name="description" content="Cập nhật tiến độ xây dựng Vinhomes Green Paradise thời gian thực. Hoàn thành 42%, dự kiến bàn giao The Haven Bay Q4/2027. Xem camera trực tiếp">
+    <meta name="description"
+        content="Cập nhật tiến độ xây dựng Vinhomes Green Paradise thời gian thực. Hoàn thành 42%, dự kiến bàn giao The Haven Bay Q4/2027. Xem camera trực tiếp">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -848,7 +849,7 @@
         }
 
         .btn-subscribe {
-            background: #f8f9fa;
+            background: #eee;
             color: #333;
         }
 
@@ -929,6 +930,24 @@
 
             .webcam-grid {
                 grid-template-columns: 1fr;
+            }
+
+            @media (max-width: 480px) {
+                .progress-stats {
+                    grid-template-columns: 1fr;
+                }
+
+                .section-padding {
+                    padding: 40px 0;
+                }
+
+                .report-actions {
+                    width: 100%;
+                    flex-wrap: wrap;
+                }
+                .btn-download, .btn-subscribe {
+                    width: 100%;
+                }
             }
         }
     </style>
@@ -1656,35 +1675,7 @@
 
 
         $(function() {
-            $('.contact-form-main .btn-submit-main').on('click', function(e) {
-                $(this).find('button').prop('disabled', true);
-
-                var data = {
-                    name: $('input[name="name"]').val(),
-                    phone: $('input[name="phone"]').val(),
-                    email: $('input[name="email"]').val(),
-                    product: $('select[name="product"]').val(),
-                    message: $('textarea[name="message"]').val()
-                };
-
-                $.ajax({
-                    type: 'post',
-                    url: "{{ route('newsletters') }}",
-                    data: data,
-                }).then(function(res) {
-
-                    if (res.success) {
-                        toastr.success(
-                            'Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ với bạn sớm nhất.');
-                        $('.contact-form-main')[0].reset();
-                    } else {
-                        toastr.error(res.msg);
-                    }
-
-
-                });
-                $(this).find('button').prop('disabled', false);
-            });
+            
         });
     </script>
 @endsection

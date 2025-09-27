@@ -1270,35 +1270,7 @@
 @section('js')
     <script>
         $(function() {
-            $('.contact-form-main .btn-submit-main').on('click', function(e) {
-                $(this).find('button').prop('disabled', true);
-
-                var data = {
-                    name: $('input[name="name"]').val(),
-                    phone: $('input[name="phone"]').val(),
-                    email: $('input[name="email"]').val(),
-                    product: $('select[name="product"]').val(),
-                    message: $('textarea[name="message"]').val()
-                };
-
-                $.ajax({
-                    type: 'post',
-                    url: "{{ route('newsletters') }}",
-                    data: data,
-                }).then(function(res) {
-
-                    if (res.success) {
-                        toastr.success(
-                            'Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ với bạn sớm nhất.');
-                        $('.contact-form-main')[0].reset();
-                    } else {
-                        toastr.error(res.msg);
-                    }
-
-
-                });
-                $(this).find('button').prop('disabled', false);
-            });
+            
         });
     </script>
 @endsection

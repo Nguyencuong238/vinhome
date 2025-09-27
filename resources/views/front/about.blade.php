@@ -485,6 +485,18 @@
         @media screen and (max-width: 767px) {}
 
         @media screen and (max-width: 575px) {}
+
+        @media screen and (max-width: 480px) {
+            .check-list li {
+                display: block;
+            }
+
+            .section-padding {
+                padding: 40px 0;
+            }
+            .esg-grid {
+                grid-template-columns: 1fr;}
+        }
     </style>
     <!-- Schema for About Page -->
     <script type="application/ld+json">
@@ -809,7 +821,5 @@
 @endsection
 
 @section('js')
-    <script>
-        
-    </script>
+    <script></script>
 @endsection

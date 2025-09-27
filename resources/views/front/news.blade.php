@@ -759,8 +759,8 @@
                     <h3>Đăng Ký Nhận Bản Tin</h3>
                     <p>Cập nhật tin tức mới nhất về dự án và nhận ưu đãi độc quyền dành riêng cho thành viên</p>
                 </div>
-                <form class="newsletter-inline">
-                    <input type="email" placeholder="Nhập email của bạn" required>
+                <form class="newsletter-inline" onsubmit="registerNewsletter(this, event)">
+                    <input type="email" name="email" placeholder="Nhập email của bạn" required>
                     <button type="submit">
                         Đăng Ký Ngay
                         <i class="fas fa-arrow-right"></i>

@@ -756,7 +756,7 @@
                             <div class="news-meta">
                                 <span><i class="fas fa-calendar"></i>
                                     {{ $featuredPost->created_at->format('d/m/Y') }}</span>
-                                <span><i class="fas fa-eye"></i> {{ $featuredPost->views }} lượt xem</span>
+                                <span><i class="fas fa-eye"></i> {{ $featuredPost->view }} lượt xem</span>
                             </div>
                             <h3>{{ $featuredPost->title }}</h3>
                             <p>{{ $featuredPost->excerpt }}</p>
@@ -803,9 +803,7 @@
             <div class="contact-wrapper">
                 <div class="contact-form-wrapper">
                     <h3>Đăng Ký Nhận Bảng Giá & Ưu Đãi</h3>
-                    <form class="contact-form" method="post" action="route('newsletters')">
-                        @csrf
-
+                    <form class="contact-form" method="post">
                         <div class="form-row">
                             <div class="form-group">
                                 <input type="text" placeholder="Họ và tên *" required name="name">
@@ -836,7 +834,7 @@
                             <textarea placeholder="Lời nhắn" rows="4" name="message"></textarea>
                             <i class="fas fa-comment"></i>
                         </div>
-                        <button type="button" class="btn btn-submit">
+                        <button type="submit" class="btn btn-submit">
                             Gửi Đăng Ký
                             <i class="fas fa-paper-plane"></i>
                         </button>
@@ -856,7 +854,7 @@
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <h4>Hotline 24/7</h4>
-                        <p class="contact-phone">0963 72 85 86</p>
+                        <p class="contact-phone">{{ settings('phone') }}</p>
                         <p>Tư vấn miễn phí</p>
                     </div>
                     <div class="contact-card">
@@ -889,15 +887,17 @@
 @section('js')
     <script>
         $(function() {
-            $('.contact-form .btn-submit').on('click', function(e) {
+            $('.contact-form').on('submit', function(e) {
+                e.preventDefault();
+
                 $(this).find('button').prop('disabled', true);
 
                 var data = {
-                    name: $('input[name="name"]').val(),
-                    phone: $('input[name="phone"]').val(),
-                    email: $('input[name="email"]').val(),
-                    product: $('select[name="product"]').val(),
-                    message: $('textarea[name="message"]').val()
+                    name: $(this).find('input[name="name"]').val(),
+                    phone: $(this).find('input[name="phone"]').val(),
+                    email: $(this).find('input[name="email"]').val(),
+                    product: $(this).find('select[name="product"]').val(),
+                    message: $(this).find('textarea[name="message"]').val()
                 };
 
                 $.ajax({

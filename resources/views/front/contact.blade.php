@@ -1,26 +1,26 @@
 @extends('layouts.front')
 
 @section('meta')
-    <title>Liên Hệ Tư Vấn Vinhomes Green Paradise | Hotline: 0963 72 85 86</title>
+    <title>Liên Hệ Tư Vấn Vinhomes Green Paradise | Hotline: {{ settings('phone') }}</title>
     <meta name="description"
-        content="Liên hệ tư vấn dự án Vinhomes Green Paradise Cần Giờ. Hotline 24/7: 0963 72 85 86. Nhận bảng giá, ưu đãi chiết khấu 18%, hỗ trợ vay 0% lãi suất">
+        content="Liên hệ tư vấn dự án Vinhomes Green Paradise Cần Giờ. Hotline 24/7: {{ settings('phone') }}. Nhận bảng giá, ưu đãi chiết khấu 18%, hỗ trợ vay 0% lãi suất">
 
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="Liên Hệ Tư Vấn Vinhomes Green Paradise | Hotline: 0963 72 85 86">
+    <meta property="og:title" content="Liên Hệ Tư Vấn Vinhomes Green Paradise | Hotline: {{ settings('phone') }}">
     <meta property="og:description"
-        content="Liên hệ tư vấn dự án Vinhomes Green Paradise Cần Giờ. Hotline 24/7: 0963 72 85 86. Nhận bảng giá, ưu đãi chiết khấu 18%, hỗ trợ vay 0% lãi suất">
+        content="Liên hệ tư vấn dự án Vinhomes Green Paradise Cần Giờ. Hotline 24/7: {{ settings('phone') }}. Nhận bảng giá, ưu đãi chiết khấu 18%, hỗ trợ vay 0% lãi suất">
     <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
     <meta property="og:locale" content="vi_VN">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ url()->current() }}">
-    <meta name="twitter:title" content="Liên Hệ Tư Vấn Vinhomes Green Paradise | Hotline: 0963 72 85 86">
+    <meta name="twitter:title" content="Liên Hệ Tư Vấn Vinhomes Green Paradise | Hotline: {{ settings('phone') }}">
     <meta name="twitter:description"
-        content="Liên hệ tư vấn dự án Vinhomes Green Paradise Cần Giờ. Hotline 24/7: 0963 72 85 86. Nhận bảng giá, ưu đãi chiết khấu 18%, hỗ trợ vay 0% lãi suất">
+        content="Liên hệ tư vấn dự án Vinhomes Green Paradise Cần Giờ. Hotline 24/7: {{ settings('phone') }}. Nhận bảng giá, ưu đãi chiết khấu 18%, hỗ trợ vay 0% lãi suất">
     <meta name="twitter:image" content="{{ asset('assets/images/logo.png') }}">
 @endsection
 
@@ -577,7 +577,7 @@
                     <h2>Đăng Ký Nhận Thông Tin</h2>
                     <p class="form-subtitle">Để lại thông tin để nhận tư vấn từ đội ngũ chuyên gia của chúng tôi</p>
 
-                    <form class="contact-form-main" action="{{route('newsletters')}}">
+                    <form class="contact-form-main">
                         <div class="form-group">
                             <label>Họ và tên <span class="required">*</span></label>
                             <div class="position-relative">
@@ -647,7 +647,7 @@
                             <label for="agree">Tôi đồng ý nhận thông tin từ Vinhomes Green Paradise</label>
                         </div>
 
-                        <button type="button" class="btn btn-submit-main">
+                        <button type="submit" class="btn btn-submit-main">
                             Gửi Yêu Cầu
                             <i class="fas fa-paper-plane"></i>
                         </button>
@@ -702,7 +702,7 @@
                             <h4>Mr. Nguyễn Văn A</h4>
                             <p>Giám đốc Kinh doanh</p>
                             <a href="tel:{{ str_replace(' ', '', settings('phone')) }}" class="phone-direct">
-                                <i class="fas fa-phone"></i> 0963 72 85 86
+                                <i class="fas fa-phone"></i> {{ settings('phone') }}
                             </a>
                         </div>
                     </div>
@@ -806,15 +806,17 @@
         });
 
         $(function() {
-            $('.contact-form-main .btn-submit-main').on('click', function(e) {
+            $('.contact-form-main').on('submit', function(e) {
+                e.preventDefault();
+
                 $(this).find('button').prop('disabled', true);
                 
                 var data = {
-                        name: $('input[name="name"]').val(),
-                        phone: $('input[name="phone"]').val(),
-                        email: $('input[name="email"]').val(),
-                        product: $('select[name="product"]').val(),
-                        message: $('textarea[name="message"]').val()
+                        name: $(this).find('input[name="name"]').val(),
+                        phone: $(this).find('input[name="phone"]').val(),
+                        email: $(this).find('input[name="email"]').val(),
+                        product: $(this).find('select[name="product"]').val(),
+                        message: $(this).find('textarea[name="message"]').val()
                     };
                     
                 $.ajax({

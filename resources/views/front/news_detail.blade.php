@@ -91,6 +91,7 @@
             gap: 15px;
             padding-top: 20px;
             border-top: 1px solid #dee2e6;
+            flex-wrap: wrap;
         }
 
         .article-author img {
@@ -101,6 +102,7 @@
 
         .author-info {
             flex: 1;
+            display: flex;
         }
 
         .author-info strong {
@@ -739,6 +741,25 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        @media (max-width: 480px) {
+            .author-info {
+                flex: inherit;
+            }
+
+            .article-author {
+                justify-content: end;
+            }
+
+            .infographic-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .article-content,
+            .more-articles {
+                padding: 40px 0;
+            }
+        }
     </style>
     <!-- Article Schema -->
     <script type="application/ld+json">
@@ -779,8 +800,8 @@
             </div>
 
             <div class="article-meta">
-                @if($cat = $post->categories->first())
-                <span class="article-category">{{$cat->name}}</span>
+                @if ($cat = $post->categories->first())
+                    <span class="article-category">{{ $cat->name }}</span>
                 @endif
                 <span class="article-date"><i class="fas fa-calendar"></i> {{ $post->created_at->format('d/m/Y') }}</span>
                 <span class="article-views"><i class="fas fa-eye"></i> {{ $post->view }} lượt xem</span>
@@ -792,10 +813,13 @@
             <p class="article-lead">{{ $post->excerpt }}</p>
 
             <div class="article-author">
-                <img src="{{asset('assets/images/photo-1472099645785-5658abf4ff4e.jpeg')}}" alt="Author">
+
                 <div class="author-info">
-                    <strong>Nguyễn Văn Nam</strong>
-                    <span>Phóng viên BĐS - 5 năm kinh nghiệm</span>
+                    <img src="{{ asset('assets/images/photo-1472099645785-5658abf4ff4e.jpeg') }}" alt="Author">
+                    <div style="margin-left: 10px;">
+                        <strong>Nguyễn Văn Nam</strong>
+                        <span>Phóng viên BĐS - 5 năm kinh nghiệm</span>
+                    </div>
                 </div>
                 <div class="share-buttons">
                     <button class="share-btn facebook"><i class="fab fa-facebook-f"></i></button>
@@ -825,7 +849,7 @@
                         <div class="article-cta">
                             <h3>Đăng Ký Tư Vấn Ngay</h3>
                             <p>Để nhận thông tin chi tiết và ưu đãi độc quyền phân khu The Haven Bay</p>
-                            <a href="{{route('contact')}}" class="btn btn-primary">
+                            <a href="{{ route('contact') }}" class="btn btn-primary">
                                 <i class="fas fa-phone-alt"></i> Liên Hệ Hotline: {{ settings('phone') }}
                             </a>
                         </div>
@@ -845,8 +869,8 @@
                     <!-- Table of Contents -->
                     <div class="sidebar-widget toc-widget">
                         <h3>Nội Dung Chính</h3>
-                        
-                        {!!generate_toc($post->body)['toc']!!}
+
+                        {!! generate_toc($post->body)['toc'] !!}
                     </div>
 
                     <!-- Quick Contact -->
@@ -857,9 +881,9 @@
                                 <i class="fas fa-phone-alt"></i>
                                 <span>{{ settings('phone') }}</span>
                             </a>
-                            <a href="https://zalo.me/{{ str_replace(' ', '', settings('phone')) }}" class="contact-btn zalo" target="blank">
-                                <img src="{{asset('assets/images/zalo.svg')}}"
-                                    alt="Zalo">
+                            <a href="https://zalo.me/{{ str_replace(' ', '', settings('phone')) }}"
+                                class="contact-btn zalo" target="blank">
+                                <img src="{{ asset('assets/images/zalo.svg') }}" alt="Zalo">
                                 <span>Chat Zalo</span>
                             </a>
                             <a href="#" class="contact-btn messenger">
@@ -898,14 +922,14 @@
                     <div class="sidebar-widget related-widget">
                         <h3>Tin Tức Liên Quan</h3>
                         <div class="related-list">
-                            @foreach($relatedPosts as $rp)
-                            <article class="related-item">
-                                <img src="{{$rp->getFirstMediaUrl('media')}}" alt="{{$rp->title}}">
-                                <div class="related-content">
-                                    <h4><a href="{{$rp->showUrl()}}">{{$rp->title}}</a></h4>
-                                    <span class="date">{{$rp->created_at->format('d/m/Y')}}</span>
-                                </div>
-                            </article>
+                            @foreach ($relatedPosts as $rp)
+                                <article class="related-item">
+                                    <img src="{{ $rp->getFirstMediaUrl('media') }}" alt="{{ $rp->title }}">
+                                    <div class="related-content">
+                                        <h4><a href="{{ $rp->showUrl() }}">{{ $rp->title }}</a></h4>
+                                        <span class="date">{{ $rp->created_at->format('d/m/Y') }}</span>
+                                    </div>
+                                </article>
                             @endforeach
                         </div>
                     </div>
@@ -914,8 +938,8 @@
                     <div class="sidebar-widget newsletter-widget">
                         <h3>Đăng Ký Nhận Tin</h3>
                         <p>Cập nhật tin tức mới nhất về dự án</p>
-                        <form class="sidebar-newsletter">
-                            <input type="email" placeholder="Email của bạn">
+                        <form class="sidebar-newsletter" onsubmit="registerNewsletter(this, event)">
+                            <input type="email" name="email" placeholder="Email của bạn">
                             <button type="submit">Đăng Ký</button>
                         </form>
                     </div>
@@ -929,20 +953,20 @@
         <div class="container">
             <h2 class="section-title">Tin Tức Khác</h2>
             <div class="articles-grid">
-                @foreach($otherPosts as $op)
-                <article class="article-card">
-                    <div class="article-image">
-                        <img src="{{$op->getFirstMediaUrl('media')}}" alt="{{$op->title}}">
-                        @if($cat = $rp->categories->first())
-                        <span class="article-badge">{{$cat->name}}</span>
-                        @endif
-                    </div>
-                    <div class="article-info">
-                        <span class="article-date">{{$op->created_at->format('d/m/Y')}}</span>
-                        <h3><a href="{{$op->showUrl()}}">{{$op->title}}</a></h3>
-                        <p>{{Str::words($op->excerpt, 15)}}</p>
-                    </div>
-                </article>
+                @foreach ($otherPosts as $op)
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="{{ $op->getFirstMediaUrl('media') }}" alt="{{ $op->title }}">
+                            @if ($cat = $rp->categories->first())
+                                <span class="article-badge">{{ $cat->name }}</span>
+                            @endif
+                        </div>
+                        <div class="article-info">
+                            <span class="article-date">{{ $op->created_at->format('d/m/Y') }}</span>
+                            <h3><a href="{{ $op->showUrl() }}">{{ $op->title }}</a></h3>
+                            <p>{{ Str::words($op->excerpt, 15) }}</p>
+                        </div>
+                    </article>
                 @endforeach
             </div>
         </div>
