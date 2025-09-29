@@ -605,12 +605,14 @@
                             alt="BLUE WAVES THEATRE – NHÀ HÁT SÓNG XANH">
                     </div>
                 </div>
+            </div>
+            <div class="utilities-grid mt-30" style="grid-template-columns: repeat(3, 1fr);">
                 <div class="utility-card">
                     <h4>PARADISE LAGOON – VỊNH THIÊN ĐƯỜNG 443HA</h4>
                     <p>Biển hồ nhân tạo lớn nhất thế giới, tái hiện trọn vẹn vẻ đẹp Maldives với mặt nước xanh ngọc, bờ cát
                         trắng mịn và trải nghiệm nghỉ dưỡng bất tận ngay giữa lòng đô thị.</p>
                     <div class="mt-10">
-                        <img src="{{ asset('assets/images/paradise-lagoon-vinhomes-green-paradise.webp') }}"
+                        <img src="{{ asset('assets/images/paradise-lagoon-vinhomes-green-paradise.jpeg') }}"
                             alt="PARADISE LAGOON – VỊNH THIÊN ĐƯỜNG 443HA">
                     </div>
                 </div>
@@ -623,20 +625,23 @@
                             alt="LANDMARK HARBOUR – CẢNG DU THUYỀN 5 SAO QUỐC TẾ">
                     </div>
                 </div>
-                {{-- <div class="utility-card">
-                    <div class="utility-card-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                <div class="utility-card utility-info">
+                    <h4>2 SÂN GOLF 18 LỖ – DẤU ẤN HUYỀN THOẠI QUỐC TẾ</h4>
+                    <ul>
+                        <li class="border-bottom-0">
+                            <span class="fw-600">Sunset (West)</span> – thiết kế bởi huyền thoại <span class="fw-600">Tiger Woods</span>.
+                        </li>
+                        <li class="border-bottom-0">
+                            <span class="fw-600">Sunrise (East)</span> – kiến tạo bởi bậc thầy <span class="fw-600">Robert Trent Jones II</span>.
+                        </li>
+                    </ul>
+                    <p>Thiên đường thể thao đẳng cấp, dành riêng cho giới thượng lưu yêu golf.</p>
+                    <div class="mt-10">
+                        <img src="{{ asset('assets/images/san-golf-vinhomes-green-paradise.jpg') }}"
+                            alt="2 SÂN GOLF 18 LỖ – DẤU ẤN HUYỀN THOẠI QUỐC TẾ">
                     </div>
-                    <h4>Giáo Dục Quốc Tế</h4>
-                    <p>Hệ thống trường Vinschool, VinUni, trường quốc tế chuẩn Cambridge</p>
                 </div>
-                <div class="utility-card">
-                    <div class="utility-card-icon">
-                        <i class="fas fa-snowflake"></i>
-                    </div>
-                    <h4>Winter Wonderland</h4>
-                    <p>30.000m² với núi tuyết nhân tạo 60m, trượt tuyết 4 mùa</p>
-                </div> --}}
+                
             </div>
         </div>
     </section>
@@ -1078,10 +1083,12 @@
         document.addEventListener("DOMContentLoaded", function() {
             new Glide('.glide', {
                 type: 'carousel',
-                perView: 3, // số item hiển thị
+                perView: 2, // số item hiển thị
                 gap: 20, // khoảng cách giữa các item
-                autoplay: 3000, // tự động chạy (ms), bỏ nếu không muốn
+                autoplay: 300000, // tự động chạy (ms), bỏ nếu không muốn
                 hoverpause: true,
+    focusAt: 'center',
+                //  peek: { before: 300, after: 300 },
                 breakpoints: {
                     1024: {
                         perView: 2
