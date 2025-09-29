@@ -85,10 +85,10 @@
         }
 
         .lead {
-            font-size: 1.2rem;
+            /* font-size: 1.2rem; */
             line-height: 1.8;
             margin-bottom: 30px;
-            color: #6c757d;
+            color: #5a5f63;
         }
 
         .highlight-box {
@@ -97,6 +97,7 @@
             padding: 40px;
             border-radius: 16px;
             margin: 40px 0;
+            text-align: left;
         }
 
         .highlight-box h4 {
@@ -172,9 +173,15 @@
         }
 
         .developer-content {
-            max-width: 1000px;
+            /* max-width: 1000px; */
             margin: 0 auto;
             text-align: center;
+        }
+
+        .developer-info {
+            display: grid;
+            gap: 40px;
+            grid-template-columns: 2fr 1fr;
         }
 
         .developer-logo {
@@ -182,7 +189,7 @@
         }
 
         .achievements {
-            margin-top: 50px;
+            margin-top: 30px;
         }
 
         .achievement-grid {
@@ -230,7 +237,7 @@
 
         .esg-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             margin-bottom: 50px;
         }
@@ -265,6 +272,10 @@
             background: linear-gradient(90deg, #fd7e14, #dc3545);
         }
 
+        .esg-card.esg-plus::before {
+            background: linear-gradient(90deg, #fd14e5, #8e009b);
+        }
+
         .esg-icon {
             width: 70px;
             height: 70px;
@@ -290,6 +301,10 @@
 
         .governance .esg-icon i {
             color: #fd7e14;
+        }
+
+        .esg-plus .esg-icon i {
+            color: purple
         }
 
         .esg-card h3 {
@@ -494,8 +509,10 @@
             .section-padding {
                 padding: 40px 0;
             }
+
             .esg-grid {
-                grid-template-columns: 1fr;}
+                grid-template-columns: 1fr;
+            }
         }
     </style>
     <!-- Schema for About Page -->
@@ -541,19 +558,21 @@
             <div class="content-wrapper">
                 <div class="content-main">
                     <span class="section-tag">TẦM NHÌN & SỨ MỆNH</span>
-                    <h2 class="content-title">Kiến Tạo Thiên Đường Xanh Bên Biển</h2>
+                    <h2 class="content-title text-transform-capitalize">Kiến tạo thiên đường xanh bên bờ biển</h2>
                     <div class="content-text">
-                        <p class="lead">Vinhomes Green Paradise không chỉ là một dự án bất động sản, đây là tuyên ngôn
-                            mạnh mẽ của Việt Nam trong việc kiến tạo những chuẩn mực sống mới, nơi một Việt Nam tiên phong
-                            cùng thế giới xây dựng tương lai bền vững.</p>
+                        <p class="lead"><strong>Vinhomes Green Paradise</strong> không đơn thuần là một dự án bất động
+                            sản, mà là <strong>biểu tượng cho khát vọng tiên phong của Việt Nam</trong> – kiến tạo chuẩn mực
+                                sống mới, hòa nhịp cùng thế giới trong hành trình xây dựng một tương lai xanh, thông minh và
+                                bền vững.</p>
 
-                        <h3>Tầm Nhìn 2030</h3>
-                        <p>Trở thành biểu tượng đô thị sinh thái hàng đầu châu Á, điểm đến du lịch quốc tế với 8-9 triệu
+                        <h3 class="mb-15">Tầm Nhìn 2030</h3>
+                        <p class=" fw-500">Trở thành biểu tượng đô thị sinh thái hàng đầu châu Á, điểm đến du lịch quốc tế
+                            với 8-9 triệu
                             lượt khách mỗi năm, và là mô hình chuẩn mực cho phát triển đô thị bền vững toàn cầu.</p>
 
                         <div class="highlight-box">
                             <h4>Cam Kết ESG++</h4>
-                            <ul class="check-list">
+                            <ul class="check-list fw-400">
                                 <li><i class="fas fa-check-circle"></i> <strong>Environment:</strong> 100% năng lượng tái
                                     tạo, 70% diện tích xanh</li>
                                 <li><i class="fas fa-check-circle"></i> <strong>Social:</strong> Cộng đồng 230.000 cư dân
@@ -587,13 +606,13 @@
                     <img src="{{ asset('assets/images/photo-1570168007204-dfb528c6958f.jpeg') }}" alt="Vision"
                         class="rounded-image">
                     <div class="sidebar-box">
-                        <h4>Quick Facts</h4>
-                        <ul class="info-list">
-                            <li><strong>Vị trí:</strong> Cần Giờ, TP.HCM</li>
-                            <li><strong>Diện tích:</strong> 2,870 ha</li>
-                            <li><strong>Mật độ xây dựng:</strong> 30%</li>
-                            <li><strong>Khởi công:</strong> Q4/2025</li>
-                            <li><strong>Hoàn thành:</strong> 2035</li>
+                        <h4>Thông tin dự án Vinhomes Green Paradise</h4>
+                        <ul class="info-list fw-400">
+                            <li><strong>Vị trí:</strong> Cần Giờ, TP.Hồ Chí Minh</li>
+                            <li><strong>Tổng diện tích:</strong> 2,870 ha</li>
+                            <li><strong>Mật độ xây dựng:</strong> Khoảng 30%</li>
+                            <li><strong>Thời gian khởi công:</strong> Quý IV/2025</li>
+                            <li><strong>Dự kiến hoàn thành:</strong> Năm 2035</li>
                         </ul>
                     </div>
                 </div>
@@ -606,53 +625,43 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">CHỦ ĐẦU TƯ</span>
-                <h2 class="section-title">Vinhomes - Thương Hiệu BĐS Số 1 Việt Nam</h2>
+                <h2 class="section-title">Chủ Đầu Tư Dự Án <br><span>Vinhomes Green Paradise</span></h2>
             </div>
 
             <div class="developer-content">
                 <div class="developer-info">
-                    <img src="https://via.placeholder.com/300x120/fff/333?text=VINHOMES" alt="Vinhomes Logo"
-                        class="developer-logo">
-                    <p>Vinhomes là thương hiệu bất động sản số 1 Việt Nam, thành viên của Tập đoàn Vingroup - Tập đoàn kinh
-                        tế tư nhân hàng đầu Châu Á. Với hơn 15 năm phát triển, Vinhomes đã và đang kiến tạo chuỗi đô thị
-                        đẳng cấp, góp phần nâng tầm vị thế Việt Nam trên bản đồ quốc tế.</p>
+                    <div class="highlight-box">
+                        <p>Dự án Vinhomes Green Paradise Cần Giờ được phát triển bởi Tập đoàn Vingroup – một trong những tập
+                            đoàn kinh tế tư nhân đa ngành lớn nhất Việt Nam, đồng thời khẳng định uy tín hàng đầu tại khu
+                            vực châu Á.</p>
+                        <br>
+                        <p>Thành lập từ năm 1993, Vingroup hiện hoạt động trên ba trụ cột chính: Công nghệ – Công nghiệp,
+                            Thương mại Dịch vụ và Phát triển Bất động sản. Trong đó, bất động sản là lĩnh vực mũi nhọn, gắn
+                            liền với thương hiệu Vinhomes – nhà phát triển đô thị số 1 Việt Nam.</p>
+                    </div>
 
-                    <div class="achievements">
-                        <h3>Thành Tựu Nổi Bật</h3>
-                        <div class="achievement-grid">
-                            <div class="achievement-item">
-                                <i class="fas fa-trophy"></i>
-                                <h4>Top 10 Châu Á</h4>
-                                <p>Nhà phát triển BĐS hàng đầu</p>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-building"></i>
-                                <h4>50+ Dự Án</h4>
-                                <p>Trên khắp Việt Nam</p>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-users"></i>
-                                <h4>500,000+</h4>
-                                <p>Cư dân tin tưởng</p>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-award"></i>
-                                <h4>100+ Giải Thưởng</h4>
-                                <p>Quốc tế uy tín</p>
-                            </div>
-                        </div>
+                    <div class="p-20">
+                        <img src="{{ asset('assets/images/logo.png') }}" alt="Vinhomes Logo" class="developer-logo">
                     </div>
                 </div>
+                <div class="achievements text-left fw-400">
 
-                <div class="partners">
-                    <h3>Đối Tác Chiến Lược</h3>
-                    <div class="partner-logos">
-                        <img src="https://via.placeholder.com/150x80/f8f9fa/333?text=BCG" alt="Boston Consulting Group">
-                        <img src="https://via.placeholder.com/150x80/f8f9fa/333?text=GENSLER" alt="Gensler">
-                        <img src="https://via.placeholder.com/150x80/f8f9fa/333?text=CLEVELAND" alt="Cleveland Clinic">
-                        <img src="https://via.placeholder.com/150x80/f8f9fa/333?text=TIGER+WOODS" alt="Tiger Woods Design">
-                    </div>
+                    <p class="mb-20">Hơn hai thập kỷ qua, Vingroup đã kiến tạo hàng loạt đại đô thị quy mô hàng trăm đến
+                        hàng nghìn hecta
+                        tại Hà Nội, TP.HCM và nhiều tỉnh thành lớn. Những dự án tiêu biểu có thể kể đến như: Vinhomes
+                        Riverside, Vinhomes Ocean Park, Vinhomes Smart City, Vinhomes Grand Park…
+                    </p>
+                    <p class="mb-20">Không chỉ mang đến những sản phẩm bất động sản chất lượng cao, Vingroup còn xây dựng
+                        hệ sinh thái
+                        toàn diện bao gồm y tế, giáo dục, thương mại, nghỉ dưỡng và giao thông thông minh, góp phần nâng tầm
+                        chất lượng sống cho hàng triệu cư dân.</p>
+                    <p class="mb-20">Với tiềm lực tài chính vững mạnh, uy tín quốc tế và kinh nghiệm dày dặn, Vingroup cam
+                        kết đưa
+                        Vinhomes Green Paradise trở thành biểu tượng sống – nghỉ dưỡng – đầu tư tầm cỡ toàn cầu ngay tại Cần
+                        Giờ.</p>
                 </div>
+
+
             </div>
         </div>
     </section>
@@ -673,15 +682,13 @@
                     <h3>Environment</h3>
                     <h4>Môi Trường Bền Vững</h4>
                     <ul>
-                        <li>100% năng lượng từ điện gió và mặt trời</li>
-                        <li>70% diện tích dành cho cây xanh & mặt nước</li>
-                        <li>Xử lý rác thải công nghệ cao, zero waste</li>
-                        <li>Tuần hoàn nước thông minh, tiết kiệm 50%</li>
-                        <li>Giảm 80% phát thải carbon so với đô thị thông thường</li>
+                        <li>Kiến trúc khí hậu học, năng lượng tái tạo</li>
+                        <li>70% diện tích phủ xanh, hệ thống hấp thụ carbon</li>
+                        <li>Hướng tới Climate-Positive, vượt xa Net Zero</li>
                     </ul>
-                    <div class="esg-metrics">
+                    {{-- <div class="esg-metrics">
                         <span class="metric-value">Net Zero 2030</span>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <div class="esg-card social">
@@ -689,17 +696,15 @@
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>Social</h3>
-                    <h4>Cộng Đồng Thịnh Vượng</h4>
+                    <h4>Xã hội</h4>
                     <ul>
-                        <li>230.000 cư dân với chất lượng sống đẳng cấp</li>
-                        <li>200.000 việc làm chất lượng cao</li>
-                        <li>Hệ thống giáo dục từ mầm non đến đại học</li>
-                        <li>Y tế chuẩn quốc tế Cleveland Clinic</li>
-                        <li>Không gian văn hóa nghệ thuật sôi động</li>
+                        <li>Trường học, trung tâm sáng tạo, spa rừng</li>
+                        <li>Không gian công cộng đa dạng, gắn kết cộng đồng 230.000 cư dân</li>
+                        <li>Kiến tạo cộng đồng công dân toàn cầu</li>
                     </ul>
-                    <div class="esg-metrics">
+                    {{-- <div class="esg-metrics">
                         <span class="metric-value">Happy City Index 95/100</span>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <div class="esg-card governance">
@@ -707,21 +712,35 @@
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Governance</h3>
-                    <h4>Quản Trị Minh Bạch</h4>
+                    <h4>Quản Trị</h4>
                     <ul>
-                        <li>Quản lý thông minh bằng AI & Big Data</li>
-                        <li>An ninh 24/7 với hệ thống camera AI</li>
-                        <li>Blockchain cho giao dịch minh bạch</li>
-                        <li>Cư dân tham gia quản trị qua app</li>
-                        <li>Báo cáo ESG định kỳ theo chuẩn GRI</li>
+                        <li>Quản trị đô thị thông minh theo thời gian thực</li>
+                        <li>Minh bạch, đo lường và công bố liên tục</li>
+                        <li>Chứng nhận quốc tế: <strong>BREEAM, WELL, LEED, GRESB</strong></li>
                     </ul>
-                    <div class="esg-metrics">
+                    {{-- <div class="esg-metrics">
                         <span class="metric-value">ISO 37122 Smart City</span>
+                    </div> --}}
+                </div>
+
+                <div class="esg-card esg-plus">
+                    <div class="esg-icon">
+                        <i class="fas fa-globe"></i>
                     </div>
+                    <h3>ESG++</h3>
+                    <h4>Super Plus</h4>
+                    <ul>
+                        <li>Tái sinh đất – nước – con người – tương lai</li>
+                        <li>Ứng dụng AI, dữ liệu lớn, cảm biến môi trường</li>
+                        <li>Bảo tồn Khu Dự trữ Sinh quyển Cần Giờ</li>
+                    </ul>
+                    {{-- <div class="esg-metrics">
+                        <span class="metric-value">ISO 37122 Smart City</span>
+                    </div> --}}
                 </div>
             </div>
 
-            <div class="certification-box">
+            {{-- <div class="certification-box">
                 <h3>Chứng Nhận Mục Tiêu</h3>
                 <div class="cert-list">
                     <div class="cert-item">
@@ -741,12 +760,12 @@
                         <span>UNESCO Biosphere</span>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 
     <!-- Timeline Section -->
-    <section id="timeline" class="section-padding bg-gray">
+    {{-- <section id="timeline" class="section-padding bg-gray">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">LỊCH SỬ PHÁT TRIỂN</span>
@@ -799,7 +818,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- CTA Section -->
     <section class="cta-section">
