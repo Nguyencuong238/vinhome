@@ -565,11 +565,7 @@
                                 sống mới, hòa nhịp cùng thế giới trong hành trình xây dựng một tương lai xanh, thông minh và
                                 bền vững.</p>
 
-                        <h3 class="mb-15">Tầm Nhìn 2030</h3>
-                        <p class=" fw-500">Trở thành biểu tượng đô thị sinh thái hàng đầu châu Á, điểm đến du lịch quốc tế
-                            với 8-9 triệu
-                            lượt khách mỗi năm, và là mô hình chuẩn mực cho phát triển đô thị bền vững toàn cầu.</p>
-
+                        
                         <div class="highlight-box">
                             <h4>Cam Kết ESG++</h4>
                             <ul class="check-list fw-400">
@@ -603,7 +599,7 @@
                     </div>
                 </div>
                 <div class="content-sidebar">
-                    <img src="{{ asset('assets/images/photo-1570168007204-dfb528c6958f.jpeg') }}" alt="Vision"
+                    <img src="{{ asset('assets/images/vinhomes-green-paradise-kinh-te-su-kien.jpg') }}" alt="Vision"
                         class="rounded-image">
                     <div class="sidebar-box">
                         <h4>Thông tin dự án Vinhomes Green Paradise</h4>
@@ -640,8 +636,8 @@
                             liền với thương hiệu Vinhomes – nhà phát triển đô thị số 1 Việt Nam.</p>
                     </div>
 
-                    <div class="p-20">
-                        <img src="{{ asset('assets/images/logo.png') }}" alt="Vinhomes Logo" class="developer-logo">
+                    <div class="p-40 text-center">
+                        <img src="{{ asset('assets/images/vingroup.png') }}" alt="Vinhomes Logo" class="developer-logo">
                     </div>
                 </div>
                 <div class="achievements text-left fw-400">

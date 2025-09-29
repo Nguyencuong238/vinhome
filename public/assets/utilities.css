@@ -1,6 +1,7 @@
 /* =======================
    MARGIN
    ======================= */
+.m-0 { margin: 0px !important; }
 .m-5 { margin: 5px !important; }
 .m-10 { margin: 10px !important; }
 .m-15 { margin: 15px !important; }
@@ -14,6 +15,7 @@
 .m-80 { margin: 80px !important; }
 
 /* Margin top */
+.mt-0 { margin-top: 0px !important; }
 .mt-5 { margin-top: 5px !important; }
 .mt-10 { margin-top: 10px !important; }
 .mt-15 { margin-top: 15px !important; }
@@ -27,6 +29,7 @@
 .mt-80 { margin-top: 80px !important; }
 
 /* Margin bottom */
+.mb-0 { margin-bottom: 0 !important; }
 .mb-5 { margin-bottom: 5px !important; }
 .mb-10 { margin-bottom: 10px !important; }
 .mb-15 { margin-bottom: 15px !important; }
@@ -40,6 +43,7 @@
 .mb-80 { margin-bottom: 80px !important; }
 
 /* Margin left */
+.ml-0 { margin-left: 0px !important; }
 .ml-5 { margin-left: 5px !important; }
 .ml-10 { margin-left: 10px !important; }
 .ml-15 { margin-left: 15px !important; }
@@ -53,6 +57,7 @@
 .ml-80 { margin-left: 80px !important; }
 
 /* Margin right */
+.mr-0 { margin-right: 0px !important; }
 .mr-5 { margin-right: 5px !important; }
 .mr-10 { margin-right: 10px !important; }
 .mr-15 { margin-right: 15px !important; }
@@ -68,6 +73,7 @@
 /* =======================
    PADDING
    ======================= */
+.p-0 { padding: 0px !important; }
 .p-5 { padding: 5px !important; }
 .p-10 { padding: 10px !important; }
 .p-15 { padding: 15px !important; }
@@ -81,6 +87,7 @@
 .p-80 { padding: 80px !important; }
 
 /* Padding top */
+.pt-0 { padding-top: 0px !important; }
 .pt-5 { padding-top: 5px !important; }
 .pt-10 { padding-top: 10px !important; }
 .pt-15 { padding-top: 15px !important; }
@@ -94,6 +101,7 @@
 .pt-80 { padding-top: 80px !important; }
 
 /* Padding bottom */
+.pb-0 { padding-bottom: 0px !important; }
 .pb-5 { padding-bottom: 5px !important; }
 .pb-10 { padding-bottom: 10px !important; }
 .pb-15 { padding-bottom: 15px !important; }
@@ -107,6 +115,7 @@
 .pb-80 { padding-bottom: 80px !important; }
 
 /* Padding left */
+.pl-0 { padding-left: 0px !important; }
 .pl-5 { padding-left: 5px !important; }
 .pl-10 { padding-left: 10px !important; }
 .pl-15 { padding-left: 15px !important; }
@@ -120,6 +129,7 @@
 .pl-80 { padding-left: 80px !important; }
 
 /* Padding right */
+.pr-0 { padding-right: 0px !important; }
 .pr-5 { padding-right: 5px !important; }
 .pr-10 { padding-right: 10px !important; }
 .pr-15 { padding-right: 15px !important; }

@@ -638,6 +638,11 @@
             width: 100%;
         }
 
+        .utility-info li:before {
+            content: '';
+            margin-right: 0;
+        }
+
         @media (max-width: 992px) {
 
             .feature-wrapper,
