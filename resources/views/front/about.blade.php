@@ -544,7 +544,7 @@
                 <h1 class="page-title">Giới Thiệu Dự Án</h1>
                 <p class="page-subtitle">Siêu Đô Thị ESG Hàng Đầu Thế Giới</p>
                 <div class="breadcrumb">
-                    <a href="index.html">Trang Chủ</a>
+                    <a href="/">Trang Chủ</a>
                     <span>/</span>
                     <span>Giới Thiệu</span>
                 </div>
@@ -823,10 +823,10 @@
                 <h2>Sẵn Sàng Khám Phá Green Paradise?</h2>
                 <p>Đăng ký ngay để nhận thông tin chi tiết và ưu đãi độc quyền</p>
                 <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-lg">
+                    <a href="{{route('contact')}}" class="btn btn-primary btn-lg">
                         <i class="fas fa-phone-alt"></i> Liên Hệ Tư Vấn
                     </a>
-                    <a href="#" class="btn btn-outline btn-lg">
+                    <a href="{{route('contact')}}" class="btn btn-outline btn-lg">
                         <i class="fas fa-download"></i> Tải Brochure
                     </a>
                 </div>

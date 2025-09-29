@@ -792,9 +792,9 @@
     <section class="article-header">
         <div class="container">
             <div class="breadcrumb-nav">
-                <a href="index.html">Trang Chủ</a>
+                <a href="/">Trang Chủ</a>
                 <span>/</span>
-                <a href="news.html">Tin Tức</a>
+                <a href="{{route('news')}}">Tin Tức</a>
                 <span>/</span>
                 <span>Chi Tiết</span>
             </div>

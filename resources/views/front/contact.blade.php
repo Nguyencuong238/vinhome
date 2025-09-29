@@ -510,7 +510,7 @@
                 <h1 class="page-title">Liên Hệ Tư Vấn</h1>
                 <p class="page-subtitle">Nhận Ưu Đãi Độc Quyền & Bảng Giá Mới Nhất</p>
                 <div class="breadcrumb">
-                    <a href="index.html">Trang Chủ</a>
+                    <a href="/">Trang Chủ</a>
                     <span>/</span>
                     <span>Liên Hệ</span>
                 </div>

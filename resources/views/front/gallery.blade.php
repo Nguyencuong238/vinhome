@@ -625,7 +625,7 @@
                 <h1 class="page-title">Thư Viện Hình Ảnh</h1>
                 <p class="page-subtitle">Khám Phá Vẻ Đẹp Green Paradise</p>
                 <div class="breadcrumb">
-                    <a href="index.html">Trang Chủ</a>
+                    <a href="/">Trang Chủ</a>
                     <span>/</span>
                     <span>Thư Viện</span>
                 </div>
