@@ -739,8 +739,8 @@
                     </div>
                     <div class="subdivision-info">
                         <h4>The Paradise - Mũi Danh Vọng</h4>
-                        <p><strong>Biểu tượng phồn vinh của đại đô thị</strong>, nơi định hình đường chân trời mới với những
-                            công trình mang tầm vóc toàn cầu.</p>
+                        <div><strong>Biểu tượng phồn vinh của đại đô thị</strong>, nơi định hình đường chân trời mới với những
+                            công trình mang tầm vóc toàn cầu.</div>
                         <ul>
                             <li><strong>Quy mô:</strong> 318 ha</li>
                             <li><strong>Chức năng:</strong> Trung tâm tài chính – thương mại – dịch vụ & bến cảng.</li>
@@ -782,26 +782,6 @@
                 <h2 class="section-title">Pháp Lý Dự Án <br><span>Vinhomes Green Paradise</span></h2>
             </div>
 
-            {{-- <div class="overview-stats" style="display:block; font-size: 18px;">
-                <p style="margin-bottom: 20px;">
-                    Dự án Vinhomes Green Paradise Cần Giờ đã được UBND TP.HCM phê duyệt Quy hoạch chi tiết 1/500 theo Quyết
-                    định số 340/QĐ-UBND ngày 24/01/2025. Đây là nền tảng pháp lý quan trọng, khẳng định tính minh bạch và
-                    đảm bảo khả năng triển khai bền vững của dự án.</p>
-
-                <label>Thông tin quy hoạch 1/500</label>
-                <ul>
-                    <li>Quy mô: ~2.870 ha, gồm 4 phân khu A, B, C, D-E
-
-                    </li>
-                    <li>Vị trí: Xã Long Hòa & Thị trấn Cần Thạnh, huyện Cần Giờ, TP.HCM
-                    </li>
-                </ul>
-                <p style="margin-bottom: 20px;">Với <strong>hành lang pháp lý đầy đủ và minh bạch</strong>, Vinhomes Green
-                    Paradise khẳng định vị thế là <strong>điểm đến an cư – đầu tư tầm cỡ quốc tế</strong> ngay giữa thiên
-                    nhiên Cần Giờ.</p>
-
-            </div> --}}
-
             <div class="utility-highlight reverse">
                 <div class="utility-content">
                     <div class="utility-info">
@@ -824,10 +804,10 @@
                             <li>Đảm bảo an toàn pháp lý tuyệt đối, mang lại sự an tâm cho khách hàng và nhà đầu tư.</li>
                         </ul>
 
-                        <p class="mt-20">Với <strong>hành lang pháp lý đầy đủ và minh bạch</strong>, Vinhomes Green
+                        <div class="mt-20">Với <strong>hành lang pháp lý đầy đủ và minh bạch</strong>, Vinhomes Green
                             Paradise khẳng định vị thế là <strong>điểm đến an cư – đầu tư tầm cỡ quốc tế</strong> ngay giữa
                             thiên
-                            nhiên Cần Giờ.</p>
+                            nhiên Cần Giờ.</div>
                     </div>
 
                 </div>
@@ -1005,6 +985,7 @@
                 @if ($posts->isNotEmpty())
                     <div class="news-grid">
                         @foreach ($posts as $post)
+                            @if($loop->iteration >= 4) @break @endif
                             <article class="news-item">
                                 <div class="news-image">
                                     <img src="{{ $post->getFirstMediaUrl('media') }}" alt="{{ $post->title }}">

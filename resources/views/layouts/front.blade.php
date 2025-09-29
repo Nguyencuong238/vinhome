@@ -143,7 +143,7 @@
             <div class="footer-top">
                 <div class="footer-column">
                     <div class="footer-logo">
-                        <a href="/"><img src="{{ asset('assets/images/logo.png') }}" alt="Green Paradise"></a>
+                        <a href="/"><img src="{{ asset('assets/images/logo-vinhomes-can-gio.png') }}" alt="Green Paradise"></a>
                     </div>
                     <h3>Vinhomes Green Paradise</h3>
                     <p>Siêu đô thị ESG đầu tiên Việt Nam, kiến tạo chuẩn mực sống mới cho 230.000 cư dân,
