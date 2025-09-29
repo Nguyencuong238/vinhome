@@ -581,103 +581,7 @@
                 </div>
             </div>
 
-            <!-- More Utilities Grid -->
-            <div class="section-header">
-                <h2 class="section-title">Hệ Thống Tiện Ích <br><span>Toàn Năng Cho Cư Dân Toàn Cầu</span></h2>
-                <p class="section-desc">
-                    Giữa đại dương bao la và hệ sinh quyển cổ đại của Cần Giờ, Vinhomes Green Paradise được quy hoạch như
-                    một thế giới sống toàn diện – nơi mỗi khoảnh khắc đều trọn vẹn ý nghĩa. Tại đây, hệ thống tiện ích không
-                    chỉ đáp ứng nhu cầu mà còn trở thành chất liệu kiến tạo phong cách sống và linh hồn kết nối cộng đồng
-                    tinh hoa toàn cầu.
-                </p>
-            </div>
-
-            <div class="overview-grid">
-                <div class="overview-item utilities-image">
-                    <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-9.jpg') }}"
-                        alt="tien-ich-vinhomes-green-paradise-1">
-                </div>
-                <div class="overview-item utilities-image">
-                    <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-10.jpg') }}"
-                        alt="tien-ich-vinhomes-green-paradise-2">
-                </div>
-                <div class="overview-item utilities-image">
-                    <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-11.jpg') }}"
-                        alt="tien-ich-vinhomes-green-paradise-3">
-                </div>
-            </div>
-
-            <div class="section-header">
-                <h2 class="section-title">Biểu Tượng Toàn Cầu – <br><span>Kỳ Quan Tiện Ích Giữa Rừng Biển Việt Nam</span>
-                </h2>
-                <p class="section-desc">
-                    Vinhomes Green Paradise không chỉ đơn thuần là nơi an cư, mà còn là tuyệt tác sống đỉnh cao – nơi hội tụ
-                    những tiện ích tầm vóc quốc tế, kiến tạo nên chuẩn mực sống mới của thế kỷ 21 ngay giữa thiên nhiên Cần
-                    Giờ.
-                </p>
-            </div>
-
-            <div class="utilities-grid">
-                <div class="utility-card">
-                    <h4>TÒA THÁP 108 TẦNG – HẢI ĐĂNG THẾ KỶ MỚI</h4>
-                    <p>Biểu tượng phồn vinh mới của TP.HCM, tòa tháp 108 tầng vươn cao giữa đại dương và rừng ngập mặn, hội
-                        tụ khách sạn 6 sao, TTTM xa xỉ, trung tâm hội nghị – triển lãm quốc tế và đài quan sát 360° – khẳng
-                        định vị thế Việt Nam trên bản đồ kiến trúc toàn cầu.</p>
-                    <div class="mt-10">
-                        <img src="{{ asset('assets/images/thap-108-tang-vinhomes-can-gio.webp') }}"
-                            alt="TÒA THÁP 108 TẦNG – HẢI ĐĂNG THẾ KỶ MỚI">
-                    </div>
-                </div>
-                <div class="utility-card">
-                    <h4>BLUE WAVES THEATRE – NHÀ HÁT SÓNG XANH</h4>
-                    <p>Tuyệt tác kiến trúc 7ha do Gensler thiết kế, quy mô đăng cấp Quốc tế : Nhà hát 5.000 chỗ ngồi lớn
-                        nhất Đông Nam Á, 40 phòng hội nghị, khu tiệc cưới – triển lãm, quảng trường 50.000 người và cụm ẩm
-                        thực quốc tế – trái tim văn hóa, nghệ thuật, giải trí tại Vinhomes Green Paradise.</p>
-                    <div class="mt-10">
-                        <img src="{{ asset('assets/images/vinhomes-green-paradise-tam-co-quoc-te.jpeg') }}"
-                            alt="BLUE WAVES THEATRE – NHÀ HÁT SÓNG XANH">
-                    </div>
-                </div>
-            </div>
-            <div class="utilities-grid mt-30" style="grid-template-columns: repeat(3, 1fr);">
-                <div class="utility-card">
-                    <h4>PARADISE LAGOON – VỊNH THIÊN ĐƯỜNG 443HA</h4>
-                    <p>Biển hồ nhân tạo lớn nhất thế giới, tái hiện trọn vẹn vẻ đẹp Maldives với mặt nước xanh ngọc, bờ cát
-                        trắng mịn và trải nghiệm nghỉ dưỡng bất tận ngay giữa lòng đô thị.</p>
-                    <div class="mt-10">
-                        <img src="{{ asset('assets/images/paradise-lagoon-vinhomes-green-paradise.jpeg') }}"
-                            alt="PARADISE LAGOON – VỊNH THIÊN ĐƯỜNG 443HA">
-                    </div>
-                </div>
-                <div class="utility-card">
-                    <h4>LANDMARK HARBOUR – CẢNG DU THUYỀN 5 SAO QUỐC TẾ</h4>
-                    <p>Bến đỗ của những siêu du thuyền xa hoa từ khắp thế giới, kết nối trực tiếp với chuỗi nhà hàng, khách
-                        sạn và phố ẩm thực ven biển đẳng cấp quốc tế.</p>
-                    <div class="mt-10">
-                        <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-5.jpg') }}"
-                            alt="LANDMARK HARBOUR – CẢNG DU THUYỀN 5 SAO QUỐC TẾ">
-                    </div>
-                </div>
-                <div class="utility-card utility-info">
-                    <h4>2 SÂN GOLF 18 LỖ – DẤU ẤN HUYỀN THOẠI QUỐC TẾ</h4>
-                    <ul>
-                        <li class="border-bottom-0">
-                            <span class="fw-600">Sunset (West)</span> – thiết kế bởi huyền thoại <span
-                                class="fw-600">Tiger Woods</span>.
-                        </li>
-                        <li class="border-bottom-0">
-                            <span class="fw-600">Sunrise (East)</span> – kiến tạo bởi bậc thầy <span class="fw-600">Robert
-                                Trent Jones II</span>.
-                        </li>
-                    </ul>
-                    <p>Thiên đường thể thao đẳng cấp, dành riêng cho giới thượng lưu yêu golf.</p>
-                    <div class="mt-10">
-                        <img src="{{ asset('assets/images/san-golf-vinhomes-green-paradise.jpg') }}"
-                            alt="2 SÂN GOLF 18 LỖ – DẤU ẤN HUYỀN THOẠI QUỐC TẾ">
-                    </div>
-                </div>
-
-            </div>
+            
         </div>
     </section>
 
@@ -897,42 +801,26 @@
             <div class="glide gallerycontainer">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
-                        <li class="glide__slide gallery-item" data-category="overview">
-                            <img src="assets/images/photo-1570168007204-dfb528c6958f.jpeg" alt="Toàn cảnh dự án">
-                            <div class="gallery-info">
+                        @for ($i = 1; $i <= 5; $i++)
+                        <li class="glide__slide gallery-item">
+                            <img src="assets/images/tien-ich-toan-cau-vinhomes-green-paradise-{{ $i }}.jpg" alt="tien-ich-toan-cau-vinhomes-green-paradise-{{ $i }}">
+                            {{-- <div class="gallery-info">
                                 <h4>Toàn Cảnh Dự Án</h4>
-                            </div>
+                            </div> --}}
                         </li>
-                        <li class="glide__slide gallery-item" data-category="utilities">
-                            <img src="assets/images/photo-1571896349842-33c89424de2d.jpeg" alt="Resort 5 sao">
-                            <div class="gallery-info">
-                                <h4>Resort 5 Sao</h4>
-                            </div>
-                        </li>
-                        <li class="glide__slide gallery-item" data-category="interior">
-                            <img src="assets/images/photo-1600607687939-ce8a6c25118c.jpeg" alt="Nội thất căn hộ">
-                            <div class="gallery-info">
-                                <h4>Nội Thất Cao Cấp</h4>
-                            </div>
-                        </li>
-                        <li class="glide__slide gallery-item" data-category="overview">
-                            <img src="assets/images/photo-1506929562872-bb421503ef21.jpeg" alt="Bãi biển">
-                            <div class="gallery-info">
-                                <h4>Bãi Biển Riêng</h4>
-                            </div>
-                        </li>
-                        <li class="glide__slide gallery-item" data-category="utilities">
-                            <img src="assets/images/photo-1587381420270-3e1a5b9e6904.jpeg" alt="Sân golf">
-                            <div class="gallery-info">
-                                <h4>Sân Golf Championship</h4>
-                            </div>
-                        </li>
-                        <li class="glide__slide gallery-item" data-category="construction">
-                            <img src="assets/images/photo-1541888946425-d81bb19240f5.jpeg" alt="Tiến độ xây dựng">
-                            <div class="gallery-info">
-                                <h4>Tiến Độ Q4/2025</h4>
-                            </div>
-                        </li>
+                        @endfor
+
+                        @for ($i = 1; $i <= 8; $i++)
+                            <li class="glide__slide gallery-item">
+                                <img src="assets/images/tien-ich-vinhomes-green-paradise-{{ $i }}.jpg"
+                                    alt="tien-ich-vinhomes-green-paradise-{{ $i }}">
+                                {{-- <div class="gallery-info">
+                                    <h4>Phân Khu A - Vịnh Tiên</h4>
+                                </div> --}}
+                            </li>
+                            
+                        @endfor
+                        
                     </ul>
                 </div>
 
@@ -943,12 +831,11 @@
                 </div>
                 <!-- Dấu chấm (bullets) -->
                 <div class="glide__bullets" data-glide-el="controls[nav]">
-                    <button class="glide__bullet" data-glide-dir="=0"></button>
-                    <button class="glide__bullet" data-glide-dir="=1"></button>
-                    <button class="glide__bullet" data-glide-dir="=2"></button>
-                    <button class="glide__bullet" data-glide-dir="=3"></button>
-                    <button class="glide__bullet" data-glide-dir="=4"></button>
-                    <button class="glide__bullet" data-glide-dir="=5"></button>
+
+                    @for ($i = 0; $i < 13; $i++)
+                    <button class="glide__bullet" data-glide-dir="={{$i}}"></button>
+                    
+                    @endfor
                 </div>
             </div>
         </div>
