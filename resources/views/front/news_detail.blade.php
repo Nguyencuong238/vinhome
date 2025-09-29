@@ -734,6 +734,9 @@
             .timeline-item:not(:last-child):after {
                 display: none;
             }
+            .article-image {
+                height: auto;
+            }
         }
 
         @media (max-width: 768px) {
@@ -759,6 +762,7 @@
             .more-articles {
                 padding: 40px 0;
             }
+            
         }
     </style>
     <!-- Article Schema -->

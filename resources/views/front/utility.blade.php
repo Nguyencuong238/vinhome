@@ -633,7 +633,7 @@
             width: 100%;
         }
 
-        .utilities-grid.mt-40 .utility-card img {
+        .utility-other .utility-card img {
             height: 250px;
             width: 100%;
         }
@@ -643,11 +643,16 @@
             margin-right: 0;
         }
 
-        @media (max-width: 992px) {
+        .utility-other {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 991px) {
 
             .feature-wrapper,
             .marina-content,
-            .services-wrapper {
+            .services-wrapper,
+            .utility-other {
                 grid-template-columns: 1fr;
             }
 
@@ -659,12 +664,19 @@
                 grid-column: span 1;
                 grid-row: span 1;
             }
+
+            .overview-item.utilities-image img,
+            .utility-card img,
+            .utility-other .utility-card img
+            {
+                height: auto;
+            }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
 
             .sports-grid,
-            .smart-features {
+            .smart-features, .entertainment-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -674,6 +686,9 @@
 
             .marina-features {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            .cta-buttons {
+                flex-direction: column;
             }
         }
     </style>
@@ -785,7 +800,7 @@
                     </div>
                 </div>
             </div>
-            <div class="utilities-grid mt-40" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="utilities-grid mt-40 utility-other">
                 <div class="utility-card">
                     <h4>PARADISE LAGOON – VỊNH THIÊN ĐƯỜNG 443HA</h4>
                     <p>Biển hồ nhân tạo lớn nhất thế giới, tái hiện trọn vẹn vẻ đẹp Maldives với mặt nước xanh ngọc, bờ cát
@@ -842,42 +857,52 @@
                 <div class="entertainment-card">
                     <div class="entertainment-content">
                         <h3 class="text-transform-capitalize mb-25 text-center">Giáo dục</h3>
-                        <p>Dự án quy hoạch 97 cơ sở giáo dục liên cấp từ mầm non đến phổ thông, phân bổ khắp khu đô thị. Hệ thống trường học hiện đại với thư viện, sân thể thao, phòng thí nghiệm đáp ứng nhu cầu học tập toàn diện, nuôi dưỡng thế hệ công dân tương lai.</p>
+                        <p>Dự án quy hoạch 97 cơ sở giáo dục liên cấp từ mầm non đến phổ thông, phân bổ khắp khu đô thị. Hệ
+                            thống trường học hiện đại với thư viện, sân thể thao, phòng thí nghiệm đáp ứng nhu cầu học tập
+                            toàn diện, nuôi dưỡng thế hệ công dân tương lai.</p>
                     </div>
                     <div class="entertainment-image">
-                        <img src="{{ asset('assets/images/giao-duc-vinhomes-green-paradise.jpg') }}"
-                            alt="Shopping Mall">
+                        <img src="{{ asset('assets/images/giao-duc-vinhomes-green-paradise.jpg') }}" alt="Shopping Mall">
                     </div>
                 </div>
 
                 <div class="entertainment-card">
                     <div class="entertainment-content">
                         <h3 class="text-transform-capitalize mb-25 text-center">Y tế</h3>
-                        <p>Khu đô thị được trang bị 2 bệnh viện đa khoa cùng 18 trạm y tế vệ tinh, đảm bảo cư dân tiếp cận dịch vụ y tế nhanh chóng và thuận tiện. Đặc biệt, Vinmec Cần Giờ hợp tác chuyên môn cùng Cleveland Clinic (Mỹ), mang đến chất lượng khám chữa bệnh chuẩn quốc tế ngay tại địa phương.</p>
+                        <p>Khu đô thị được trang bị 2 bệnh viện đa khoa cùng 18 trạm y tế vệ tinh, đảm bảo cư dân tiếp cận
+                            dịch vụ y tế nhanh chóng và thuận tiện. Đặc biệt, Vinmec Cần Giờ hợp tác chuyên môn cùng
+                            Cleveland Clinic (Mỹ), mang đến chất lượng khám chữa bệnh chuẩn quốc tế ngay tại địa phương.</p>
                     </div>
                     <div class="entertainment-image">
-                        <img src="{{ asset('assets/images/y-te-vinhomes-green-paradise.jpg') }}"
-                            alt="Winter Wonderland">
+                        <img src="{{ asset('assets/images/y-te-vinhomes-green-paradise.jpg') }}" alt="Winter Wonderland">
                     </div>
                 </div>
 
                 <div class="entertainment-card">
                     <div class="entertainment-content">
                         <h3 class="text-transform-capitalize mb-25 text-center">Giao thông nội khu</h3>
-                        <p>Hệ thống VinBus điện vận hành xuyên suốt các phân khu, kết nối thuận tiện đến trường học, bệnh viện, trung tâm thương mại và công viên. Với năng lượng sạch và công nghệ hiện đại, VinBus không chỉ mang lại trải nghiệm di chuyển an toàn, tiện lợi mà còn giảm phát thải, bảo vệ môi trường, đúng với định hướng phát triển xanh ESG của Vingroup.</p>
+                        <p>Hệ thống VinBus điện vận hành xuyên suốt các phân khu, kết nối thuận tiện đến trường học, bệnh
+                            viện, trung tâm thương mại và công viên. Với năng lượng sạch và công nghệ hiện đại, VinBus không
+                            chỉ mang lại trải nghiệm di chuyển an toàn, tiện lợi mà còn giảm phát thải, bảo vệ môi trường,
+                            đúng với định hướng phát triển xanh ESG của Vingroup.</p>
                     </div>
                     <div class="entertainment-image">
-                        <img src="{{ asset('assets/images/tiem-nang-bat-dong-san-vinhomes-green-paradise.jpg') }}" alt="Water Park">
+                        <img src="{{ asset('assets/images/tiem-nang-bat-dong-san-vinhomes-green-paradise.jpg') }}"
+                            alt="Water Park">
                     </div>
                 </div>
 
                 <div class="entertainment-card">
                     <div class="entertainment-content">
                         <h3 class="text-transform-capitalize mb-25 text-center">Năng lượng xanh</h3>
-                        <p>Vingroup hợp tác cùng Boston Consulting Group (BCG) phát triển dự án điện gió ngoài khơi Cần Giờ, cách bờ 10km. Công trình ứng dụng công nghệ hiện đại để khai thác nguồn gió tự nhiên, cung cấp 100% điện tái tạo cho toàn bộ đại đô thị. Đây là bước đi chiến lược hướng tới phát triển bền vững, giảm thiểu carbon và kiến tạo chuẩn mực sống xanh cho thế hệ tương lai.</p>
+                        <p>Vingroup hợp tác cùng Boston Consulting Group (BCG) phát triển dự án điện gió ngoài khơi Cần Giờ,
+                            cách bờ 10km. Công trình ứng dụng công nghệ hiện đại để khai thác nguồn gió tự nhiên, cung cấp
+                            100% điện tái tạo cho toàn bộ đại đô thị. Đây là bước đi chiến lược hướng tới phát triển bền
+                            vững, giảm thiểu carbon và kiến tạo chuẩn mực sống xanh cho thế hệ tương lai.</p>
                     </div>
                     <div class="entertainment-image">
-                        <img src="{{ asset('assets/images/vinhomes-green-paradise-so-sanh-quoc-te.jpg') }}" alt="Cinema">
+                        <img src="{{ asset('assets/images/vinhomes-green-paradise-so-sanh-quoc-te.jpg') }}"
+                            alt="Cinema">
                     </div>
                 </div>
             </div>

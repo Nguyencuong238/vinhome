@@ -1629,6 +1629,7 @@ section {
 .footer-column h3 {
     color: var(--primary);
     margin-bottom: 10px;
+    font-size: 26px;
 }
 
 .footer-column h4 {

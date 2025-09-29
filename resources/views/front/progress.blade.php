@@ -908,6 +908,9 @@
                 text-align: center;
                 gap: 30px;
             }
+            .webcam-feed img {
+                height: auto;
+            }
         }
 
         @media (max-width: 768px) {

@@ -550,6 +550,9 @@
             .news-categories-section {
                 position: static;
             }
+            .article-image {
+                height: auto;
+            }
         }
 
         @media (max-width: 768px) {
@@ -585,6 +588,12 @@
 
             .pagination {
                 flex-wrap: wrap;
+            }
+            .article-footer, .featured-actions {
+                flex-direction: column-reverse;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                gap: 20px;
             }
         }
 

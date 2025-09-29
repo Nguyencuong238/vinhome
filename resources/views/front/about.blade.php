@@ -470,7 +470,7 @@
         }
 
         @media (max-width: 768px) {
-            .content-wrapper {
+            .content-wrapper, .developer-info {
                 grid-template-columns: 1fr;
             }
 

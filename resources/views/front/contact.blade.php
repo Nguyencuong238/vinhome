@@ -126,6 +126,7 @@
         .contact-info-card h3 {
             margin-bottom: 15px;
             color: #1a1a1a;
+            font-size: 26px;
         }
 
         .contact-phone-large {
@@ -170,6 +171,7 @@
         .form-left h2 {
             margin-bottom: 10px;
             color: #00a896;
+            font-size: 42px;
         }
 
         .form-subtitle {
