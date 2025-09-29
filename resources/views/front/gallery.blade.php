@@ -674,14 +674,14 @@
         <div class="container">
             <div class="gallery-grid" id="galleryGrid">
                 @foreach ($galleries as $gallery)
-                    @foreach($gallery->getMedia('media') as $media)
+                    {{-- @foreach($gallery->getMedia('media') as $media) --}}
                     <div class="gallery-card @if($gallery->is_featured) featured @endif show" data-category="category-{{$gallery->categories->first()?->id}}">
                         <div class="gallery-image">
-                            <img src="{{$media->getUrl()}}" alt="{{$gallery->name}}">
+                            <img src="{{$gallery->getFirstMediaUrl('media')}}" alt="{{$gallery->name}}">
                             <div class="gallery-overlay">
                                 <div class="gallery-actions">
                                     <button class="btn-zoom"
-                                        data-image="{{$media->getUrl()}}">
+                                        data-image="{{$gallery->getFirstMediaUrl('media')}}">
                                         <i class="fas fa-search-plus"></i>
                                     </button>
                                     <button class="btn-share">
@@ -696,7 +696,7 @@
                             <p>Cảng du thuyền đẳng cấp quốc tế</p>
                         </div>
                     </div>
-                    @endforeach
+                    {{-- @endforeach --}}
                 @endforeach
             </div>
 
