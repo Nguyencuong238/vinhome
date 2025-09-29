@@ -18,6 +18,10 @@
             object-fit: cover;
         }
 
+        .utilities-grid.mt-30 .utility-card img {
+            height: 250px;
+        }
+
         .glide__arrows {
             position: absolute;
             top: 50%;
@@ -46,6 +50,35 @@
 
         .glide__arrow:hover {
             background: rgba(0, 0, 0, 0.8);
+        }
+
+        .glide__bullets {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 8px;
+        }
+
+        .glide__bullet {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .glide__bullet:focus {
+            outline: none;
+        }
+
+        .glide__bullet:hover {
+            background: #666;
+        }
+
+        .glide__bullet.glide__bullet--active {
+            background: #000;
         }
     </style>
     <!-- Schema.org Structured Data -->
@@ -629,10 +662,12 @@
                     <h4>2 SÂN GOLF 18 LỖ – DẤU ẤN HUYỀN THOẠI QUỐC TẾ</h4>
                     <ul>
                         <li class="border-bottom-0">
-                            <span class="fw-600">Sunset (West)</span> – thiết kế bởi huyền thoại <span class="fw-600">Tiger Woods</span>.
+                            <span class="fw-600">Sunset (West)</span> – thiết kế bởi huyền thoại <span
+                                class="fw-600">Tiger Woods</span>.
                         </li>
                         <li class="border-bottom-0">
-                            <span class="fw-600">Sunrise (East)</span> – kiến tạo bởi bậc thầy <span class="fw-600">Robert Trent Jones II</span>.
+                            <span class="fw-600">Sunrise (East)</span> – kiến tạo bởi bậc thầy <span class="fw-600">Robert
+                                Trent Jones II</span>.
                         </li>
                     </ul>
                     <p>Thiên đường thể thao đẳng cấp, dành riêng cho giới thượng lưu yêu golf.</p>
@@ -641,7 +676,7 @@
                             alt="2 SÂN GOLF 18 LỖ – DẤU ẤN HUYỀN THOẠI QUỐC TẾ">
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -926,6 +961,15 @@
                     <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
                     <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
                 </div>
+                <!-- Dấu chấm (bullets) -->
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                    <button class="glide__bullet" data-glide-dir="=3"></button>
+                    <button class="glide__bullet" data-glide-dir="=4"></button>
+                    <button class="glide__bullet" data-glide-dir="=5"></button>
+                </div>
             </div>
         </div>
     </section>
@@ -1085,9 +1129,9 @@
                 type: 'carousel',
                 perView: 2, // số item hiển thị
                 gap: 20, // khoảng cách giữa các item
-                autoplay: 300000, // tự động chạy (ms), bỏ nếu không muốn
+                autoplay: 3000, // tự động chạy (ms), bỏ nếu không muốn
                 hoverpause: true,
-    focusAt: 'center',
+                focusAt: 'center',
                 //  peek: { before: 300, after: 300 },
                 breakpoints: {
                     1024: {
