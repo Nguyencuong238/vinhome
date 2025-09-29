@@ -98,9 +98,11 @@
                     <a href="/"><img src="{{ asset('assets/images/logo.png') }}" alt="Green Paradise"></a>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="/">Trang Chủ</a></li>
+                    <li>
+                        <a href="/" @if(request()->routeIs('home')) class="btn-nav" @endif>Trang Chủ</a>
+                    </li>
                     <li class="dropdown">
-                        <a href="{{ route('about') }}">Tổng Quan
+                        <a href="{{ route('about') }}" @if(request()->routeIs('about')) class="btn-nav" @endif>Tổng Quan
                             {{-- <i class="fas fa-chevron-down"></i> --}}
                         </a>
                         {{-- <ul class="dropdown-menu">
@@ -111,7 +113,7 @@
                     </li>
                     {{-- <li><a href="#location">Vị Trí</a></li> --}}
                     <li class="dropdown">
-                        <a href="{{ route('utility') }}">Tiện Ích
+                        <a href="{{ route('utility') }}" @if(request()->routeIs('utility')) class="btn-nav" @endif>Tiện Ích
                             {{-- <i class="fas fa-chevron-down"></i> --}}
                         </a>
                         {{-- <ul class="dropdown-menu">
@@ -121,10 +123,10 @@
                             <li><a href="#entertainment">Giải Trí</a></li>
                         </ul> --}}
                     </li>
-                    <li><a href="{{ route('progress') }}">Tiến độ</a></li>
-                    <li><a href="{{ route('gallery') }}">Thư Viện</a></li>
-                    <li><a href="{{ route('news') }}">Tin Tức</a></li>
-                    <li><a href="{{ route('contact') }}" class="btn-nav">Liên Hệ</a></li>
+                    <li><a href="{{ route('progress') }}" @if(request()->routeIs('progress')) class="btn-nav" @endif>Tiến độ</a></li>
+                    <li><a href="{{ route('gallery') }}" @if(request()->routeIs('gallery')) class="btn-nav" @endif>Thư Viện</a></li>
+                    <li><a href="{{ route('news') }}" @if(request()->routeIs('news')) class="btn-nav" @endif>Tin Tức</a></li>
+                    <li><a href="{{ route('contact') }}" @if(request()->routeIs('contact')) class="btn-nav" @endif>Liên Hệ</a></li>
                 </ul>
                 <div class="mobile-toggle">
                     <span></span>

@@ -80,6 +80,9 @@
         .glide__bullet.glide__bullet--active {
             background: #000;
         }
+        .contact-card h4 {
+            white-space: nowrap;
+        }
     </style>
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -951,37 +954,29 @@
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <h4>Văn Phòng Dự Án</h4>
-                        <p>Xã Long Hòa, Huyện Cần Giờ<br>TP. Hồ Chí Minh</p>
+                        <h4 class="flex-1">Địa chỉ 1:</h4>
+                        <p>Tòa nhà T4-51, PhốManhattan, Khu đô thị Vinhomes Grand Park, TP. Thủ Đức , HCM</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 class="flex-1">Địa chỉ 2:</h4>
+                        <p>L10-06 , Lầu 10 , Vincom Center, 72 Lê Thánh Tôn, P. bến Nghé, Quận 1, TP.HCM</p>
                     </div>
                     <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fas fa-phone-alt"></i>
                         </div>
-                        <h4>Hotline 24/7</h4>
+                        <h4>Số điện thoại:</h4>
                         <p class="contact-phone">{{ settings('phone') }}</p>
-                        <p>Tư vấn miễn phí</p>
                     </div>
                     <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fas fa-clock"></i>
                         </div>
-                        <h4>Giờ Làm Việc</h4>
-                        <p>Thứ 2 - Thứ 7: 8:00 - 19:00<br>Chủ nhật: 8:00 - 17:00</p>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-download"></i>
-                        </div>
-                        <h4>Tải Tài Liệu</h4>
-                        <div class="download-buttons">
-                            <a href="#" class="download-btn">
-                                <i class="fas fa-file-pdf"></i> Brochure
-                            </a>
-                            <a href="#" class="download-btn">
-                                <i class="fas fa-file-excel"></i> Bảng Giá
-                            </a>
-                        </div>
+                        <h4>Website:</h4>
+                        <p>{{url('/')}}/</p>
                     </div>
                 </div>
             </div>
