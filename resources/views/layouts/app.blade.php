@@ -21,7 +21,7 @@
 			display: none !important;
 		}
 		.navbar-brand img {
-			height: 80px;
+			height: 50px;
 		}
 		.collapse.in {
 			display: block;
@@ -34,7 +34,7 @@
 		<div class="sidebar sidebar-dark sidebar-main sidebar-expand-lg">
 
 			<div class="navbar navbar-dark bg-dark-100 navbar-static border-0">
-				<div class="navbar-brand flex-fill wmin-0 py-0 text-center">
+				<div class="navbar-brand flex-fill wmin-0 py-2 text-center">
 					<a href="{{ route('home')}}" target="_blank" class="d-inline-block">
 						<img src="{{ asset('assets/images/logo-2.png') }}" alt="GemXChannels" class="sidebar-resize-hide">
 						<img src="{{ asset('assets/images/logo-2.png') }}" alt="GemXChannels" class="sidebar-resize-show">
