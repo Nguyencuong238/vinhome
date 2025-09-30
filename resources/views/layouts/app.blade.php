@@ -80,7 +80,7 @@
 						</li>
 						@endcan 
 
-						 @canany('blogs.view', 'blogs.create', 'blogs.edit', 'blogs.delete')
+						 {{-- @canany('blogs.view', 'blogs.create', 'blogs.edit', 'blogs.delete')
 						<li class="nav-item">
 							<a href="{{ route('blogs.index') }}" class="nav-link">
 								<i class="icon-compose"></i>
@@ -89,7 +89,7 @@
 								</span>
 							</a>
 						</li>
-						@endcan 
+						@endcan  --}}
 
                         {{--  @canany('events.view', 'events.create', 'events.edit', 'events.delete')
                         <li class="nav-item">
