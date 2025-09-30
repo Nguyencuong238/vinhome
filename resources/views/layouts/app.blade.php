@@ -36,8 +36,8 @@
 			<div class="navbar navbar-dark bg-dark-100 navbar-static border-0">
 				<div class="navbar-brand flex-fill wmin-0 py-0 text-center">
 					<a href="{{ route('home')}}" target="_blank" class="d-inline-block">
-						<img src="{{ asset('images/logo.png') }}" alt="GemXChannels" class="sidebar-resize-hide">
-						<img src="{{ asset('images/logo.png') }}" alt="GemXChannels" class="sidebar-resize-show">
+						<img src="{{ asset('assets/images/logo-2.png') }}" alt="GemXChannels" class="sidebar-resize-hide">
+						<img src="{{ asset('assets/images/logo-2.png') }}" alt="GemXChannels" class="sidebar-resize-show">
 					</a>
 				</div>
 
