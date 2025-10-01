@@ -23,7 +23,7 @@
     @hasSection('meta')
         @yield('meta')
     @else
-        <title>Vinhomes Green Paradise Cần Giờ - Siêu Đô Thị ESG 2.870ha | Chính Thức 2025</title>
+        <title>Vinhomes Green Paradise Cần Giờ - Siêu Đô Thị ESG 2.870ha</title>
         <meta name="description"
             content="Vinhomes Green Paradise Cần Giờ - Siêu đô thị lấn biển 2.870ha, vốn đầu tư 10 tỷ USD. Paradise Lagoon 443ha, sân golf Tiger Woods, Marina 5 sao. Hotline: {{ settings('phone') }}">
         <meta name="keywords"
@@ -423,7 +423,7 @@
     <div id="exampleModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true"
         aria-labelledby="modalTitle">
         <div class="modal" role="document" tabindex="-1">
-            <header class="modal-header pt-30">
+            <header class="modal-header pt-30 pb-5">
                 <h3 id="modalTitle" class="modal-title text-center" style="font-size: 22px;">Đăng Ký Nhận Thông Tin
                 </h3>
                 {{-- <button class="close-btn" data-dismiss="modal" aria-label="Đóng">&times;</button> --}}
