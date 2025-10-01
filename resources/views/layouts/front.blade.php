@@ -50,13 +50,13 @@
 
     <!-- Toastr CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <link rel="stylesheet" href="{{ asset('assets/styles.css') .'?v=' . env('ASSET_VERSION') }}">
-    <link rel="stylesheet" href="{{ asset('assets/utilities.css') .'?v=' . env('ASSET_VERSION') }}">
+    <link rel="stylesheet" href="{{ asset('assets/styles.css') . '?v=' . env('ASSET_VERSION') }}">
+    <link rel="stylesheet" href="{{ asset('assets/utilities.css') . '?v=' . env('ASSET_VERSION') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap"
         rel="stylesheet">
-@yield('css')
+    @yield('css')
 
     <style>
         @media (max-width: 768px) {
@@ -70,6 +70,223 @@
             }
         }
     </style>
+    <style>
+        :root {
+            --backdrop: rgba(0, 0, 0, 0.5);
+            --modal-bg: #fff;
+            --accent: #0d6efd;
+            --radius: 8px
+        }
+
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--white) !important;
+            padding: 10px 25px !important;
+            border-radius: var(--radius-full);
+            font-weight: 600 !important;
+        }
+
+
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1050;
+            background: rgba(0, 0, 0, .5);
+        }
+
+        .modal-backdrop.show {
+            display: flex
+        }
+
+        .modal-backdrop[aria-hidden="false"] {
+            display: flex
+        }
+
+
+        .modal {
+            width: 100%;
+            max-width: 540px;
+            margin: 1.5rem;
+            transform: translateY(-10px) scale(.98);
+            opacity: 0;
+            transition: all 180ms cubic-bezier(.2, .8, .2, 1);
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--modal-bg);
+            box-shadow: 0 10px 30px rgba(2, 6, 23, .2);
+        }
+
+        .modal.show {
+            transform: translateY(0) scale(1);
+            opacity: 1
+        }
+
+
+        .modal-header,
+        .modal-footer {
+            padding: 1rem 1.25rem;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent)
+        }
+
+        .modal-title {
+            margin: 0;
+            font-weight: 600;
+            font-size: 1.05rem
+        }
+
+        .close-btn {
+            background: transparent;
+            border: 0;
+            font-size: 1.35rem;
+            line-height: 1;
+            color: #333;
+            cursor: pointer
+        }
+
+
+        .modal-body {
+            padding: 30px 20px
+        }
+
+        .modal-footer {
+            display: flex;
+            gap: .5rem;
+            justify-content: flex-end
+        }
+
+
+        .modal-sm {
+            max-width: 360px
+        }
+
+        .modal-lg {
+            max-width: 900px
+        }
+
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0
+        }
+
+        .text-muted {
+            color: #6c757d;
+            font-size: .95rem
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .required {
+            color: #dc3545;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px 15px 50px;
+            border: 1px solid #ced4da;
+            border-radius: 10px;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00a896;
+            box-shadow: 0 0 0 3px rgba(0, 168, 150, 0.1);
+        }
+
+        .form-group i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #adb5bd;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-checkbox {
+            margin: 30px 0;
+        }
+
+        .form-checkbox input {
+            margin-right: 10px;
+        }
+
+        .btn-submit-main {
+            width: 100%;
+            background: linear-gradient(135deg, #00a896 0%, #02c39a 100%);
+            color: white;
+            padding: 18px 30px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-submit-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 168, 150, 0.3);
+        }
+    </style>
+    
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WK9SW2KW');
+    </script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
@@ -99,10 +316,11 @@
                 </div>
                 <ul class="nav-menu">
                     <li>
-                        <a href="/" @if(request()->routeIs('home')) class="btn-nav" @endif>Trang Chủ</a>
+                        <a href="/" @if (request()->routeIs('home')) class="btn-nav" @endif>Trang Chủ</a>
                     </li>
                     <li class="dropdown">
-                        <a href="{{ route('about') }}" @if(request()->routeIs('about')) class="btn-nav" @endif>Tổng Quan
+                        <a href="{{ route('about') }}" @if (request()->routeIs('about')) class="btn-nav" @endif>Tổng
+                            Quan
                             {{-- <i class="fas fa-chevron-down"></i> --}}
                         </a>
                         {{-- <ul class="dropdown-menu">
@@ -113,7 +331,8 @@
                     </li>
                     {{-- <li><a href="#location">Vị Trí</a></li> --}}
                     <li class="dropdown">
-                        <a href="{{ route('utility') }}" @if(request()->routeIs('utility')) class="btn-nav" @endif>Tiện Ích
+                        <a href="{{ route('utility') }}" @if (request()->routeIs('utility')) class="btn-nav" @endif>Tiện
+                            Ích
                             {{-- <i class="fas fa-chevron-down"></i> --}}
                         </a>
                         {{-- <ul class="dropdown-menu">
@@ -123,10 +342,14 @@
                             <li><a href="#entertainment">Giải Trí</a></li>
                         </ul> --}}
                     </li>
-                    <li><a href="{{ route('progress') }}" @if(request()->routeIs('progress')) class="btn-nav" @endif>Tiến độ</a></li>
-                    <li><a href="{{ route('gallery') }}" @if(request()->routeIs('gallery')) class="btn-nav" @endif>Thư Viện</a></li>
-                    <li><a href="{{ route('news') }}" @if(request()->routeIs('news')) class="btn-nav" @endif>Tin Tức</a></li>
-                    <li><a href="{{ route('contact') }}" @if(request()->routeIs('contact')) class="btn-nav" @endif>Liên Hệ</a></li>
+                    <li><a href="{{ route('progress') }}" @if (request()->routeIs('progress')) class="btn-nav" @endif>Tiến
+                            độ</a></li>
+                    <li><a href="{{ route('gallery') }}" @if (request()->routeIs('gallery')) class="btn-nav" @endif>Thư
+                            Viện</a></li>
+                    <li><a href="{{ route('news') }}" @if (request()->routeIs('news')) class="btn-nav" @endif>Tin
+                            Tức</a></li>
+                    <li><a href="{{ route('contact') }}" @if (request()->routeIs('contact')) class="btn-nav" @endif>Liên
+                            Hệ</a></li>
                 </ul>
                 <div class="mobile-toggle">
                     <span></span>
@@ -145,26 +368,27 @@
             <div class="footer-top">
                 <div class="footer-column">
                     <div class="footer-logo">
-                        <a href="/"><img src="{{ asset('assets/images/logo-2.png') }}" alt="Green Paradise"></a>
+                        <a href="/"><img src="{{ asset('assets/images/logo-2.png') }}"
+                                alt="Green Paradise"></a>
                     </div>
                     <h3>Vinhomes Green Paradise</h3>
                     <p>Siêu đô thị ESG đầu tiên Việt Nam, kiến tạo chuẩn mực sống mới cho 230.000 cư dân,
                         hứa hẹn trở thành biểu tượng mới của TP.HCM và điểm đến du lịch hàng đầu châu Á.</p>
                     <div class="footer-social">
-                        <a href="{{settings('facebook')}}"><i class="fab fa-facebook-f"></i></a>
-                        <a href="{{settings('youtube')}}"><i class="fab fa-youtube"></i></a>
-                        <a href="{{settings('tiktok')}}"><i class="fab fa-tiktok"></i></a>
+                        <a href="{{ settings('facebook') }}"><i class="fab fa-facebook-f"></i></a>
+                        <a href="{{ settings('youtube') }}"><i class="fab fa-youtube"></i></a>
+                        <a href="{{ settings('tiktok') }}"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-column">
                     <h4>Khám Phá Dự Án</h4>
                     <ul>
-                        <li><a href="{{route('about')}}">Tổng quan dự án</a></li>
+                        <li><a href="{{ route('about') }}">Tổng quan dự án</a></li>
                         <li><a href="#">Vị trí & Kết nối</a></li>
-                        <li><a href="{{route('utility')}}">Tiện ích đẳng cấp</a></li>
+                        <li><a href="{{ route('utility') }}">Tiện ích đẳng cấp</a></li>
                         <li><a href="#">Phân khu dự án</a></li>
-                        <li><a href="{{route('gallery')}}">Thư viện hình ảnh</a></li>
+                        <li><a href="{{ route('gallery') }}">Thư viện hình ảnh</a></li>
                     </ul>
                 </div>
 
@@ -174,7 +398,7 @@
                         <li><a href="#">Chính sách bán hàng</a></li>
                         <li><a href="#">Phương thức thanh toán</a></li>
                         <li><a href="#">Hỗ trợ vay vốn</a></li>
-                        <li><a href="{{route('progress')}}">Tiến độ dự án</a></li>
+                        <li><a href="{{ route('progress') }}">Tiến độ dự án</a></li>
                         <li><a href="#">Câu hỏi thường gặp</a></li>
                     </ul>
                 </div>
@@ -209,6 +433,58 @@
         </div>
     </footer>
 
+    <div id="exampleModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true"
+        aria-labelledby="modalTitle">
+        <div class="modal" role="document" tabindex="-1">
+            <header class="modal-header pt-30">
+                <h3 id="modalTitle" class="modal-title text-center" style="font-size: 22px;">Đăng Ký Nhận Thông Tin
+                </h3>
+                {{-- <button class="close-btn" data-dismiss="modal" aria-label="Đóng">&times;</button> --}}
+            </header>
+            <div class="modal-body">
+                <form onsubmit="registerNewsletter(this, event, true);">
+                    <div class="form-group">
+                        <label>Họ và tên <span class="required">*</span></label>
+                        <div class="position-relative">
+                            <input type="text" placeholder="Nhập họ tên của bạn" required name="name">
+                            <i class="fas fa-user"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Số điện thoại <span class="required">*</span></label>
+                            <div class="position-relative">
+                                <input type="tel" placeholder="Số điện thoại" required name="phone">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <div class="position-relative">
+                                <input type="email" placeholder="Email của bạn" name="email">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Lời nhắn</label>
+                        <div class="position-relative">
+                            <textarea rows="3" placeholder="Nội dung bạn muốn tư vấn..." name="message"></textarea>
+                            <i class="fas fa-comment" style="top: 35px;"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-submit-main">
+                        Gửi Yêu Cầu
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Fixed Buttons -->
     <div class="fixed-buttons">
         <a href="tel:{{ str_replace(' ', '', settings('phone')) }}" class="fixed-call">
@@ -226,6 +502,78 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script>
+        $(function() {
+            function showModal($backdrop) {
+                const $dialog = $backdrop.find('.modal');
+                $backdrop.attr('aria-hidden', 'false').addClass('show');
+                $dialog.addClass('show');
+                $backdrop.data('prevFocus', document.activeElement);
+                setTimeout(function() {
+                    let $focusable = $dialog.find(
+                            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
+                        .first();
+                    if ($focusable.length) {
+                        $focusable.focus();
+                    } else {
+                        $dialog.focus();
+                    }
+                }, 50);
+            }
+
+
+            function hideModal($backdrop) {
+                const $dialog = $backdrop.find('.modal');
+                $backdrop.attr('aria-hidden', 'true').removeClass('show');
+                $dialog.removeClass('show');
+                const prev = $backdrop.data('prevFocus');
+                if (prev && typeof prev.focus === 'function') prev.focus();
+            }
+
+
+            $('[data-toggle="modal"]').on('click', function() {
+                const target = $(this).data('target');
+                showModal($(target));
+            });
+
+
+            $(document).on('click', '[data-dismiss="modal"]', function() {
+                hideModal($(this).closest('.modal-backdrop'));
+            });
+
+
+            $(document).on('click', '.modal-backdrop', function(e) {
+                if (e.target === this) {
+                    hideModal($(this));
+                }
+            });
+
+
+            $(document).on('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const $open = $('.modal-backdrop[aria-hidden="false"]');
+                    if ($open.length) {
+                        hideModal($open);
+                    }
+                }
+            });
+
+
+            window.Modal = {
+                show: function(selector) {
+                    showModal($(selector));
+                },
+                hide: function(selector) {
+                    hideModal($(selector));
+                }
+            };
+        });
+        // @if (!request()->routeIs('contact'))
+        setTimeout(() => {
+            Modal.show('#exampleModal');
+        }, 5000);
+        // @endif
+    </script>
     <script>
         // Mobile Menu Toggle
         document.querySelector('.mobile-toggle').addEventListener('click', function() {
@@ -318,13 +666,16 @@
         @endif
     </script>
     <script>
-        function registerNewsletter(form, e) {
+        function registerNewsletter(form, e, isModal = false) {
             e.preventDefault();
 
             $(form).find('button').prop('disabled', true);
 
             var data = {
-                email: $(form).find('input[name="email"]').val()
+                name: $(form).find('input[name="name"]').val(),
+                phone: $(form).find('input[name="phone"]').val(),
+                email: $(form).find('input[name="email"]').val(),
+                message: $(form).find('[name="message"]').val()
             };
 
             $.ajax({
@@ -336,11 +687,14 @@
                     toastr.success(
                         'Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ với bạn sớm nhất.');
                     $(form)[0].reset();
+                    if (isModal) {
+                        setTimeout(() => {
+                            Modal.hide('#exampleModal');
+                        }, 200);
+                    }
                 } else {
                     toastr.error(res.msg);
                 }
-
-
             });
             $(form).find('button').prop('disabled', false);
         }

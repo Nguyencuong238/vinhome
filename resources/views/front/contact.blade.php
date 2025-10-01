@@ -812,7 +812,7 @@
                 e.preventDefault();
 
                 $(this).find('button').prop('disabled', true);
-                
+                var form = $('.contact-form-main')[0];
                 var data = {
                         name: $(this).find('input[name="name"]').val(),
                         phone: $(this).find('input[name="phone"]').val(),
@@ -829,7 +829,7 @@
                     
                     if (res.success) {
                         toastr.success('Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ với bạn sớm nhất.');
-                        $('.contact-form-main')[0].reset();
+                        form.reset();
                     } else {
                         toastr.error(res.msg);
                     }

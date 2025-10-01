@@ -123,7 +123,7 @@
         <div class="hero-bg">
             <div class="hero-overlay"></div>
             <video autoplay muted loop poster="{{ asset('assets/images/sieu-do-thi-esg-vinhomes-green-peradise.jpg') }}">
-                <source src="video.mp4" type="video/mp4">
+                {{-- <source src="video.mp4" type="video/mp4"> --}}
                 <img src="{{ asset('assets/images/sieu-do-thi-esg-vinhomes-green-peradise.jpg') }}" alt="Green Paradise">
             </video>
         </div>
