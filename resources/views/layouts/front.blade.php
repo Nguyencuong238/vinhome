@@ -226,7 +226,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         // Mobile Menu Toggle
         document.querySelector('.mobile-toggle').addEventListener('click', function() {
