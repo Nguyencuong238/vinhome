@@ -71,7 +71,7 @@
         }
         @media (max-width: 480px) {
             .logo img {
-                height: 45px;
+                height: 40px;
             }
         }
     </style>
@@ -439,20 +439,11 @@
 
                     </div>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Số điện thoại <span class="required">*</span></label>
-                            <div class="position-relative">
-                                <input type="tel" placeholder="Số điện thoại" required name="phone">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Email</label>
-                            <div class="position-relative">
-                                <input type="email" placeholder="Email của bạn" name="email">
-                                <i class="fas fa-envelope"></i>
-                            </div>
+                    <div class="form-group">
+                        <label>Số điện thoại <span class="required">*</span></label>
+                        <div class="position-relative">
+                            <input type="tel" placeholder="Số điện thoại" required name="phone">
+                            <i class="fas fa-phone"></i>
                         </div>
                     </div>
 
