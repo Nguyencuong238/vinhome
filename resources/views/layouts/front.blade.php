@@ -69,6 +69,11 @@
                 margin: 0 auto 15px;
             }
         }
+        @media (max-width: 480px) {
+            .logo img {
+                height: 45px;
+            }
+        }
     </style>
     <style>
         :root {
