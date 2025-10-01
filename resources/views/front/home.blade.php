@@ -140,10 +140,10 @@
                         Đô thị Xanh - Thông minh - Sinh thái đầu tiên Việt Nam
                     </p>
                     <div class="hero-cta">
-                        <a href="#contact" class="btn btn-primary btn-lg">
+                        <a href="{{route('contact')}}" class="btn btn-primary btn-lg">
                             <i class="fas fa-download"></i> Tải Brochure
                         </a>
-                        <a href="#video" class="btn btn-outline btn-lg">
+                        <a href="{{route('gallery')}}" class="btn btn-outline btn-lg">
                             <i class="fas fa-play"></i> Xem Video
                         </a>
                     </div>
