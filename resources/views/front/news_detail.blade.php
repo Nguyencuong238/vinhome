@@ -782,11 +782,11 @@
                 "name": "Vinhomes Green Paradise",
                 "logo": {
                 "@type": "ImageObject",
-                "url": "https://vinhomescangio.info/logo.png"
+                "url": "{{asset('assets/images/logo.png')}}"
                 }
             },
-            "image": "https://vinhomescangio.info/images/the-haven-bay.jpg",
-            "articleBody": "Vinhomes Green Paradise chính thức ra mắt..."
+            "image": "{{$post->getFirstMediaUrl('media')}}",
+            "articleBody": "{{Str::words($post->excerpt, 15)}}"
         }
     </script>
 @endsection

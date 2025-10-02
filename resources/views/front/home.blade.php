@@ -90,9 +90,9 @@
             "@context": "https://schema.org",
             "@type": "RealEstateAgent",
             "name": "Vinhomes Green Paradise Cần Giờ",
-            "image": "https://vinhomescangio.info/logo.png",
-            "url": "https://vinhomescangio.info",
-            "telephone": "+84963728586",
+            "image": "{{asset('assets/images/logo.png')}}",
+            "url": "{{url('')}}",
+            "telephone": "{{settings('phone')}}",
             "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Xã Long Hòa, Thị trấn Cần Thạnh",
