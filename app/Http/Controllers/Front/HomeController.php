@@ -26,7 +26,13 @@ class HomeController extends Controller
 
     public function news(Request $req)
     {
-        $posts = Post::where('status', 1)->orderByDesc('is_featured')->orderByDesc('id')->paginate(9);
+        $posts = Post::where('status', 1)->orderByDesc('is_featured')->orderByDesc('id')->paginate(1);
+
+        if ($req->ajax()) {
+            $view = view('front._news', compact('posts'))->render();
+            return response()->json(['html' => $view, 'totalPage' => $posts->lastPage()]);
+        }
+
         $categories = Category::where('type', 'post')->get();
 
         return view('front.news', compact('posts', 'categories'));
@@ -36,15 +42,15 @@ class HomeController extends Controller
     {
         $post->increment('view', 1);
         $category = $post->categories()->first();
-        
-        $relatedPosts = Post::when($category, function($q) use ($category) {
-            $q->whereHas('categories', function($q) use ($category) {
+
+        $relatedPosts = Post::when($category, function ($q) use ($category) {
+            $q->whereHas('categories', function ($q) use ($category) {
                 $q->where('id', $category->id);
             });
         })
-        ->where('status', 1)
-        ->orderByDesc('id')->limit(3)->get();
-        
+            ->where('status', 1)
+            ->orderByDesc('id')->limit(3)->get();
+
         $otherPosts = Post::query()->where('status', 1)->where('id', '<>', $post->id)->inRandomOrder()->limit(3)->get();
         $categories = Category::where('type', 'post')->get();
 
@@ -60,7 +66,7 @@ class HomeController extends Controller
     {
         $galleries = Album::where('status', 1)->orderByDesc('id')->get();
         $categories = Category::where('type', 'image')->get();
-        
+
         return view('front.gallery', compact('galleries', 'categories'));
     }
 
@@ -73,16 +79,17 @@ class HomeController extends Controller
     {
         $galleries = Album::where('status', 1)->orderByDesc('id')->get();
         $categories = Category::where('type', 'image')->get();
-        
+
         return view('front.progress', compact('galleries', 'categories'));
     }
 
-    public function login(){
+    public function login()
+    {
         return view('auth.login');
     }
 
-    public function register(){
+    public function register()
+    {
         return view('auth.register');
     }
-
 }

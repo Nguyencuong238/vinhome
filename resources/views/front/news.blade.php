@@ -5,9 +5,10 @@
     <meta name="description"
         content="Cập nhật tin tức mới nhất về dự án Vinhomes Green Paradise - Tiến độ xây dựng, sự kiện, ưu đãi đặc biệt">
     <meta property="og:title" content="Tin Tức & Sự Kiện - Vinhomes Green Paradise Cần Giờ">
-    <meta property="og:description" content="Cập nhật tin tức mới nhất về dự án Vinhomes Green Paradise - Tiến độ xây dựng, sự kiện, ưu đãi đặc biệt">
+    <meta property="og:description"
+        content="Cập nhật tin tức mới nhất về dự án Vinhomes Green Paradise - Tiến độ xây dựng, sự kiện, ưu đãi đặc biệt">
     <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
-    <link rel="canonical" href="{{url()->current()}}">
+    <link rel="canonical" href="{{ url()->current() }}">
 @endsection
 
 @section('css')
@@ -270,7 +271,7 @@
 
         .news-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin-bottom: 60px;
         }
@@ -405,6 +406,7 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
+            font-size: 14px;
         }
 
         .load-more-btn:hover {
@@ -550,6 +552,7 @@
             .news-categories-section {
                 position: static;
             }
+
             .article-image {
                 height: auto;
             }
@@ -589,7 +592,9 @@
             .pagination {
                 flex-wrap: wrap;
             }
-            .article-footer, .featured-actions {
+
+            .article-footer,
+            .featured-actions {
                 flex-direction: column-reverse;
                 flex-wrap: wrap;
                 align-items: flex-start;
@@ -613,7 +618,7 @@
 @section('page')
     <!-- Page Hero -->
     <section class="page-hero"
-        style="background: linear-gradient(135deg, rgba(5,102,141,0.9) 0%, rgba(0,168,150,0.8) 100%), url('{{asset('assets/images/photo-1504711434969-e33886168f5c.jpeg')}}') center/cover;">
+        style="background: linear-gradient(135deg, rgba(5,102,141,0.9) 0%, rgba(0,168,150,0.8) 100%), url('{{ asset('assets/images/photo-1504711434969-e33886168f5c.jpeg') }}') center/cover;">
         <div class="container">
             <div class="page-hero-content">
                 <h1 class="page-title">Tin Tức & Sự Kiện</h1>
@@ -637,7 +642,6 @@
                 @foreach ($categories as $category)
                     <button class="category-btn" data-category="category-{{ $category->id }}">
                         <i class="fas fa-tags"></i> {{ $category->name }}
-                    
                 @endforeach
             </div>
         </div>
@@ -649,7 +653,7 @@
             <div class="container">
                 <article class="featured-article">
                     <div class="featured-image">
-                        <img src="{{ $featured->getFirstMediaUrl('media') }}" alt="{{$featured->title}}">
+                        <img src="{{ $featured->getFirstMediaUrl('media') }}" alt="{{ $featured->title }}">
                         <div class="featured-category">SỰ KIỆN HOT</div>
                         <div class="featured-date">
                             <span class="day">{{ $featured->created_at->format('d') }}</span>
@@ -664,9 +668,9 @@
                             <span><i class="fas fa-share-alt"></i> 456 chia sẻ</span>
                         </div>
                         <h2>{{ $featured->title }}</h2>
-                        <p>{{$featured->excerpt}}</p>
+                        <p>{{ $featured->excerpt }}</p>
                         <div class="featured-actions">
-                            <a href="{{$featured->showUrl()}}" class="read-more-btn">
+                            <a href="{{ $featured->showUrl() }}" class="read-more-btn">
                                 Đọc Tiếp <i class="fas fa-arrow-right"></i>
                             </a>
                             <div class="social-share">
@@ -688,24 +692,25 @@
             <div class="news-grid">
 
                 @foreach ($posts as $post)
-                    <article class="news-article" data-category="{{'category-' .$post->categories->first()?->id}}">
+                    <article class="news-article" data-category="{{ 'category-' . $post->categories->first()?->id }}">
                         <div class="article-image">
                             <img src="{{ $post->getFirstMediaUrl('media') }}" alt="{{ $post->title }}">
-                            <div class="article-category">{{$post->categories->first()?->name}}</div>
-                            <div class="article-date">{{ $post->created_at->format('d') }}<br>{{ $post->created_at->format('M') }}</div>
+                            <div class="article-category">{{ $post->categories->first()?->name }}</div>
+                            <div class="article-date">
+                                {{ $post->created_at->format('d') }}<br>{{ $post->created_at->format('M') }}</div>
                         </div>
                         <div class="article-content">
                             <div class="article-meta">
-                                <span><i class="fas fa-clock"></i> {{human_time($post->created_at)}}</span>
-                                <span><i class="fas fa-eye"></i> {{$post->view}}</span>
+                                <span><i class="fas fa-clock"></i> {{ human_time($post->created_at) }}</span>
+                                <span><i class="fas fa-eye"></i> {{ $post->view }}</span>
                             </div>
                             <h3>{{ $post->title }}</h3>
                             <p>{{ $post->excerpt }}</p>
                             <div class="article-footer">
-                                <a href="{{$post->showUrl()}}" class="article-link">Xem Chi Tiết →</a>
+                                <a href="{{ $post->showUrl() }}" class="article-link">Xem Chi Tiết →</a>
                                 <div class="article-tags">
                                     @foreach ($post->tags as $tag)
-                                        <span class="tag">#{{$tag->name}}</span>
+                                        <span class="tag">#{{ $tag->name }}</span>
                                     @endforeach
                                 </div>
                             </div>
@@ -719,26 +724,9 @@
             <div class="load-more-section">
                 <button class="load-more-btn">
                     <i class="fas fa-plus-circle"></i>
-                    Xem Thêm Tin Tức
+                    <span>Xem thêm</span>
                 </button>
             </div>
-
-            <!-- Pagination -->
-            {{-- <div class="pagination">
-                <button class="page-btn prev" disabled>
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="page-btn active">1</button>
-                <button class="page-btn">2</button>
-                <button class="page-btn">3</button>
-                <button class="page-btn">4</button>
-                <button class="page-btn">5</button>
-                <span class="page-dots">...</span>
-                <button class="page-btn">12</button>
-                <button class="page-btn next">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div> --}}
         </div>
     </section>
 
@@ -793,6 +781,47 @@
                         setTimeout(() => {
                             article.style.display = 'none';
                         }, 300);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(function() {
+            var $btn = $('.load-more-btn');
+            var $grid = $('.news-grid');
+            if ($btn.length === 0 || $grid.length === 0) return;
+
+            var currentPage = 1;
+            var defaultBtnText = $btn.text();
+
+            $btn.on('click', function() {
+                var nextPage = currentPage + 1;
+                $btn.prop('disabled', true).find('span').text('Đang tải...');
+
+                $.ajax({
+                    url: '?page=' + nextPage,
+                    method: 'GET',
+                    dataType: 'json',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    success: function(data) {
+                        if (data && data.html && $.trim(data.html) !== '') {
+                            $grid.append(data.html);
+                            currentPage = nextPage;
+                            console.log()
+                            if (currentPage < data.totalPage) {
+                                $btn.prop('disabled', false).find('span').text(defaultBtnText);
+                            } else {
+                                $btn.prop('disabled', true).text('Đã tải hết');
+                            }
+                        }
+                    },
+                    error: function(xhr, status, err) {
+                        toastr.error("Đã xảy ra lỗi. Vui lòng thử lại");
+                        $btn.prop('disabled', false).text(defaultBtnText);
                     }
                 });
             });
