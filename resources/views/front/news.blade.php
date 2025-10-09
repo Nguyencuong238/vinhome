@@ -639,21 +639,6 @@
                         <i class="fas fa-tags"></i> {{ $category->name }}
                     
                 @endforeach
-                {{-- <button class="category-btn" data-category="project">
-                    <i class="fas fa-building"></i> Tin Dự Án
-                </button>
-                <button class="category-btn" data-category="event">
-                    <i class="fas fa-calendar-alt"></i> Sự Kiện
-                </button>
-                <button class="category-btn" data-category="promotion">
-                    <i class="fas fa-tags"></i> Ưu Đãi
-                </button>
-                <button class="category-btn" data-category="progress">
-                    <i class="fas fa-chart-line"></i> Tiến Độ
-                </button>
-                <button class="category-btn" data-category="lifestyle">
-                    <i class="fas fa-heart"></i> Lifestyle
-                </button> --}}
             </div>
         </div>
     </section>

@@ -701,8 +701,7 @@
                         <img src="{{asset('assets/images/avatar.jpeg')}}"
                             alt="Sales Manager">
                         <div>
-                            <h4>Mr. Nguyễn Văn A</h4>
-                            <p>Giám đốc Kinh doanh</p>
+                            <h4>Hotline</h4>
                             <a href="tel:{{ str_replace(' ', '', settings('phone')) }}" class="phone-direct">
                                 <i class="fas fa-phone"></i> {{ settings('phone') }}
                             </a>
