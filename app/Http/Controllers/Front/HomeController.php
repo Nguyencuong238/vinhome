@@ -26,7 +26,12 @@ class HomeController extends Controller
 
     public function news(Request $req)
     {
-        $posts = Post::where('status', 1)->orderByDesc('is_featured')->orderByDesc('id')->paginate(1);
+        $featuredPost = Post::where('status', 1)->where('is_featured', 1)->orderByDesc('id')->first();
+        $posts = Post::where('status', 1)
+            ->where('id', '<>', $featuredPost->id)
+            ->orderByDesc('is_featured')
+            ->orderByDesc('id')
+            ->paginate(6);
 
         if ($req->ajax()) {
             $view = view('front._news', compact('posts'))->render();
@@ -35,7 +40,7 @@ class HomeController extends Controller
 
         $categories = Category::where('type', 'post')->get();
 
-        return view('front.news', compact('posts', 'categories'));
+        return view('front.news', compact('posts', 'categories', 'featuredPost'));
     }
 
     public function newsDetail(Request $req, Post $post)

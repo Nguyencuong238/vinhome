@@ -648,29 +648,29 @@
     </section>
 
     <!-- Featured Article -->
-    @if ($featured = $posts->shift())
+    @if ($featuredPost)
         <section class="news-featured">
             <div class="container">
                 <article class="featured-article">
                     <div class="featured-image">
-                        <img src="{{ $featured->getFirstMediaUrl('media') }}" alt="{{ $featured->title }}">
+                        <img src="{{ $featuredPost->getFirstMediaUrl('media') }}" alt="{{ $featuredPost->title }}">
                         <div class="featured-category">SỰ KIỆN HOT</div>
                         <div class="featured-date">
-                            <span class="day">{{ $featured->created_at->format('d') }}</span>
-                            <span class="month">{{ $featured->created_at->format('M') }}</span>
+                            <span class="day">{{ $featuredPost->created_at->format('d') }}</span>
+                            <span class="month">{{ $featuredPost->created_at->format('M') }}</span>
                         </div>
                     </div>
                     <div class="featured-content">
                         <div class="article-meta">
                             <span><i class="fas fa-user"></i> Admin</span>
-                            <span><i class="fas fa-eye"></i> {{ $featured->view }} lượt xem</span>
+                            <span><i class="fas fa-eye"></i> {{ $featuredPost->view }} lượt xem</span>
                             <span><i class="fas fa-comments"></i> 89 bình luận</span>
                             <span><i class="fas fa-share-alt"></i> 456 chia sẻ</span>
                         </div>
-                        <h2>{{ $featured->title }}</h2>
-                        <p>{{ $featured->excerpt }}</p>
+                        <h2>{{ $featuredPost->title }}</h2>
+                        <p>{{ $featuredPost->excerpt }}</p>
                         <div class="featured-actions">
-                            <a href="{{ $featured->showUrl() }}" class="read-more-btn">
+                            <a href="{{ $featuredPost->showUrl() }}" class="read-more-btn">
                                 Đọc Tiếp <i class="fas fa-arrow-right"></i>
                             </a>
                             <div class="social-share">
@@ -811,12 +811,9 @@
                         if (data && data.html && $.trim(data.html) !== '') {
                             $grid.append(data.html);
                             currentPage = nextPage;
-                            console.log()
-                            if (currentPage < data.totalPage) {
-                                $btn.prop('disabled', false).find('span').text(defaultBtnText);
-                            } else {
-                                $btn.prop('disabled', true).text('Đã tải hết');
-                            }
+                            $btn.prop('disabled', false).find('span').text(defaultBtnText);
+                        } else {
+                            $btn.prop('disabled', true).text('Đã tải hết');
                         }
                     },
                     error: function(xhr, status, err) {
