@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="google-site-verification" content="TGMZpofgWigfiCUCyNKGCeB59B21LVKOdAhT7NNYl6E" />
+    <meta name="google-site-verification" content="o0tDC-cGTnpaqQ2Z6KqBMBswqFWIo7PmNlpv85CxIrM" />
 
     <!-- SEO Meta Tags -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
