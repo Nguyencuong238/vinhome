@@ -827,7 +827,7 @@
                         <i class="fas fa-phone-alt"></i> Liên Hệ Tư Vấn
                     </a>
                     <a href="{{route('contact')}}" class="btn btn-outline btn-lg">
-                        <i class="fas fa-download"></i> Tải Brochure
+                        <i class="fas fa-download"></i> Tải báo giá
                     </a>
                 </div>
             </div>

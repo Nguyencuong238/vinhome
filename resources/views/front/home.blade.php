@@ -141,7 +141,7 @@
                     </p>
                     <div class="hero-cta">
                         <a href="{{route('contact')}}" class="btn btn-primary btn-lg">
-                            <i class="fas fa-download"></i> Tải Brochure
+                            <i class="fas fa-download"></i> Tải Báo Giá
                         </a>
                         <a href="{{route('gallery')}}" class="btn btn-outline btn-lg">
                             <i class="fas fa-play"></i> Xem Video
