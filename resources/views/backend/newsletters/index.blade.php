@@ -21,7 +21,7 @@
                         <th>{{ __('Quan tâm') }}</th>
                         <th>{{ __('Message') }}</th>
                         <th>{{ __('Date') }}</th>
-                        <th class="text-center">{{ __('Action') }}</th>
+                        {{-- <th class="text-center">{{ __('Action') }}</th> --}}
                     </tr>
                 </thead>
                 <tbody>
@@ -33,11 +33,11 @@
                         <td>{{ $contact->product }}</td>
                         <td>{{ $contact->message }}</td>
                         <td>{{ $contact->created_at->format('d/m/Y H:i:s') }}</td>
-                        <td class="text-center">
+                        {{-- <td class="text-center">
                             <div class="list-icons">
                                 <a href="javascript:void(0)" data-action-url="{{ route('gallery.destroy', $contact) }}" data-behavior="delete-resource" class="dropdown-item"><i class="icon-trash"></i> {{ __('Delete') }}</a>
                             </div>
-                        </td>
+                        </td> --}}
                     </tr>
                     @endforeach
                 </tbody>
