@@ -19,8 +19,9 @@
                         <th>{{ __('Name') }}</th>
                         <th>{{ __('Email') }}</th>
                         <th>{{ __('Số điện thoại') }}</th>
-                        <th>{{ __('Quan tâm') }}</th>
-                        <th>{{ __('Message') }}</th>
+                        <th>Sản phẩm</th>
+                        <th>Ghi chú</th>
+                        <th>Ngân sách</th>
                         <th>{{ __('Date') }}</th>
                         {{-- <th class="text-center">{{ __('Action') }}</th> --}}
                     </tr>
@@ -34,6 +35,7 @@
                         <td>{{ $contact->phone }}</td>
                         <td>{{ $contact->product }}</td>
                         <td>{{ $contact->message }}</td>
+                        <td>{{ $contact->budget }}</td>
                         <td>{{ $contact->created_at->format('d/m/Y H:i:s') }}</td>
                         {{-- <td class="text-center">
                             <div class="list-icons">
