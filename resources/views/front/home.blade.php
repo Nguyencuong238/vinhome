@@ -310,29 +310,29 @@
                         <div class="location-feature">
                             <i class="fas fa-subway"></i>
                             <div>
-                                <h4>Metro Tốc Độ Cao</h4>
-                                <p>12 phút đến Q7 với vận tốc 350km/h</p>
+                                <h4>Trung tâm Phú Mỹ Hưng (Quận 7)</h4>
+                                <p>Chỉ 12 phút qua tuyến metro tốc độ cao 350km/giờ theo quy hoạch hoặc khoảng 20-25 phút di chuyển qua Cầu Cần Giờ trong tương lai</p>
                             </div>
                         </div>
                         <div class="location-feature">
                             <i class="fas fa-bridge"></i>
                             <div>
-                                <h4>Cầu Cần Giờ 7.3km</h4>
-                                <p>25 phút về trung tâm TP.HCM</p>
+                                <h4>Chợ Bến Thành (Quận 1)</h4>
+                                <p>Khoảng 30-35 phút di chuyển, kết nối thuận tiện qua trục đường Nguyễn Văn Linh và các cây cầu huyết mạch</p>
                             </div>
                         </div>
                         <div class="location-feature">
                             <i class="fas fa-plane"></i>
                             <div>
-                                <h4>Sân Bay Long Thành</h4>
-                                <p>45km - 25 phút qua cao tốc</p>
+                                <h4>Sân Bay Quốc tế Long Thành</h4>
+                                <p>Khoảng 30-40 phút di chuyển nhanh chóng thông qua Cao tốc Bến Lức – Long Thành</p>
                             </div>
                         </div>
                         <div class="location-feature">
                             <i class="fas fa-ship"></i>
                             <div>
-                                <h4>Cảng Quốc Tế Cần Giờ</h4>
-                                <p>100 triệu tấn hàng/năm</p>
+                                <h4>Cảng Quốc tế Cái Mép & KCN Hiệp Phước</h4>
+                                <p>Khoảng 15-25 phút, mở ra tiềm năng khổng lồ cho việc phát triển dịch vụ logistics và cho thuê chuyên gia.</p>
                             </div>
                         </div>
                     </div>
@@ -774,12 +774,12 @@
                     </div>
                     <div class="policy-item">
                         <i class="fas fa-home"></i>
-                        <p>Cam kết thuê lại <strong>10%/năm</strong> trong 5 năm đầu</p>
+                        <p>Cam kết thuê lại <strong>6%/năm</strong> trong 5 năm đầu</p>
                     </div>
-                    <div class="policy-item">
+                    {{-- <div class="policy-item">
                         <i class="fas fa-car"></i>
                         <p>Tặng gói nội thất <strong>500 triệu</strong> + 2 năm phí quản lý</p>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
