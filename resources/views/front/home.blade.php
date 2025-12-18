@@ -964,13 +964,13 @@
                         <h4 class="flex-1">Địa chỉ 2:</h4>
                         <p>L10-06 , Lầu 10 , Vincom Center, 72 Lê Thánh Tôn, P. bến Nghé, Quận 1, TP.HCM</p>
                     </div>
-                    <div class="contact-card">
+                    {{-- <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <h4>Số điện thoại:</h4>
                         <p class="contact-phone">{{ settings('phone') }}</p>
-                    </div>
+                    </div> --}}
                     <div class="contact-card">
                         <div class="contact-icon">
                             <i class="fas fa-clock"></i>

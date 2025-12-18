@@ -323,7 +323,7 @@
 
 <body>
     <!-- Top Bar -->
-    <div class="top-bar">
+    {{-- <div class="top-bar">
         <div class="container">
             <div class="top-bar-content">
                 <div class="top-info">
@@ -337,7 +337,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- Header Navigation -->
     <header class="header">
@@ -510,14 +510,14 @@
 
     <!-- Fixed Buttons -->
     <div class="fixed-buttons">
-        <a href="tel:{{ str_replace(' ', '', settings('phone')) }}" class="fixed-call">
+        {{-- <a href="tel:{{ str_replace(' ', '', settings('phone')) }}" class="fixed-call">
             <i class="fas fa-phone-alt"></i>
             <span>Gọi Ngay</span>
-        </a>
-        <a href="https://zalo.me/{{ str_replace(' ', '', settings('phone')) }}" target="blank" class="fixed-zalo">
+        </a> --}}
+        {{-- <a href="https://zalo.me/{{ str_replace(' ', '', settings('phone')) }}" target="blank" class="fixed-zalo">
             <img src="{{ asset('assets/images/zalo.svg') }}" alt="Zalo">
             <span>Chat Zalo</span>
-        </a>
+        </a> --}}
         <button id="backToTop" class="back-to-top">
             <i class="fas fa-arrow-up"></i>
         </button>
